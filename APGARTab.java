@@ -4,6 +4,9 @@
  */
 package ls.jtsk.ui;
 
+import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
+
 /**
  *
  * @author liushuai
@@ -894,15 +897,15 @@ public class APGARTab extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRadioButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton65ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton65ActionPerformed
 
     private void jRadioButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton64ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton64ActionPerformed
 
     private void jRadioButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton67ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton67ActionPerformed
 
     private void jRadioButton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton66ActionPerformed
@@ -918,23 +921,23 @@ public class APGARTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton62ActionPerformed
 
     private void jRadioButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton68ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton68ActionPerformed
 
     private void jRadioButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton60ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton60ActionPerformed
 
     private void jRadioButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton61ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton61ActionPerformed
 
     private void jRadioButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton56ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton56ActionPerformed
 
     private void jRadioButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton57ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton57ActionPerformed
 
     private void jRadioButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton58ActionPerformed
@@ -942,11 +945,11 @@ public class APGARTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton58ActionPerformed
 
     private void jRadioButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton59ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton59ActionPerformed
 
     private void jRadioButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton51ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton51ActionPerformed
 
     private void jRadioButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton52ActionPerformed
@@ -957,12 +960,8 @@ public class APGARTab extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton53ActionPerformed
 
-    private void jRadioButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton54ActionPerformed
-         System.out.println(evt.getActionCommand());
-    }//GEN-LAST:event_jRadioButton54ActionPerformed
-
     private void jRadioButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton55ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton55ActionPerformed
 
     private void jRadioButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton50ActionPerformed
@@ -974,11 +973,11 @@ public class APGARTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton49ActionPerformed
 
     private void jRadioButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton48ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton48ActionPerformed
 
     private void jRadioButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton32ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton32ActionPerformed
 
     private void jRadioButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton31ActionPerformed
@@ -986,19 +985,19 @@ public class APGARTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton31ActionPerformed
 
     private void jRadioButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton30ActionPerformed
 
     private void jRadioButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton29ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton29ActionPerformed
 
     private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton28ActionPerformed
 
     private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton27ActionPerformed
 
     private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
@@ -1014,27 +1013,27 @@ public class APGARTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton24ActionPerformed
 
     private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton23ActionPerformed
 
     private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton22ActionPerformed
 
     private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton21ActionPerformed
 
     private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton20ActionPerformed
 
     private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton19ActionPerformed
 
     private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton18ActionPerformed
 
     private void jRadioButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton69ActionPerformed
@@ -1046,27 +1045,27 @@ public class APGARTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton70ActionPerformed
 
     private void jRadioButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton71ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton71ActionPerformed
 
     private void jRadioButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton72ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton72ActionPerformed
 
     private void jRadioButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton73ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton73ActionPerformed
 
     private void jRadioButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton74ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton74ActionPerformed
 
     private void jRadioButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton75ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton75ActionPerformed
 
     private void jRadioButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton76ActionPerformed
-        // TODO add your handling code here:
+        actionHandle(evt);
     }//GEN-LAST:event_jRadioButton76ActionPerformed
 
     private void jRadioButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton77ActionPerformed
@@ -1076,6 +1075,10 @@ public class APGARTab extends javax.swing.JFrame {
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         System.exit(0);
     }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void jRadioButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton54ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton54ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1110,6 +1113,10 @@ public class APGARTab extends javax.swing.JFrame {
                 new APGARTab().setVisible(true);
             }
         });
+    }
+    
+    private void actionHandle(ActionEvent e) {
+        System.out.println(e.getActionCommand());
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
