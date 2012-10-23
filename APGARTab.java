@@ -5,7 +5,13 @@
 package ls.jtsk.ui;
 
 import java.awt.event.ActionEvent;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JPanel;
+import ls.jtsk.model.Apgar;
+import ls.jtsk.ui.assistant.ApgarFactory;
 
 /**
  *
@@ -1116,7 +1122,25 @@ public class APGARTab extends javax.swing.JFrame {
     }
     
     private void actionHandle(ActionEvent e) {
-        System.out.println(e.getActionCommand());
+        String[] splitApgarTags = e.getActionCommand().split("_");
+        if (splitApgarTags != null && splitApgarTags[0] != null) {
+             ApgarFactory apgarFactory = ApgarFactory.getApgarFactory();
+             Apgar apgar = apgarFactory.getApgarByInterval(Integer.parseInt(splitApgarTags[0]));
+             
+             // 通过从radiobutton中传入的apgar评分类型，比如pulse或者activity，基于反射机制，而不是静态switch判断，直接调用setPulse或者setActivity方法
+             Method[] apgarMethods = apgar.getClass().getMethods();
+             for (int i=0; i<apgarMethods.length; i++) {
+                 if (apgarMethods[i].getName().indexOf("set") != -1 && apgarMethods[i].getName().indexOf(splitApgarTags[1].substring(1)) != -1 ) {
+                     try {
+                         apgarMethods[i].invoke(apgar, Integer.parseInt(splitApgarTags[2]));
+                     } catch (Exception ex) {
+                         Logger.getLogger(APGARTab.class.getName()).log(Level.SEVERE, null, ex);
+                     }
+                     break;
+                 }
+             }
+             System.out.println(apgar.getSum());
+        }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
