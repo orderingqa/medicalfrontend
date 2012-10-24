@@ -3,7 +3,9 @@
  * and open the template in the editor.
  */
 package ls.jtsk.ui.assistant;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 import ls.jtsk.model.Apgar;
 
 /**
@@ -22,13 +24,17 @@ public class ApgarFactory {
     }
     public Apgar getApgarByInterval(int apgarInternal) {
         Apgar ap = null;
-        if (apgarHash.containsKey(1))
-            ap = (Apgar) apgarHash.get(1);
+        if (apgarHash.containsKey(apgarInternal))
+            ap = (Apgar) apgarHash.get(apgarInternal);
         else{
             ap = new Apgar();
-            ap.setApgarInterval(1);
-            apgarHash.put(1, ap);
+            ap.setApgarInterval(apgarInternal);
+            apgarHash.put(apgarInternal, ap);
         }
         return ap;
+    }
+    public Collection<Apgar> getAllApgars() {
+        Collection apgars = apgarHash.values();
+        return apgars;
     }
 }
