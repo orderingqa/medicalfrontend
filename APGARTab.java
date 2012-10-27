@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import ls.jtsk.helper.ApgarHelper;
 import ls.jtsk.model.Apgar;
 import ls.jtsk.ui.assistant.ApgarFactory;
+import ls.jtsk.ui.timer.ApgarTimer;
 
 /**
  *
@@ -23,6 +24,7 @@ public class APGARTab extends javax.swing.JFrame {
      */
     public APGARTab() {
         initComponents();
+        ApgarTimer.registerDisplayComponent(apgarTimerLabel);
     }
 
     /**
@@ -81,7 +83,7 @@ public class APGARTab extends javax.swing.JFrame {
         jRadioButton52 = new javax.swing.JRadioButton();
         jRadioButton58 = new javax.swing.JRadioButton();
         jLabel37 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        apgarTimerLabel = new javax.swing.JLabel();
         jRadioButton61 = new javax.swing.JRadioButton();
         jRadioButton60 = new javax.swing.JRadioButton();
         jRadioButton68 = new javax.swing.JRadioButton();
@@ -323,8 +325,8 @@ public class APGARTab extends javax.swing.JFrame {
 
         jLabel37.setText("1£ºËÄÖ«ÇüÇú");
 
-        jLabel15.setFont(new java.awt.Font("ËÎÌå", 0, 48)); // NOI18N
-        jLabel15.setText("00:00");
+        apgarTimerLabel.setFont(new java.awt.Font("ËÎÌå", 0, 48)); // NOI18N
+        apgarTimerLabel.setText("00:00");
 
         ciJiOneminButtonGroup.add(jRadioButton61);
         jRadioButton61.setText("0");
@@ -637,7 +639,7 @@ public class APGARTab extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
+                    .addComponent(apgarTimerLabel)
                     .addComponent(jLabel38)
                     .addComponent(jLabel39)
                     .addComponent(jLabel35)
@@ -735,7 +737,7 @@ public class APGARTab extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel15)
+                                .addComponent(apgarTimerLabel)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel14))
                             .addGroup(jPanel7Layout.createSequentialGroup()
@@ -898,7 +900,7 @@ public class APGARTab extends javax.swing.JFrame {
                                 .addGap(32, 32, 32)
                                 .addComponent(tenMinTotalLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2)
                             .addComponent(jButton3))))
                 .addGap(32, 32, 32))
@@ -928,10 +930,7 @@ public class APGARTab extends javax.swing.JFrame {
                 .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(295, 295, 295)
-                            .addGap(101, 101, 101)
-                            .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(finishButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(405, 405, 405)))
@@ -1214,6 +1213,7 @@ public class APGARTab extends javax.swing.JFrame {
              }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel apgarTimerLabel;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -1233,7 +1233,6 @@ public class APGARTab extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
