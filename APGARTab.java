@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import ls.jtsk.helper.ApgarHelper;
 import ls.jtsk.model.Apgar;
 import ls.jtsk.ui.assistant.ApgarFactory;
+import ls.jtsk.ui.controller.CentralController;
 import ls.jtsk.ui.timer.ApgarTimer;
 
 /**
@@ -18,13 +19,15 @@ import ls.jtsk.ui.timer.ApgarTimer;
  * @author liushuai
  */
 public class APGARTab extends javax.swing.JFrame {
-
+    long momId, babyId;
     /**
      * Creates new form APGAR
      */
-    public APGARTab() {
+    public APGARTab(long momId, long babyId) {
         initComponents();
         ApgarTimer.registerDisplayComponent(apgarTimerLabel);
+        this.momId = momId;
+        this.babyId = babyId;
     }
 
     /**
@@ -1137,8 +1140,9 @@ public class APGARTab extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton54ActionPerformed
 
     private void finishButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishButtonActionPerformed
+        // save the model from model/view layer to persistent/database layer
         ApgarFactory apgarFactory = ApgarFactory.getApgarFactory();
-        ApgarHelper.saveApgar(apgarFactory.getAllApgars());
+        CentralController.saveApgarAndDisposeWindow(momId, babyId, apgarFactory.getAllApgars(), this);
     }//GEN-LAST:event_finishButtonActionPerformed
 
     /**
@@ -1171,12 +1175,12 @@ public class APGARTab extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new APGARTab().setVisible(true);
+                new APGARTab(0, 0).setVisible(true);
             }
         });
     }
     
-    private void actionHandle(ActionEvent e) {
+    private void actionHandle(ActionEvent e) { // update the model
         String[] splitApgarTags = e.getActionCommand().split("_");
         if (splitApgarTags != null && splitApgarTags[0] != null) {
              ApgarFactory apgarFactory = ApgarFactory.getApgarFactory();
@@ -1194,8 +1198,7 @@ public class APGARTab extends javax.swing.JFrame {
                      break;
                  }
              }
-             updateRelationalLabel(Integer.parseInt(splitApgarTags[0]),apgar.getSum());
-             
+             updateRelationalLabel(Integer.parseInt(splitApgarTags[0]),apgar.getSum());      
         }
     }
     
