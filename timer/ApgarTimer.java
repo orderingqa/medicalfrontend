@@ -42,7 +42,7 @@ public class ApgarTimer implements Runnable{
     public void run() {
         while (true) {
             autoUpdateTimer();
-            System.out.println(getTimerModel());
+//            System.out.println(getTimerModel());
             fillExternalComponent(extJLabel, getTimerModel());
             try {
                 Thread.sleep(1000);
