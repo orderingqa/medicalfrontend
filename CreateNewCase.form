@@ -58,7 +58,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="38" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -137,7 +137,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="medicalNoInput">
       <Properties>
-        <Property name="text" type="java.lang.String" value="0000001"/>
+        <Property name="text" type="java.lang.String" value="2012"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="doctorInput">

@@ -3,7 +3,6 @@
  * and open the template in the editor.
  */
 package ls.jtsk.ui;
-
 import ls.jtsk.helper.CasesHelper;
 import ls.jtsk.ui.controller.CentralController;
 /**
@@ -72,7 +71,7 @@ public class CreateNewCase extends javax.swing.JFrame {
             }
         });
 
-        medicalNoInput.setText("0000001");
+        medicalNoInput.setText("2012");
 
         doctorInput.setText("Íõ´ó·ò");
 
@@ -110,7 +109,7 @@ public class CreateNewCase extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
