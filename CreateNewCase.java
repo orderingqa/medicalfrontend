@@ -10,7 +10,12 @@ import ls.jtsk.ui.controller.CentralController;
  * @author liushuai
  */
 public class CreateNewCase extends javax.swing.JFrame {
-
+    CaseHistory caseHistoryForUpdate = null;
+    // TODO createNewCase时，需要判断是否有重复的病历号。
+    public void setChForUpdate(CaseHistory caseHistory) {
+        caseHistoryForUpdate = caseHistory;
+    }
+    
     /**
      * Creates new form CaseHistoryModifyFrame
      */
@@ -72,6 +77,11 @@ public class CreateNewCase extends javax.swing.JFrame {
         });
 
         medicalNoInput.setText("2012");
+        medicalNoInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                medicalNoInputActionPerformed(evt);
+            }
+        });
 
         doctorInput.setText("王大夫");
 
@@ -139,6 +149,7 @@ public class CreateNewCase extends javax.swing.JFrame {
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         CentralController.saveCaseAndExit(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
+        if (caseHistoryForUpdate != null) caseHistoryForUpdate.updateModelFromExternal();
         this.dispose();
     }//GEN-LAST:event_saveButtonActionPerformed
 
@@ -149,7 +160,12 @@ public class CreateNewCase extends javax.swing.JFrame {
     private void apgarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apgarButtonActionPerformed
         this.dispose();
         CentralController.saveCaseAndShowBabyInputWindow(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
+        if (caseHistoryForUpdate != null) caseHistoryForUpdate.updateModelFromExternal();
     }//GEN-LAST:event_apgarButtonActionPerformed
+
+    private void medicalNoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicalNoInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_medicalNoInputActionPerformed
 
     /**
      * @param args the command line arguments

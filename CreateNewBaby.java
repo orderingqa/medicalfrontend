@@ -4,6 +4,9 @@
  */
 package ls.jtsk.ui;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import ls.jtsk.ui.controller.CentralController;
 
 /**
@@ -17,6 +20,7 @@ public class CreateNewBaby extends javax.swing.JFrame {
      */
     public CreateNewBaby(long momId) {
         initComponents();
+        geneareteBirthDateInput();
         this.momId = momId;
     }
 
@@ -35,9 +39,13 @@ public class CreateNewBaby extends javax.swing.JFrame {
         girlSelectButton = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        birthTimeInput = new javax.swing.JTextField();
         startApgarButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
+        birthMinComBox = new javax.swing.JComboBox();
+        birthDateComBox = new javax.swing.JComboBox();
+        birthHourComBox = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,8 +66,6 @@ public class CreateNewBaby extends javax.swing.JFrame {
 
         jLabel3.setText("出生日期");
 
-        birthTimeInput.setText("2012-10-14 16:06:05");
-
         startApgarButton.setText("添加婴儿信息并Apgar");
         startApgarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +80,16 @@ public class CreateNewBaby extends javax.swing.JFrame {
             }
         });
 
+        birthMinComBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                birthMinComBoxActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("点");
+
+        jLabel5.setText("分");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -81,26 +97,34 @@ public class CreateNewBaby extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3))
-                                .addGap(60, 60, 60)
+                                .addGap(45, 45, 45)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(boySelectButton)
+                                    .addComponent(birthDateComBox, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(girlSelectButton)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(boySelectButton)
-                                        .addGap(31, 31, 31)
-                                        .addComponent(girlSelectButton))
-                                    .addComponent(birthTimeInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(91, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(startApgarButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(exitButton)
-                        .addGap(43, 43, 43))))
+                                        .addGap(14, 14, 14)
+                                        .addComponent(birthHourComBox, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(birthMinComBox, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(startApgarButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(exitButton)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)))
+                .addGap(14, 14, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,14 +137,18 @@ public class CreateNewBaby extends javax.swing.JFrame {
                     .addComponent(girlSelectButton)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(birthTimeInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(startApgarButton)
-                    .addComponent(exitButton))
-                .addGap(66, 66, 66))
+                    .addComponent(jLabel3)
+                    .addComponent(birthMinComBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(birthDateComBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(birthHourComBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(exitButton)
+                    .addComponent(startApgarButton))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
@@ -136,12 +164,17 @@ public class CreateNewBaby extends javax.swing.JFrame {
 
     private void startApgarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startApgarButtonActionPerformed
     // TODO 怎么获得radio button的值
-        if((boySelectButton.isSelected() || girlSelectButton.isSelected()) && birthTimeInput.getText() != null) {
+        if((boySelectButton.isSelected() || girlSelectButton.isSelected())) {
             int babyGender = boySelectButton.isSelected() ? ls.jtsk.model.Gender.BOY : ls.jtsk.model.Gender.GIRL;
-            String babyBirthTime = birthTimeInput.getText();
+            String babyBirthTime = ((String)(birthDateComBox.getSelectedItem())).replace("年","-").replace("月","-").replace("日", " ");
+            babyBirthTime = babyBirthTime + birthHourComBox.getSelectedItem() + " " + birthMinComBox.getSelectedItem();
             CentralController.saveBabyAndShowApgarScoreWindow(momId, babyGender, babyBirthTime, this.getTitle());
         }   
     }//GEN-LAST:event_startApgarButtonActionPerformed
+
+    private void birthMinComBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthMinComBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_birthMinComBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,12 +206,15 @@ public class CreateNewBaby extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CreateNewBaby(0).setVisible(true);
+                new CreateNewBaby(1).setVisible(true);
+//                  new CreateNewBaby(0).geneareteBirthDateInput();
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField birthTimeInput;
+    private javax.swing.JComboBox birthDateComBox;
+    private javax.swing.JComboBox birthHourComBox;
+    private javax.swing.JComboBox birthMinComBox;
     private javax.swing.JRadioButton boySelectButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton exitButton;
@@ -186,6 +222,45 @@ public class CreateNewBaby extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JButton startApgarButton;
     // End of variables declaration//GEN-END:variables
+
+    
+    // need a function return two bits when input as 0, or 18
+    private void geneareteBirthDateInput() {
+        Date todayForTime =  new Date();
+        String todayString = new SimpleDateFormat("yyyy年MM月dd日").format(new Date());
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -1);
+        Date yesterday = cal.getTime();
+        String yesterdayString = new SimpleDateFormat("yyyy年MM月dd日").format(yesterday);
+        cal.add(Calendar.DATE, 2);
+        Date tomorrow = cal.getTime();
+        String tomorrowString = new SimpleDateFormat("yyyy年MM月dd日").format(tomorrow);
+        
+        birthDateComBox.addItem(yesterdayString);
+        birthDateComBox.addItem(todayString);
+        birthDateComBox.addItem(tomorrowString);
+        birthDateComBox.setSelectedIndex(1);
+
+        cal.setTime(todayForTime);
+        for (int i=0; i<23; i++) {
+            birthHourComBox.addItem(giveMeTwoBytes(i));
+        }
+        
+        birthHourComBox.setSelectedIndex(cal.get(Calendar.HOUR_OF_DAY));
+        
+        for (int i=0; i<60; i++) {
+            birthMinComBox.addItem(giveMeTwoBytes(i));
+        }
+        birthMinComBox.setSelectedIndex(cal.get(Calendar.MINUTE));
+    }
+    
+    
+    private String giveMeTwoBytes(int num) {
+        String a = "0" + num;
+        return a.substring(a.length()-2, a.length());
+    }
 }
