@@ -82,7 +82,7 @@ public class ApgarTimer implements Runnable {
         switch (alarmMinInterval) {
             case 1:
                 if (alarmSecInternal == 0) {
-                    alarmPlay();
+                    alarmPlay("1.wav");
                 }
                 oneMinFlashLabel.setOpaque(true);
                 if (alarmSecInternal % 2 == 1) {
@@ -97,7 +97,7 @@ public class ApgarTimer implements Runnable {
 
             case 5:
                 if (alarmSecInternal == 0) {
-                    alarmPlay();
+                    alarmPlay("5.wav");
                 }
                 fiveMinFlashLabel.setOpaque(true);
                 if (alarmSecInternal % 2 == 1) {
@@ -112,7 +112,7 @@ public class ApgarTimer implements Runnable {
 
             case 10:
                 if (alarmSecInternal == 0) {
-                    alarmPlay();
+                    alarmPlay("10.wav");
                 }
                 tenMinFlashLabel.setOpaque(true);
                 if (alarmSecInternal % 2 == 1) {
@@ -137,9 +137,9 @@ public class ApgarTimer implements Runnable {
         new Thread(ap).start();
     }
 
-    private void alarmPlay() {
+    private void alarmPlay(String fileName) {
         try {
-            AudioInputStream ais = AudioSystem.getAudioInputStream(new File("notify.wav"));// 获得音频输入流 
+            AudioInputStream ais = AudioSystem.getAudioInputStream(new File(fileName));// 获得音频输入流 
             AudioFormat baseFormat = ais.getFormat();// 指定声音流中特定数据安排 
 //            System.out.println("baseFormat=" + baseFormat);
             DataLine.Info info = new DataLine.Info(SourceDataLine.class, baseFormat);
