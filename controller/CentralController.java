@@ -17,7 +17,9 @@ import ls.jtsk.helper.CasesHelper;
 import ls.jtsk.model.Apgar;
 import ls.jtsk.model.Cases;
 import ls.jtsk.ui.APGARTab;
+import ls.jtsk.ui.CaseHistory;
 import ls.jtsk.ui.CreateNewBaby;
+import ls.jtsk.ui.CreateNewCase;
 
 /**
  *
@@ -39,17 +41,17 @@ public class CentralController {
      * @param age 
      */
     public static void saveCaseAndShowBabyInputWindow(String medicalNo, String doctorName, String gravidaName, String age) {
-//        long newCaseId = ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age)); // 模型更新完毕，接下来拼装新的视图。
-        // TODO 怎么样才能使得我想运行上下两个赋值可以通过配置来完成，而不是修改代码？
-        long newCaseId = 0;
+        long newCaseId = ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age)); // 模型更新完毕，接下来拼装新的视图。
+        // TODO 怎么样才能使得我想运行上下两个赋值可以通过配置来完成，而不是修改代码？这样我可以随时测试有没有db的代码。
+//        long newCaseId = 0;
         CreateNewBaby cnb = new CreateNewBaby(newCaseId);
         cnb.setTitle("病历号：" + medicalNo + "产妇："+gravidaName);
         cnb.setVisible(true);
     }
     
     public static void saveBabyAndShowApgarScoreWindow(long momId, int babyGender, String babyBirthTime, String babyWindowTitle) {
-//        long babyId = BabyHelper.addBaby(momId, babyGender, babyBirthTime); // update backend model
-        long babyId = 0;
+        long babyId = BabyHelper.addBaby(momId, babyGender, babyBirthTime); // update backend model
+//        long babyId = 0;
         APGARTab apgarWindow = new APGARTab(momId, babyId);
         apgarWindow.setTitle(babyWindowTitle+" 性别： " + babyGender + " 出生时间: " + babyBirthTime);
         apgarWindow.setVisible(true);
@@ -109,6 +111,15 @@ public class CentralController {
         } catch (IOException ex) {
             Logger.getLogger(CentralController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    
+    public static void displayCreateCaseWindow(CaseHistory ch) {
+        CreateNewCase cnc = new CreateNewCase();
+        cnc.setChForUpdate(ch);
+        cnc.setTitle("创建新的病历");
+        cnc.setVisible(true);
+        
     }
     
 }
