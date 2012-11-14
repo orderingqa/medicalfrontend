@@ -20,6 +20,7 @@ import ls.jtsk.ui.APGARTab;
 import ls.jtsk.ui.CaseHistory;
 import ls.jtsk.ui.CreateNewBaby;
 import ls.jtsk.ui.CreateNewCase;
+import ls.jtsk.ui.ViewExistingCase;
 
 /**
  *
@@ -119,7 +120,10 @@ public class CentralController {
         cnc.setChForUpdate(ch);
         cnc.setTitle("创建新的病历");
         cnc.setVisible(true);
-        
+    }
+    
+    public static void viewExistingCase(Cases existCase) {
+        new ViewExistingCase(existCase).setVisible(true);
     }
     
 }

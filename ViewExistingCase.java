@@ -4,17 +4,27 @@
  */
 package ls.jtsk.ui;
 
+import javax.swing.event.TableModelListener;
+import javax.swing.table.TableModel;
+import ls.jtsk.model.Apgar;
+import ls.jtsk.model.Apgarinterval;
+import ls.jtsk.model.Baby;
+import ls.jtsk.model.Cases;
+import ls.jtsk.model.Gender;
+
 /**
  *
  * @author liushuai
  */
 public class ViewExistingCase extends javax.swing.JFrame {
-
+    Cases existCase = null;
     /**
      * Creates new form CaseHistoryViewFrame
      */
-    public ViewExistingCase() {
+    public ViewExistingCase(Cases existCase) {
         initComponents();
+        this.existCase = existCase;
+        fillUIWithCaseData(existCase);
     }
 
     /**
@@ -32,19 +42,19 @@ public class ViewExistingCase extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        medicalNoLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        doctorNameLabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        gravidaNameLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        gravidaAgeLabel = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        babyGenderLabel = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        babyBirthDateLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        apgarScoreTable = new javax.swing.JTable();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -89,29 +99,29 @@ public class ViewExistingCase extends javax.swing.JFrame {
 
         jLabel1.setText("住院号");
 
-        jLabel2.setText("0000001");
+        medicalNoLabel.setText("0000001");
 
         jLabel3.setText("主治医师");
 
-        jLabel4.setText("王大夫");
+        doctorNameLabel.setText("王大夫");
 
         jLabel5.setText("产妇姓名");
 
-        jLabel6.setText("王菲");
+        gravidaNameLabel.setText("王菲");
 
         jLabel7.setText("产妇年龄");
 
-        jLabel8.setText("30");
+        gravidaAgeLabel.setText("30");
 
         jLabel9.setText("婴儿性别");
 
-        jLabel10.setText("男");
+        babyGenderLabel.setText("男");
 
         jLabel11.setText("出生时间");
 
-        jLabel12.setText("2012-05-18 18:30");
+        babyBirthDateLabel.setText("2012-05-18 18:30");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        apgarScoreTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"心率(次/分)", null, "", null},
                 {"呼吸", null, "", null},
@@ -124,7 +134,7 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 "APGAR评分项", "1分钟分数", "5分钟分数", "10分钟分数"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(apgarScoreTable);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,44 +144,45 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jButton3)
-                        .addGap(107, 107, 107)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4)
-                        .addGap(21, 21, 21))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel5))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(medicalNoLabel)
+                            .addComponent(gravidaNameLabel))
+                        .addGap(124, 124, 124)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel5))
-                                .addGap(35, 35, 35)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel6))
-                                .addGap(124, 124, 124)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel8))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel4))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(35, 35, 35)
-                                .addComponent(jLabel10)
-                                .addGap(29, 29, 29)
-                                .addComponent(jLabel11)
+                                .addComponent(jLabel7)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel12))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 26, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(gravidaAgeLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(doctorNameLabel))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(35, 35, 35)
+                        .addComponent(babyGenderLabel)
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel11)
+                        .addGap(18, 18, 18)
+                        .addComponent(babyBirthDateLabel)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton3)
+                        .addGap(144, 144, 144)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton4)))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,29 +190,29 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
+                    .addComponent(medicalNoLabel)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(doctorNameLabel))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel6)
+                    .addComponent(gravidaNameLabel)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                    .addComponent(gravidaAgeLabel))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jLabel10)
+                    .addComponent(babyGenderLabel)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel12))
+                    .addComponent(babyBirthDateLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
                     .addComponent(jButton3)
+                    .addComponent(jButton2)
                     .addComponent(jButton4))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -212,10 +223,146 @@ public class ViewExistingCase extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void exit(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit
-        // TODO add your handling code here:
-         
+        this.dispose();
     }//GEN-LAST:event_exit
 
+    private void fillUIWithCaseData(Cases existCase) {
+        if (existCase != null) {
+            medicalNoLabel.setText(new Integer(existCase.getGravida().getMedicNo()).toString());
+            doctorNameLabel.setText(existCase.getDoctor().getDoctorName());
+            gravidaNameLabel.setText(existCase.getGravida().getName());
+            gravidaAgeLabel.setText(new Integer(existCase.getGravida().getAge()).toString());
+            if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
+                Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
+                babyBirthDateLabel.setText(baby.getBirthTime());
+                babyGenderLabel.setText(baby.getGender() == Gender.BOY ? "男" : "女");
+                if (baby.getApgars() != null && baby.getApgars().size() > 0) {
+                    apgarScoreTable.setModel(new tableModel(baby.getApgars().toArray()));
+                }
+            } else {
+                babyBirthDateLabel.setText("");
+                babyGenderLabel.setText("");
+            }
+            
+//            Object[] tableModel = new Object [][] {
+//                {"心率(次/分)", null, "", null},
+//                {"呼吸", null, "", null},
+//                {"肌张力", null, null, null},
+//                {"对刺激反应、怪像", null, null, null},
+//                {"皮肤颜色", null, null, null},
+//                {"总分", null, null, null}
+//            };
+        }
+    }
+    
+    private class tableModel  implements TableModel {
+
+        String[] columnStrings = new String [] {"apgar评分项", "1分钟分数", "5分钟分数", "10分钟分数"};
+        String[] rowTitle = new String[] {"心率(次/分)", "呼吸", "肌张力", "对刺激反应、怪象", "皮肤颜色", "总分"};
+        Object[] apgars = null;
+                
+        public tableModel(Object[] apgars){
+            this.apgars = apgars;
+        }
+        
+        @Override
+        public int getRowCount() {
+            return 6;
+        }
+
+        @Override
+        public int getColumnCount() {
+            return columnStrings.length;
+        }
+
+        @Override
+        public String getColumnName(int columnIndex) {
+            return columnStrings[columnIndex];
+        }
+
+        @Override
+        public Class<?> getColumnClass(int columnIndex) {
+            return String.class;
+        }
+
+        @Override
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return false;
+        }
+
+        @Override
+        public Object getValueAt(int rowIndex, int columnIndex) {
+            String apgarResult = null;
+            switch (columnIndex) {
+                case 0 :
+                    apgarResult = rowTitle[rowIndex];
+                    break;
+                case 1:
+                    apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 1);
+                    break;
+                case 2:
+                    apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 5);
+                    break;
+                case 3:
+                    apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 10);
+                    break;
+                default: ;
+            }
+            return apgarResult;
+        }
+
+        
+        // 这个函数应该给所有的打印使用
+        private String getApgarValueFromIndex(int apgarTypeIndex, Object[] apgars, int apgarInterval) {
+            String apgarString = null;
+            Apgar ap = null;
+            for (int i=0; i<apgars.length; i++) {
+                if (((Apgar) apgars[i]).getApgarInterval() == apgarInterval) {
+                    ap = (Apgar) apgars[i];
+                }
+            }
+            if (ap == null) return "";
+            switch (apgarTypeIndex) {
+                case 0:
+                    apgarString = ap.getPulse() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    break;
+                case 1:
+                    apgarString = ap.getRespiration() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    break;
+                case 2:
+                    apgarString = ap.getActivity() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    break;
+                case 3:
+                    apgarString = ap.getGrimace() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    break;
+                case 4:
+                    apgarString = ap.getAppearance() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    break;
+                case 5:
+                    // TODO 总分           
+                    break;
+                default: ;                      
+            } 
+            return apgarString;
+        }
+                      
+                
+        @Override
+        public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+//            throw new UnsupportedOperationException("Not supported yet.");
+        }
+
+        @Override
+        public void addTableModelListener(TableModelListener l) {
+//            throw new UnsupportedOperationException("Not supported yet.");
+        }
+
+        @Override
+        public void removeTableModelListener(TableModelListener l) {
+//            throw new UnsupportedOperationException("Not supported yet.");
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -246,29 +393,29 @@ public class ViewExistingCase extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewExistingCase().setVisible(true);
+                new ViewExistingCase(null).setVisible(true);
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable apgarScoreTable;
+    private javax.swing.JLabel babyBirthDateLabel;
+    private javax.swing.JLabel babyGenderLabel;
+    private javax.swing.JLabel doctorNameLabel;
+    private javax.swing.JLabel gravidaAgeLabel;
+    private javax.swing.JLabel gravidaNameLabel;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel medicalNoLabel;
     // End of variables declaration//GEN-END:variables
 }

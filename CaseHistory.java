@@ -27,6 +27,7 @@ public class CaseHistory extends javax.swing.JFrame {
     private int numbersPerPage = 15;
     // 该list用来作为table和model进行通信的媒介。基于选择的表行，我们从这个list中取出数据，从而往后面传递。
     List <Cases> modelList = null;
+    Cases currentCase = null;
     // TODO case history 需要title，title应该是输入的医院和大夫名字。
     /**
      * Creates new form CaseHistory
@@ -53,7 +54,7 @@ public class CaseHistory extends javax.swing.JFrame {
         jSpinner1 = new javax.swing.JSpinner();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        viewExistingCasesButton = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         apgarScoreButton = new javax.swing.JButton();
@@ -96,7 +97,13 @@ public class CaseHistory extends javax.swing.JFrame {
 
         jLabel6.setText("页");
 
-        jButton2.setText("查看病历");
+        viewExistingCasesButton.setText("查看病历");
+        viewExistingCasesButton.setEnabled(false);
+        viewExistingCasesButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewExistingCasesButtonActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("修改病历");
         jButton3.setEnabled(false);
@@ -105,8 +112,10 @@ public class CaseHistory extends javax.swing.JFrame {
         jButton4.setEnabled(false);
 
         apgarScoreButton.setText("apgar打分");
+        apgarScoreButton.setEnabled(false);
 
         printButton.setText("打印");
+        printButton.setEnabled(false);
 
         previousPageButton.setText("上一页");
         previousPageButton.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +151,7 @@ public class CaseHistory extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jButton2)
+                .addComponent(viewExistingCasesButton)
                 .addGap(61, 61, 61)
                 .addComponent(jButton3)
                 .addGap(70, 70, 70)
@@ -180,7 +189,7 @@ public class CaseHistory extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(viewExistingCasesButton)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(apgarScoreButton)
@@ -221,16 +230,21 @@ public class CaseHistory extends javax.swing.JFrame {
     }//GEN-LAST:event_previousPageButtonActionPerformed
 
     private void caseSelectFunction(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_caseSelectFunction
-        Cases currentCase = (Cases) modelList.get(caseListTable.getSelectedRow());
+        currentCase = (Cases) modelList.get(caseListTable.getSelectedRow());
         if (currentCase.getGravida().getBabys() != null && currentCase.getGravida().getBabys().size() > 0) {
-            int babyNum = currentCase.getGravida().getBabys().size();
+//            int babyNum = currentCase.getGravida().getBabys().size();
             printButton.setEnabled(true);
             apgarScoreButton.setEnabled(false);
         } else {
             printButton.setEnabled(false);
             apgarScoreButton.setEnabled(true);
         }
+        viewExistingCasesButton.setEnabled(true);
     }//GEN-LAST:event_caseSelectFunction
+
+    private void viewExistingCasesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewExistingCasesButtonActionPerformed
+        CentralController.viewExistingCase(currentCase);
+    }//GEN-LAST:event_viewExistingCasesButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,7 +284,6 @@ public class CaseHistory extends javax.swing.JFrame {
     private javax.swing.JButton apgarScoreButton;
     private javax.swing.JTable caseListTable;
     private javax.swing.JButton createCaseButton;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton9;
@@ -283,6 +296,7 @@ public class CaseHistory extends javax.swing.JFrame {
     private javax.swing.JButton nextPageButton;
     private javax.swing.JButton previousPageButton;
     private javax.swing.JButton printButton;
+    private javax.swing.JButton viewExistingCasesButton;
     // End of variables declaration//GEN-END:variables
 
 
