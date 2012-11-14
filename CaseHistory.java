@@ -27,7 +27,10 @@ public class CaseHistory extends javax.swing.JFrame {
     private int numbersPerPage = 15;
     // 该list用来作为table和model进行通信的媒介。基于选择的表行，我们从这个list中取出数据，从而往后面传递。
     List <Cases> modelList = null;
-    Cases currentCase = null;
+//    Cases currentCase = null;
+    // TODO 采用currentSelectIndex而不是上面的currentCase来标记当前鼠标选择。
+//    原因是如果用currentCase来标记当前鼠标位置，那么当新加Cases而造成model变化后，查看当前Case详情时，会是model变化前的那个指向的case
+    int currentSelectIndex = 0;
     // TODO case history 需要title，title应该是输入的医院和大夫名字。
     /**
      * Creates new form CaseHistory
@@ -64,6 +67,7 @@ public class CaseHistory extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         caseListTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -230,7 +234,8 @@ public class CaseHistory extends javax.swing.JFrame {
     }//GEN-LAST:event_previousPageButtonActionPerformed
 
     private void caseSelectFunction(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_caseSelectFunction
-        currentCase = (Cases) modelList.get(caseListTable.getSelectedRow());
+        currentSelectIndex = caseListTable.getSelectedRow();
+        Cases currentCase = (Cases) modelList.get(currentSelectIndex);
         if (currentCase.getGravida().getBabys() != null && currentCase.getGravida().getBabys().size() > 0) {
 //            int babyNum = currentCase.getGravida().getBabys().size();
             printButton.setEnabled(true);
@@ -243,6 +248,7 @@ public class CaseHistory extends javax.swing.JFrame {
     }//GEN-LAST:event_caseSelectFunction
 
     private void viewExistingCasesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewExistingCasesButtonActionPerformed
+        Cases currentCase = (Cases) modelList.get(currentSelectIndex);
         CentralController.viewExistingCase(currentCase);
     }//GEN-LAST:event_viewExistingCasesButtonActionPerformed
 

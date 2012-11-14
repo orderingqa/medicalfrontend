@@ -123,15 +123,10 @@ public class ViewExistingCase extends javax.swing.JFrame {
 
         apgarScoreTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"心率(次/分)", null, "", null},
-                {"呼吸", null, "", null},
-                {"肌张力", null, null, null},
-                {"对刺激反应、怪像", null, null, null},
-                {"皮肤颜色", null, null, null},
-                {"总分", null, null, null}
+
             },
             new String [] {
-                "APGAR评分项", "1分钟分数", "5分钟分数", "10分钟分数"
+
             }
         ));
         jScrollPane1.setViewportView(apgarScoreTable);
@@ -297,13 +292,13 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 case 0 :
                     apgarResult = rowTitle[rowIndex];
                     break;
-                case 1:
+                case 1: // 第1列表示1分钟的apgar分数，具体是哪个指标要看行号，也即rowIndex。
                     apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 1);
                     break;
-                case 2:
+                case 2: // 第2列表示5分钟的apgar分数
                     apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 5);
                     break;
-                case 3:
+                case 3: // 第3列表示10分钟的apgar分数
                     apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 10);
                     break;
                 default: ;
@@ -321,25 +316,28 @@ public class ViewExistingCase extends javax.swing.JFrame {
                     ap = (Apgar) apgars[i];
                 }
             }
-            if (ap == null) return "";
+            // 如果apgar在这一分钟就没有，则直接返回未打分
+            // TODO 目前的方法我觉得已经算是优雅，因为后台只会返回正确的值，没打分为-1，打完分为0,1,2。
+            // UI调用时进行data到展现的转换工作。
+            if (ap == null) return "未打分";
             switch (apgarTypeIndex) {
                 case 0:
                     apgarString = ap.getPulse() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
                     break;
                 case 1:
-                    apgarString = ap.getRespiration() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    apgarString = ap.getRespiration() < 0 ? "未打分" : new Integer(ap.getRespiration()).toString();
                     break;
                 case 2:
-                    apgarString = ap.getActivity() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    apgarString = ap.getActivity() < 0 ? "未打分" : new Integer(ap.getActivity()).toString();
                     break;
                 case 3:
-                    apgarString = ap.getGrimace() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    apgarString = ap.getGrimace() < 0 ? "未打分" : new Integer(ap.getGrimace()).toString();
                     break;
                 case 4:
-                    apgarString = ap.getAppearance() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
+                    apgarString = ap.getAppearance() < 0 ? "未打分" : new Integer(ap.getAppearance()).toString();
                     break;
                 case 5:
-                    // TODO 总分           
+                    apgarString = new Integer(ap.getSum()).toString();           
                     break;
                 default: ;                      
             } 

@@ -149,7 +149,7 @@ public class CreateNewCase extends javax.swing.JFrame {
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         CentralController.saveCaseAndExit(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
-        if (caseHistoryForUpdate != null) caseHistoryForUpdate.updateModelFromExternal();
+        
         this.dispose();
     }//GEN-LAST:event_saveButtonActionPerformed
 
@@ -160,7 +160,7 @@ public class CreateNewCase extends javax.swing.JFrame {
     private void apgarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apgarButtonActionPerformed
         this.dispose();
         CentralController.saveCaseAndShowBabyInputWindow(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
-        if (caseHistoryForUpdate != null) caseHistoryForUpdate.updateModelFromExternal();
+        
     }//GEN-LAST:event_apgarButtonActionPerformed
 
     private void medicalNoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicalNoInputActionPerformed

@@ -159,7 +159,7 @@ public class CreateNewBaby extends javax.swing.JFrame {
     }//GEN-LAST:event_girlSelectButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
-        System.exit(0);
+        this.dispose();
     }//GEN-LAST:event_exitButtonActionPerformed
 
     private void startApgarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startApgarButtonActionPerformed

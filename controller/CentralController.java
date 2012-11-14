@@ -29,8 +29,13 @@ import ls.jtsk.ui.ViewExistingCase;
 public class CentralController {
     private static CasesHelper ch = new CasesHelper();
     
+    // 这个初始化在创建一个case时产生，然后在所有更新操作中调用。
+    private static CaseHistory caseHistory = null;
+    
+    
     public static void saveCaseAndExit(String medicalNo, String doctorName, String gravidaName, String age) {
         ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age));
+        if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
     /**
@@ -48,6 +53,7 @@ public class CentralController {
         CreateNewBaby cnb = new CreateNewBaby(newCaseId);
         cnb.setTitle("病历号：" + medicalNo + "产妇："+gravidaName);
         cnb.setVisible(true);
+        if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
     public static void saveBabyAndShowApgarScoreWindow(long momId, int babyGender, String babyBirthTime, String babyWindowTitle) {
@@ -56,15 +62,17 @@ public class CentralController {
         APGARTab apgarWindow = new APGARTab(momId, babyId);
         apgarWindow.setTitle(babyWindowTitle+" 性别： " + babyGender + " 出生时间: " + babyBirthTime);
         apgarWindow.setVisible(true);
+        if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
     public static void saveApgarAndDisposeWindow(long momId, long babyId, Collection collections, JFrame apgarFrame){
         ApgarHelper.addApgar(momId, babyId, collections);
         apgarFrame.dispose();
+        if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
     public static void saveApgarAndPrint(long momId, long babyId, Collection collections, JFrame apgarFrame) {
-//        ApgarHelper.addApgar(momId, babyId, collections);
+        ApgarHelper.addApgar(momId, babyId, collections);
         StringBuffer printableString = new StringBuffer();
         printableString.append(apgarFrame.getTitle()+"\r\n");
         printableString.append("评分时间   心率   呼吸    肌张力    对刺激反应、怪象   颜色\r\n");
@@ -87,6 +95,7 @@ public class CentralController {
    
         // 记事本打印程序完成后，我还是需要原生的打印研究，这个是low priority。
         apgarFrame.dispose();
+        if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
     // TODO 需要返回值以确定是否写文件成功，因为IO极大程度会失败
@@ -120,6 +129,7 @@ public class CentralController {
         cnc.setChForUpdate(ch);
         cnc.setTitle("创建新的病历");
         cnc.setVisible(true);
+        caseHistory = ch;
     }
     
     public static void viewExistingCase(Cases existCase) {

@@ -242,50 +242,10 @@
         <Component class="javax.swing.JTable" name="apgarScoreTable">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="6">
-                <Column editable="true" title="APGAR&#x8bc4;&#x5206;&#x9879;" type="java.lang.Object">
-                  <Data value="&#x5fc3;&#x7387;(&#x6b21;/&#x5206;)"/>
-                  <Data value="&#x547c;&#x5438;"/>
-                  <Data value="&#x808c;&#x5f20;&#x529b;"/>
-                  <Data value="&#x5bf9;&#x523a;&#x6fc0;&#x53cd;&#x5e94;&#x3001;&#x602a;&#x50cf;"/>
-                  <Data value="&#x76ae;&#x80a4;&#x989c;&#x8272;"/>
-                  <Data value="&#x603b;&#x5206;"/>
-                </Column>
-                <Column editable="true" title="1&#x5206;&#x949f;&#x5206;&#x6570;" type="java.lang.Object"/>
-                <Column editable="true" title="5&#x5206;&#x949f;&#x5206;&#x6570;" type="java.lang.Object">
-                  <Data value=""/>
-                  <Data value=""/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                  <Data value="null"/>
-                </Column>
-                <Column editable="true" title="10&#x5206;&#x949f;&#x5206;&#x6570;" type="java.lang.Object"/>
-              </Table>
+              <Table columnCount="0" rowCount="0"/>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-              <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-              </TableColumnModel>
+              <TableColumnModel selectionModel="0"/>
             </Property>
             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
