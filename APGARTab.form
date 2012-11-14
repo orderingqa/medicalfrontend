@@ -64,7 +64,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -76,151 +76,30 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <Component id="finishAndExitButton" min="-2" pref="119" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="115" pref="296" max="32767" attributes="0"/>
+                  <Component id="fiveMinTotalLabel" min="-2" pref="54" max="-2" attributes="0"/>
+                  <EmptySpace min="75" pref="75" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="tenMinFlashLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton63" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton62" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton66" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton77" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton69" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton70" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="tenMinTotalLabel" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
               </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="finishAndExitButton" min="-2" pref="119" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="finishAndPrintButton" min="-2" pref="119" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                  <Component id="cancelButton" min="-2" pref="116" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="apgarTimerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel44" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jRadioButton61" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton60" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton68" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton71" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton73" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton72" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton28" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton29" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton27" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                                  <Component id="oneMinFlashLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jRadioButton56" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton55" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton54" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jRadioButton21" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jRadioButton23" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jRadioButton22" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                          <Component id="oneMinTotalLabel" min="-2" pref="57" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="fiveMinTotalLabel" min="-2" pref="54" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton67" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton64" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton65" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton32" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton48" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton30" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="fiveMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton51" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton57" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton59" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton20" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton18" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton19" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton74" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton76" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton75" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jRadioButton53" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton52" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton58" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton25" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton26" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton24" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton31" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton50" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton49" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="oneMinConfirmButton" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
-                                                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace pref="101" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="finishAndPrintButton" min="-2" pref="119" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="cancelButton" min="-2" pref="116" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -231,7 +110,133 @@
                           <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="apgarTimerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel44" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="jRadioButton61" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jRadioButton60" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jRadioButton68" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jRadioButton28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jRadioButton29" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jRadioButton27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                                          <Component id="oneMinFlashLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="jRadioButton56" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="jRadioButton55" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="jRadioButton54" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="jRadioButton21" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="jRadioButton23" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="jRadioButton22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                                  <Component id="oneMinTotalLabel" min="-2" pref="57" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jRadioButton32" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton48" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton30" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fiveMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton51" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton57" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton59" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton20" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton74" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton76" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton75" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jRadioButton53" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton52" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton58" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton26" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton31" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton50" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton49" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jRadioButton71" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jRadioButton73" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jRadioButton72" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                                  <Component id="oneMinConfirmButton" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jRadioButton67" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton64" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton65" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton77" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton69" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton70" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -387,29 +392,29 @@
                           <Component id="jRadioButton30" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           <Component id="jLabel42" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="jRadioButton64" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRadioButton65" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRadioButton67" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="jRadioButton71" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                   <Component id="jRadioButton73" min="-2" max="-2" attributes="0"/>
@@ -418,38 +423,47 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jRadioButton77" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRadioButton70" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRadioButton69" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="oneMinTotalLabel" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Component id="oneMinTotalLabel" min="-2" pref="41" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="tenMinTotalLabel" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="fiveMinTotalLabel" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="fiveMinTotalLabel" min="-2" pref="41" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="tenMinTotalLabel" min="-2" pref="41" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="oneMinConfirmButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="oneMinConfirmButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="finishAndExitButton" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="finishAndPrintButton" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="cancelButton" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
