@@ -11,6 +11,7 @@ import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import ls.jtsk.helper.ApgarHelper;
 import ls.jtsk.helper.BabyHelper;
 import ls.jtsk.helper.CasesHelper;
@@ -42,6 +43,7 @@ public class CentralController {
         if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
+    // -------------------------------------------------------------------------------------------------------------------------------
     /**
      * 
      * 本方法是视图createNewCase的控制器。它会接收视图上传过来的用户输入，然后选择一个新的视图返回。
@@ -55,10 +57,23 @@ public class CentralController {
         // TODO 怎么样才能使得我想运行上下两个赋值可以通过配置来完成，而不是修改代码？这样我可以随时测试有没有db的代码。
 //        long newCaseId = 0;
         CreateNewBaby cnb = new CreateNewBaby(newCaseId);
-        cnb.setTitle("病历号：" + medicalNo + "产妇："+gravidaName);
+        cnb.setTitle("病历号：" + medicalNo + "    产妇："+gravidaName);
         cnb.setVisible(true);
         if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
+    
+    public static void showBabyInputFromCaseList(Cases existCase, CaseHistory ch) {
+        if (existCase != null) {
+            caseHistory = ch;
+            long caseId = existCase.getId();
+            CreateNewBaby cnb = new CreateNewBaby(caseId);
+            cnb.setTitle("病历号：" + existCase.getGravida().getMedicNo() + "    产妇："+existCase.getGravida().getName());
+            cnb.setVisible(true);
+        } else {
+            showCommonMessageBox();
+        }
+    }
+    // -------------------------------------------------------------------------------------------------------------------------------    
     
     public static void saveBabyAndShowApgarScoreWindow(long momId, int babyGender, String babyBirthTime, String babyWindowTitle) {
         long babyId = BabyHelper.addBaby(momId, babyGender, babyBirthTime); // update backend model
@@ -66,8 +81,14 @@ public class CentralController {
         APGARTab apgarWindow = new APGARTab(momId, babyId);
         apgarWindow.setTitle(babyWindowTitle+" 性别： " + babyGender + " 出生时间: " + babyBirthTime);
         apgarWindow.setVisible(true);
-        if (caseHistory != null) caseHistory.updateModelFromExternal();
+        if (caseHistory != null) {
+            caseHistory.updateModelFromExternal();
+            caseHistory.updateButtonForCurrentCase();
+        }
     }
+    
+
+
     
     public static void saveApgarAndDisposeWindow(long momId, long babyId, Collection collections, JFrame apgarFrame){
         ApgarHelper.addApgar(momId, babyId, collections);
@@ -144,16 +165,6 @@ public class CentralController {
         }
     }
     
-    public static void main(String[] args) {
-        try {
-            writeToFile("a.txt", "bcde");
-            callExternalCommand("notepad.exe " + "a.txt");
-        } catch (IOException ex) {
-            Logger.getLogger(CentralController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
-    
     public static void displayCreateCaseWindow(CaseHistory ch) {
         CreateNewCase cnc = new CreateNewCase();
         cnc.setChForUpdate(ch);
@@ -177,4 +188,26 @@ public class CentralController {
         callExternalCommand("notepad.exe "+fileName);
     }
     
+    public static void showCommonMessageBox() {
+        JOptionPane.showMessageDialog(null, "请按照提示输入正确的格式");
+    }
+    
+    
+    public static boolean shouldContinueMessageBox(String promptTitle, String promptMessageBody) {
+        Object[] options = {"确定","取消"}; 
+        int response = JOptionPane.showOptionDialog(null, promptMessageBody, promptTitle,JOptionPane.YES_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]); 
+        if(response == 0) {  
+            return true;
+        }
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        try {
+            writeToFile("a.txt", "bcde");
+            callExternalCommand("notepad.exe " + "a.txt");
+        } catch (IOException ex) {
+            Logger.getLogger(CentralController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

@@ -2,7 +2,7 @@
 
 <Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="xinLvOneminButtonGroup1">
+    <Component class="javax.swing.ButtonGroup" name="xinLvOneminButtonGroup">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="huXiOneminButtonGroup">
     </Component>
@@ -22,19 +22,20 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="fiveMinAppearanceButtonGroup">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    <Component class="javax.swing.ButtonGroup" name="tenMinPulseButtonGroup">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    <Component class="javax.swing.ButtonGroup" name="tenMinRespirationButtonGroup">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup3">
+    <Component class="javax.swing.ButtonGroup" name="tenMinActivityButtonGroup">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup4">
+    <Component class="javax.swing.ButtonGroup" name="tenMinGrimanceButtonGroup">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup5">
+    <Component class="javax.swing.ButtonGroup" name="tenMinAppranceButtonGroup">
     </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -195,7 +196,7 @@
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
                                                           <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="fiveMinConfirmButton" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
@@ -207,12 +208,7 @@
                                                       </Group>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jRadioButton77" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jRadioButton69" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jRadioButton70" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
+                                                  <Component id="tenMinConfirmButton" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -258,7 +254,12 @@
                           <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="tenMinTotalLabel" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="tenMinTotalLabel" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton77" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton69" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButton70" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -436,19 +437,19 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRadioButton72" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jRadioButton77" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRadioButton70" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jRadioButton69" min="-2" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jRadioButton64" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRadioButton65" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jRadioButton67" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jRadioButton77" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jRadioButton70" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jRadioButton69" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -469,8 +470,8 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="oneMinConfirmButton" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fiveMinConfirmButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tenMinConfirmButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -489,7 +490,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton55">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="xinLvOneminButtonGroup1"/>
+              <ComponentRef name="xinLvOneminButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="1_pulse_1"/>
@@ -501,7 +502,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton54">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="xinLvOneminButtonGroup1"/>
+              <ComponentRef name="xinLvOneminButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="1_pulse_0"/>
@@ -513,7 +514,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton56">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="xinLvOneminButtonGroup1"/>
+              <ComponentRef name="xinLvOneminButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="1_pulse_2"/>
@@ -636,7 +637,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton24">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup2"/>
+              <ComponentRef name="tenMinRespirationButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_respiration_0"/>
@@ -648,7 +649,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton25">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup2"/>
+              <ComponentRef name="tenMinRespirationButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_respiration_1"/>
@@ -660,7 +661,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton26">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup2"/>
+              <ComponentRef name="tenMinRespirationButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_respiration_2"/>
@@ -708,7 +709,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton31">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup3"/>
+              <ComponentRef name="tenMinActivityButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_activity_0"/>
@@ -720,7 +721,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton49">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup3"/>
+              <ComponentRef name="tenMinActivityButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_activity_2"/>
@@ -732,7 +733,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton50">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup3"/>
+              <ComponentRef name="tenMinActivityButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_activity_1"/>
@@ -744,7 +745,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton53">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup1"/>
+              <ComponentRef name="tenMinPulseButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_pulse_1"/>
@@ -756,7 +757,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton52">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup1"/>
+              <ComponentRef name="tenMinPulseButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_pulse_2"/>
@@ -768,7 +769,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton58">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup1"/>
+              <ComponentRef name="tenMinPulseButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_pulse_0"/>
@@ -829,7 +830,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton62">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup4"/>
+              <ComponentRef name="tenMinGrimanceButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_grimace_1"/>
@@ -841,7 +842,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton63">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup4"/>
+              <ComponentRef name="tenMinGrimanceButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_grimace_2"/>
@@ -853,7 +854,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton66">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup4"/>
+              <ComponentRef name="tenMinGrimanceButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_grimace_0"/>
@@ -914,7 +915,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton69">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup5"/>
+              <ComponentRef name="tenMinAppranceButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_appearance_2"/>
@@ -926,7 +927,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton70">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup5"/>
+              <ComponentRef name="tenMinAppranceButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_appearance_1"/>
@@ -979,7 +980,7 @@
         <Component class="javax.swing.JRadioButton" name="jRadioButton77">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="buttonGroup5"/>
+              <ComponentRef name="tenMinAppranceButtonGroup"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_appearance_0"/>
@@ -1212,16 +1213,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x786e;&#x5b9a;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oneMinConfirmButtonActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="tenMinConfirmButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x786e;&#x5b9a;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tenMinConfirmButtonActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="fiveMinConfirmButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x786e;&#x5b9a;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fiveMinConfirmButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="cancelButton">
           <Properties>

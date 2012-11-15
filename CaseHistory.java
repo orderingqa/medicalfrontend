@@ -117,6 +117,11 @@ public class CaseHistory extends javax.swing.JFrame {
 
         apgarScoreButton.setText("apgar打分");
         apgarScoreButton.setEnabled(false);
+        apgarScoreButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apgarScoreButtonActionPerformed(evt);
+            }
+        });
 
         printButton.setText("打印");
         printButton.setEnabled(false);
@@ -155,26 +160,28 @@ public class CaseHistory extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(createCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 763, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(viewExistingCasesButton)
-                .addGap(61, 61, 61)
-                .addComponent(jButton3)
-                .addGap(70, 70, 70)
-                .addComponent(jButton4)
-                .addGap(66, 66, 66)
-                .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(apgarScoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 818, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 20, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(viewExistingCasesButton)
+                        .addGap(79, 79, 79)
+                        .addComponent(jButton3)
+                        .addGap(97, 97, 97)
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(apgarScoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(previousPageButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nextPageButton)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(previousPageButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nextPageButton)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -195,7 +202,7 @@ public class CaseHistory extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addComponent(createCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(viewExistingCasesButton)
@@ -229,16 +236,9 @@ public class CaseHistory extends javax.swing.JFrame {
         caseListTable.updateUI();
     }
     
-    private void createCaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCaseButtonActionPerformed
-        CentralController.displayCreateCaseWindow(this);        
-    }//GEN-LAST:event_createCaseButtonActionPerformed
-
-    private void previousPageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previousPageButtonActionPerformed
-        currentPage--;
-        updateModelFromExternal();
-    }//GEN-LAST:event_previousPageButtonActionPerformed
-
-    private void caseSelectFunction(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_caseSelectFunction
+    
+    // TODO 这个函数也提供给外部调用，因为如果对一个case做了修改，那么下面的button需要在更改保存后更新。
+    public void updateButtonForCurrentCase() {
         currentSelectIndex = caseListTable.getSelectedRow();
         Cases currentCase = (Cases) modelList.get(currentSelectIndex);
         if (currentCase.getGravida().getBabys() != null && currentCase.getGravida().getBabys().size() > 0) {
@@ -250,6 +250,19 @@ public class CaseHistory extends javax.swing.JFrame {
             apgarScoreButton.setEnabled(true);
         }
         viewExistingCasesButton.setEnabled(true);
+    }
+    
+    private void createCaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCaseButtonActionPerformed
+        CentralController.displayCreateCaseWindow(this);        
+    }//GEN-LAST:event_createCaseButtonActionPerformed
+
+    private void previousPageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previousPageButtonActionPerformed
+        currentPage--;
+        updateModelFromExternal();
+    }//GEN-LAST:event_previousPageButtonActionPerformed
+
+    private void caseSelectFunction(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_caseSelectFunction
+        updateButtonForCurrentCase();
     }//GEN-LAST:event_caseSelectFunction
 
     private void viewExistingCasesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewExistingCasesButtonActionPerformed
@@ -261,6 +274,11 @@ public class CaseHistory extends javax.swing.JFrame {
         Cases currentCase = (Cases) modelList.get(currentSelectIndex);
         CentralController.printExistCase(currentCase);
     }//GEN-LAST:event_printButtonActionPerformed
+
+    private void apgarScoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apgarScoreButtonActionPerformed
+        Cases currentCase = (Cases) modelList.get(currentSelectIndex);
+        CentralController.showBabyInputFromCaseList(currentCase, this);
+    }//GEN-LAST:event_apgarScoreButtonActionPerformed
 
     /**
      * @param args the command line arguments

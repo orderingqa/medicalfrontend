@@ -4,6 +4,7 @@
  */
 package ls.jtsk.ui;
 
+import java.awt.event.WindowEvent;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -48,6 +49,7 @@ public class CreateNewBaby extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("请输入婴儿的出生信息");
 
@@ -159,7 +161,9 @@ public class CreateNewBaby extends javax.swing.JFrame {
     }//GEN-LAST:event_girlSelectButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
-        this.dispose();
+       if (CentralController.shouldContinueMessageBox("是否要关闭录入婴儿信息窗口", "请确认您准备放弃录入婴儿信心，并关闭本窗口？")){
+           this.dispose();
+       }
     }//GEN-LAST:event_exitButtonActionPerformed
 
     private void startApgarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startApgarButtonActionPerformed
@@ -168,14 +172,29 @@ public class CreateNewBaby extends javax.swing.JFrame {
             int babyGender = boySelectButton.isSelected() ? ls.jtsk.model.Gender.BOY : ls.jtsk.model.Gender.GIRL;
             String babyBirthTime = ((String)(birthDateComBox.getSelectedItem())).replace("年","-").replace("月","-").replace("日", " ");
             babyBirthTime = babyBirthTime + birthHourComBox.getSelectedItem() + " " + birthMinComBox.getSelectedItem();
+            this.dispose();
             CentralController.saveBabyAndShowApgarScoreWindow(momId, babyGender, babyBirthTime, this.getTitle());
-        }   
+        }   else {
+            CentralController.showCommonMessageBox();
+        }
     }//GEN-LAST:event_startApgarButtonActionPerformed
 
     private void birthMinComBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthMinComBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_birthMinComBoxActionPerformed
 
+    // 组织窗口被所有的子窗口关闭
+    @Override  
+    protected void processWindowEvent(WindowEvent e) {  
+        if (e.getID() == WindowEvent.WINDOW_CLOSING)  {
+            if (CentralController.shouldContinueMessageBox("是否要关闭录入婴儿信息窗口", "请确认您准备放弃录入婴儿信心，并关闭本窗口？")){
+                this.dispose(); //直接返回，阻止默认动作，阻止窗口关闭  
+            }
+        } else {
+            super.processWindowEvent(e); //该语句会执行窗口事件的默认动作(如：隐藏)  
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -206,7 +225,7 @@ public class CreateNewBaby extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CreateNewBaby(1).setVisible(true);
+                new CreateNewBaby(0).setVisible(true);
 //                  new CreateNewBaby(0).geneareteBirthDateInput();
             }
         });

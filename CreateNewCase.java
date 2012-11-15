@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package ls.jtsk.ui;
+import java.awt.event.WindowEvent;
 import ls.jtsk.helper.CasesHelper;
 import ls.jtsk.ui.controller.CentralController;
 /**
@@ -43,11 +44,14 @@ public class CreateNewCase extends javax.swing.JFrame {
         doctorInput = new javax.swing.JTextField();
         gravidaInput = new javax.swing.JTextField();
         ageInput = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("新建病历");
+        setResizable(false);
 
-        doctorNameLabel.setText("请输入主治医师姓名");
+        doctorNameLabel.setText("请输入大夫姓名");
 
         medicalNoLabel.setText("请输入住院号");
 
@@ -69,7 +73,7 @@ public class CreateNewCase extends javax.swing.JFrame {
 
         gravidaNameLabel.setText("请输入产妇姓名");
 
-        cancelButton.setText("取消");
+        cancelButton.setText("取消并退出");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelButtonActionPerformed(evt);
@@ -89,37 +93,50 @@ public class CreateNewCase extends javax.swing.JFrame {
 
         ageInput.setText("30");
 
+        jLabel1.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel1.setText("(请输入数字)");
+
+        jLabel3.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel3.setText("(请输入数字)");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cancelButton)
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(saveButton)
+                        .addGap(86, 86, 86)
+                        .addComponent(apgarButton)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(medicalNoLabel)
+                            .addComponent(gravidaNameLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(medicalNoLabel)
-                                    .addComponent(gravidaNameLabel))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(doctorNameLabel)
-                                    .addComponent(gravidaAgeLabel)))
-                            .addComponent(saveButton)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(apgarButton)
-                                .addGap(24, 24, 24)))
-                        .addGap(39, 39, 39)
+                                .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel1))
+                            .addComponent(gravidaInput))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(38, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(doctorNameLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(gravidaAgeLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cancelButton)
+                                    .addComponent(jLabel3))))
+                        .addGap(16, 16, 16))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,14 +146,16 @@ public class CreateNewCase extends javax.swing.JFrame {
                     .addComponent(medicalNoLabel)
                     .addComponent(doctorNameLabel)
                     .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(gravidaNameLabel)
                     .addComponent(gravidaAgeLabel)
                     .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                    .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
                     .addComponent(apgarButton)
@@ -147,17 +166,47 @@ public class CreateNewCase extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        CentralController.saveCaseAndExit(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
+    
+    private boolean validInput() {
+        String medicalNoValue = medicalNoInput.getText();
+        String ageValue = ageInput.getText();
         
+        if (medicalNoValue != null && medicalNoValue.trim().length() > 0 && ageValue != null && ageValue.trim().length() > 0 
+                && doctorInput.getText() != null && doctorInput.getText().trim().length() > 0
+                && gravidaInput.getText() != null && gravidaInput.getText().trim().length() > 0 ) {
+            try {
+                Integer.parseInt(medicalNoValue);
+                Integer.parseInt(ageValue);
+                return true;
+            }
+            catch (Exception e) {
+                return false;
+            }
+        
+        }
+        return false;
+    }
+    
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        if (! validInput()) {
+            CentralController.showCommonMessageBox();    
+            return;
+        }
         this.dispose();
+        CentralController.saveCaseAndExit(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        System.exit(0);
+        if (CentralController.shouldContinueMessageBox("是否要关闭", "请确认您取消创建病历和录入产妇信息，并关闭本窗口？")){
+            this.dispose();
+        }
     }//GEN-LAST:event_cancelButtonActionPerformed
     
     private void apgarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apgarButtonActionPerformed
+        if (! validInput()) {
+            CentralController.showCommonMessageBox();    
+            return;
+        }
         this.dispose();
         CentralController.saveCaseAndShowBabyInputWindow(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
         
@@ -201,6 +250,18 @@ public class CreateNewCase extends javax.swing.JFrame {
             }
         });
     }
+    
+    @Override  
+    protected void processWindowEvent(WindowEvent e) {  
+        if (e.getID() == WindowEvent.WINDOW_CLOSING)  {
+            if (CentralController.shouldContinueMessageBox("是否要关闭", "请确认您取消创建病历和录入产妇信息，并关闭本窗口？")){
+                this.dispose(); //直接返回，阻止默认动作，阻止窗口关闭  
+            }
+         }  else {
+            super.processWindowEvent(e); //该语句会执行窗口事件的默认动作(如：隐藏)  
+        }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ageInput;
     private javax.swing.JButton apgarButton;
@@ -210,6 +271,8 @@ public class CreateNewCase extends javax.swing.JFrame {
     private javax.swing.JLabel gravidaAgeLabel;
     private javax.swing.JTextField gravidaInput;
     private javax.swing.JLabel gravidaNameLabel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField medicalNoInput;
     private javax.swing.JLabel medicalNoLabel;
     private javax.swing.JButton saveButton;

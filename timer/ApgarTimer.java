@@ -28,7 +28,22 @@ public class ApgarTimer implements Runnable {
     Color defaultBackColor = null;
     Color hightlightColor = Color.red;
     final int apgarLimitedScoreTime = 1;
+    boolean oneMinAlarmShouldStop = false;
+    boolean fiveMinAlarmShouldStop = false;
+    boolean tenMinAlarmShouldStop = false;
 
+    
+    // TODO 怎么能够一次跳一个标示符而不是一个单词
+    public void setOneMinAlarmShouldStop() {
+        oneMinAlarmShouldStop = true;
+    }
+    public void setFiveMinAlarmShouldStop() {
+        fiveMinAlarmShouldStop = true;
+    }
+    public void setTenMinAlarmShouldStop() {
+        tenMinAlarmShouldStop = true;
+    }
+    
     private void autoUpdateTimer() {
         if (second < 59) {
             second++;
@@ -82,10 +97,11 @@ public class ApgarTimer implements Runnable {
         switch (alarmMinInterval) {
             case 1:
                 if (alarmSecInternal == 0) {
-                    alarmPlay("1.wav");
+                    new Thread(new AlarmWithVoice("1.wav")).start();
                 }
                 oneMinFlashLabel.setOpaque(true);
-                if (alarmSecInternal % 2 == 1) {
+                
+                if (alarmSecInternal % 2 == 1 && !oneMinAlarmShouldStop) {
                     oneMinFlashLabel.setBackground(hightlightColor);
                 } else {
                     oneMinFlashLabel.setBackground(defaultBackColor);
@@ -97,10 +113,11 @@ public class ApgarTimer implements Runnable {
 
             case 5:
                 if (alarmSecInternal == 0) {
-                    alarmPlay("5.wav");
+                    new Thread(new AlarmWithVoice("5.wav")).start();
                 }
                 fiveMinFlashLabel.setOpaque(true);
-                if (alarmSecInternal % 2 == 1) {
+                
+                if (alarmSecInternal % 2 == 1 && !fiveMinAlarmShouldStop) {
                     fiveMinFlashLabel.setBackground(hightlightColor);
                 } else {
                     fiveMinFlashLabel.setBackground(defaultBackColor);
@@ -112,10 +129,11 @@ public class ApgarTimer implements Runnable {
 
             case 10:
                 if (alarmSecInternal == 0) {
-                    alarmPlay("10.wav");
+                    new Thread(new AlarmWithVoice("10.wav")).start();
                 }
                 tenMinFlashLabel.setOpaque(true);
-                if (alarmSecInternal % 2 == 1) {
+                
+                if (alarmSecInternal % 2 == 1 && !tenMinAlarmShouldStop) {
                     tenMinFlashLabel.setBackground(hightlightColor);
                 } else {
                     tenMinFlashLabel.setBackground(defaultBackColor);
@@ -127,7 +145,7 @@ public class ApgarTimer implements Runnable {
         }
     }
 
-    public static void registerDisplayComponent(JComponent displayTimerLabel, JComponent oneMinFlashLabel, JComponent fiveMinFlashLabel, JComponent tenMinFlashLabel) {
+    public static ApgarTimer registerDisplayComponent(JComponent displayTimerLabel, JComponent oneMinFlashLabel, JComponent fiveMinFlashLabel, JComponent tenMinFlashLabel) {
         ApgarTimer ap = new ApgarTimer();
         ap.extJLabel = (JLabel) displayTimerLabel;
         ap.oneMinFlashLabel = (JLabel) oneMinFlashLabel;
@@ -135,33 +153,10 @@ public class ApgarTimer implements Runnable {
         ap.tenMinFlashLabel = (JLabel) tenMinFlashLabel;
         ap.defaultBackColor = oneMinFlashLabel.getBackground();
         new Thread(ap).start();
+        return ap;
     }
 
-    private void alarmPlay(String fileName) {
-        try {
-            AudioInputStream ais = AudioSystem.getAudioInputStream(new File(fileName));// 获得音频输入流 
-            AudioFormat baseFormat = ais.getFormat();// 指定声音流中特定数据安排 
-//            System.out.println("baseFormat=" + baseFormat);
-            DataLine.Info info = new DataLine.Info(SourceDataLine.class, baseFormat);
-//            System.out.println("info=" + info);
-            SourceDataLine line = (SourceDataLine) AudioSystem.getLine(info);
-            // 从混频器获得源数据行 
-//            System.out.println("line=" + line);
-            line.open(baseFormat);// 打开具有指定格式的行，这样可使行获得所有所需的系统资源并变得可操作。 
-            line.start();// 允许数据行执行数据 I/O 
-            int BUFFER_SIZE = 4000 * 4;
-            int intBytes = 0;
-            byte[] audioData = new byte[BUFFER_SIZE];
-            while (intBytes != -1) {
-                intBytes = ais.read(audioData, 0, BUFFER_SIZE);// 从音频流读取指定的最大数量的数据字节，并将其放入给定的字节数组中。 
-                if (intBytes >= 0) {
-                    int outBytes = line.write(audioData, 0, intBytes);// 通过此源数据行将音频数据写入混频器。 
-                }
-            }
 
-        } catch (Exception e) {
-        }
-    }
 
     public static void main(String[] args) {
         new Thread(new ApgarTimer()).start();

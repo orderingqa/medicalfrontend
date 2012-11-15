@@ -4,6 +4,7 @@
  */
 package ls.jtsk.ui;
 
+import java.awt.event.WindowEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;
 import ls.jtsk.model.Apgar;
@@ -38,8 +39,6 @@ public class ViewExistingCase extends javax.swing.JFrame {
 
         jDialog1 = new javax.swing.JDialog();
         jDialog2 = new javax.swing.JDialog();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         medicalNoLabel = new javax.swing.JLabel();
@@ -80,17 +79,9 @@ public class ViewExistingCase extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("修改病历");
+        setResizable(false);
 
-        jButton2.setText("保存并打印");
-
-        jButton3.setText("保存");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("取消");
+        jButton4.setText("退出");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exit(evt);
@@ -166,17 +157,10 @@ public class ViewExistingCase extends javax.swing.JFrame {
                         .addComponent(babyBirthDateLabel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton3)
-                        .addGap(144, 144, 144)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4)))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -203,19 +187,12 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
+                .addComponent(jButton4)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void exit(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit
         this.dispose();
@@ -361,6 +338,16 @@ public class ViewExistingCase extends javax.swing.JFrame {
         }
     }
     
+    // 组织窗口被所有的子窗口关闭
+    @Override  
+    protected void processWindowEvent(WindowEvent e) {  
+        if (e.getID() == WindowEvent.WINDOW_CLOSING)  
+            this.dispose(); //直接返回，阻止默认动作，阻止窗口关闭  
+        else {
+            super.processWindowEvent(e); //该语句会执行窗口事件的默认动作(如：隐藏)  
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -402,8 +389,6 @@ public class ViewExistingCase extends javax.swing.JFrame {
     private javax.swing.JLabel doctorNameLabel;
     private javax.swing.JLabel gravidaAgeLabel;
     private javax.swing.JLabel gravidaNameLabel;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
