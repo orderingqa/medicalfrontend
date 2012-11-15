@@ -120,6 +120,11 @@ public class CaseHistory extends javax.swing.JFrame {
 
         printButton.setText("¥Ú”°");
         printButton.setEnabled(false);
+        printButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                printButtonActionPerformed(evt);
+            }
+        });
 
         previousPageButton.setText("…œ“ª“≥");
         previousPageButton.addActionListener(new java.awt.event.ActionListener() {
@@ -251,6 +256,11 @@ public class CaseHistory extends javax.swing.JFrame {
         Cases currentCase = (Cases) modelList.get(currentSelectIndex);
         CentralController.viewExistingCase(currentCase);
     }//GEN-LAST:event_viewExistingCasesButtonActionPerformed
+
+    private void printButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printButtonActionPerformed
+        Cases currentCase = (Cases) modelList.get(currentSelectIndex);
+        CentralController.printExistCase(currentCase);
+    }//GEN-LAST:event_printButtonActionPerformed
 
     /**
      * @param args the command line arguments

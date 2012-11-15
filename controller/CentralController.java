@@ -15,7 +15,11 @@ import ls.jtsk.helper.ApgarHelper;
 import ls.jtsk.helper.BabyHelper;
 import ls.jtsk.helper.CasesHelper;
 import ls.jtsk.model.Apgar;
+import ls.jtsk.model.Baby;
 import ls.jtsk.model.Cases;
+import ls.jtsk.model.Doctor;
+import ls.jtsk.model.Gender;
+import ls.jtsk.model.Gravida;
 import ls.jtsk.ui.APGARTab;
 import ls.jtsk.ui.CaseHistory;
 import ls.jtsk.ui.CreateNewBaby;
@@ -75,27 +79,53 @@ public class CentralController {
         ApgarHelper.addApgar(momId, babyId, collections);
         StringBuffer printableString = new StringBuffer();
         printableString.append(apgarFrame.getTitle()+"\r\n");
-        printableString.append("评分时间   心率   呼吸    肌张力    对刺激反应、怪象   颜色\r\n");
-        printableString.append("----------------------------------------------------------------------------\r\n\r\n");
-        Iterator it = collections.iterator();
-        while (it.hasNext()) { // TODO 这里需要sort，按照1,5,10分钟的打分结果进行排序
-            // TODO 这里还需要严格的控制待打印的数据的format，比如最多几个空格，这样就能得到一个良好format的txt文件。
-            Apgar apgar = (Apgar) it.next();
-            printableString.append(apgar.toPrintableString()+"\r\n\r\n\r\n\r\n");
-        }
+        printableString.append(getPureApgarPrintableString(collections));
         String fileName = new Long(System.currentTimeMillis()).toString()+".txt";
-        try{
-            writeToFile(fileName, printableString.toString());
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
         
-        callExternalCommand("notepad.exe "+fileName);
+        printToFileAndOpenNotePad(fileName, printableString.toString());
    
         // 记事本打印程序完成后，我还是需要原生的打印研究，这个是low priority。
         apgarFrame.dispose();
         if (caseHistory != null) caseHistory.updateModelFromExternal();
+    }
+    
+    
+    public static void printExistCase(Cases existCase) {
+        String strForPrint = getPrintableStringFromCase(existCase);
+        String fileName = new Long(System.currentTimeMillis()).toString()+".txt";
+        printToFileAndOpenNotePad(fileName, strForPrint);
+    }
+    
+    private static String getPrintableStringFromCase(Cases existCase) {
+        StringBuffer printableString = new StringBuffer();
+        Gravida gravida = existCase.getGravida();
+        Doctor doctor = existCase.getDoctor();
+        Baby firstBaby = (Baby)gravida.getBabys().toArray()[0];
+        Collection apgarCollection = firstBaby.getApgars();
+        String hopspitalString = "大夫姓名： " + doctor.getDoctorName() + "    病历号： " + gravida.getMedicNo() + "\r\n";
+        String gravidaString = "产妇姓名： " + gravida.getName() + "    年龄： " + gravida.getAge() + "\r\n";
+        String babyString = "婴儿出生时间： " + firstBaby.getBirthTime() + "    婴儿性别： " + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ) + "\r\n"; 
+        printableString.append(hopspitalString);
+        printableString.append(gravidaString);
+        printableString.append(babyString);
+        printableString.append(getPureApgarPrintableString(apgarCollection));
+        return printableString.toString();
+    }
+    
+    
+    private static String getPureApgarPrintableString(Collection collections) {
+        StringBuffer apgarPrString = new StringBuffer();
+        apgarPrString.append("评分时间   心率   呼吸    肌张力    对刺激反应、怪象   颜色\r\n");
+        apgarPrString.append("----------------------------------------------------------------------------\r\n\r\n");
+        Iterator it = collections.iterator();
+        while (it.hasNext()) { // TODO 这里需要sort，按照1,5,10分钟的打分结果进行排序
+            // TODO 这里还需要严格的控制待打印的数据的format，比如最多几个空格，这样就能得到一个良好format的txt文件。
+            Apgar apgar = (Apgar) it.next();
+            apgarPrString.append(apgar.toPrintableString()+"\r\n\r\n\r\n\r\n");
+        }
+        
+        // TODO 这里需要对没有打分的apgar时间间隔进行判定，并全部显示未打分。
+        return apgarPrString.toString();
     }
     
     // TODO 需要返回值以确定是否写文件成功，因为IO极大程度会失败
@@ -134,6 +164,17 @@ public class CentralController {
     
     public static void viewExistingCase(Cases existCase) {
         new ViewExistingCase(existCase).setVisible(true);
+    }
+
+    private static void printToFileAndOpenNotePad(String fileName, String printableString) {
+        try{
+            writeToFile(fileName, printableString);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        callExternalCommand("notepad.exe "+fileName);
     }
     
 }
