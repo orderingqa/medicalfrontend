@@ -12,6 +12,7 @@ import ls.jtsk.model.Apgarinterval;
 import ls.jtsk.model.Baby;
 import ls.jtsk.model.Cases;
 import ls.jtsk.model.Gender;
+import ls.jtsk.ui.model.ApgarTableModel;
 
 /**
  *
@@ -208,8 +209,11 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
                 babyBirthDateLabel.setText(baby.getBirthTime());
                 babyGenderLabel.setText(baby.getGender() == Gender.BOY ? "男" : "女");
-                if (baby.getApgars() != null && baby.getApgars().size() > 0) {
-                    apgarScoreTable.setModel(new tableModel(baby.getApgars().toArray()));
+//              if (baby.getApgars() != null && baby.getApgars().size() > 0) { 
+// TODO [待总] 只用baby.getApgars()不为空来决定显示，就解决了如果一个打分也没做，那么我们会统一显示成没有打分
+// 所有的显示逻辑都由ApgarTableModel来控制。
+                if (baby.getApgars() != null) {
+                    apgarScoreTable.setModel(new ApgarTableModel(baby.getApgars().toArray()));
                 }
             } else {
                 babyBirthDateLabel.setText("");
@@ -224,117 +228,6 @@ public class ViewExistingCase extends javax.swing.JFrame {
 //                {"皮肤颜色", null, null, null},
 //                {"总分", null, null, null}
 //            };
-        }
-    }
-    
-    private class tableModel  implements TableModel {
-
-        String[] columnStrings = new String [] {"apgar评分项", "1分钟分数", "5分钟分数", "10分钟分数"};
-        String[] rowTitle = new String[] {"心率(次/分)", "呼吸", "肌张力", "对刺激反应、怪象", "皮肤颜色", "总分"};
-        Object[] apgars = null;
-                
-        public tableModel(Object[] apgars){
-            this.apgars = apgars;
-        }
-        
-        @Override
-        public int getRowCount() {
-            return 6;
-        }
-
-        @Override
-        public int getColumnCount() {
-            return columnStrings.length;
-        }
-
-        @Override
-        public String getColumnName(int columnIndex) {
-            return columnStrings[columnIndex];
-        }
-
-        @Override
-        public Class<?> getColumnClass(int columnIndex) {
-            return String.class;
-        }
-
-        @Override
-        public boolean isCellEditable(int rowIndex, int columnIndex) {
-            return false;
-        }
-
-        @Override
-        public Object getValueAt(int rowIndex, int columnIndex) {
-            String apgarResult = null;
-            switch (columnIndex) {
-                case 0 :
-                    apgarResult = rowTitle[rowIndex];
-                    break;
-                case 1: // 第1列表示1分钟的apgar分数，具体是哪个指标要看行号，也即rowIndex。
-                    apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 1);
-                    break;
-                case 2: // 第2列表示5分钟的apgar分数
-                    apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 5);
-                    break;
-                case 3: // 第3列表示10分钟的apgar分数
-                    apgarResult = getApgarValueFromIndex(rowIndex, (Object[]) apgars, 10);
-                    break;
-                default: ;
-            }
-            return apgarResult;
-        }
-
-        
-        // 这个函数应该给所有的打印使用
-        private String getApgarValueFromIndex(int apgarTypeIndex, Object[] apgars, int apgarInterval) {
-            String apgarString = null;
-            Apgar ap = null;
-            for (int i=0; i<apgars.length; i++) {
-                if (((Apgar) apgars[i]).getApgarInterval() == apgarInterval) {
-                    ap = (Apgar) apgars[i];
-                }
-            }
-            // 如果apgar在这一分钟就没有，则直接返回未打分
-            // TODO 目前的方法我觉得已经算是优雅，因为后台只会返回正确的值，没打分为-1，打完分为0,1,2。
-            // UI调用时进行data到展现的转换工作。
-            if (ap == null) return "未打分";
-            switch (apgarTypeIndex) {
-                case 0:
-                    apgarString = ap.getPulse() < 0 ? "未打分" : new Integer(ap.getPulse()).toString();
-                    break;
-                case 1:
-                    apgarString = ap.getRespiration() < 0 ? "未打分" : new Integer(ap.getRespiration()).toString();
-                    break;
-                case 2:
-                    apgarString = ap.getActivity() < 0 ? "未打分" : new Integer(ap.getActivity()).toString();
-                    break;
-                case 3:
-                    apgarString = ap.getGrimace() < 0 ? "未打分" : new Integer(ap.getGrimace()).toString();
-                    break;
-                case 4:
-                    apgarString = ap.getAppearance() < 0 ? "未打分" : new Integer(ap.getAppearance()).toString();
-                    break;
-                case 5:
-                    apgarString = new Integer(ap.getSum()).toString();           
-                    break;
-                default: ;                      
-            } 
-            return apgarString;
-        }
-                      
-                
-        @Override
-        public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-//            throw new UnsupportedOperationException("Not supported yet.");
-        }
-
-        @Override
-        public void addTableModelListener(TableModelListener l) {
-//            throw new UnsupportedOperationException("Not supported yet.");
-        }
-
-        @Override
-        public void removeTableModelListener(TableModelListener l) {
-//            throw new UnsupportedOperationException("Not supported yet.");
         }
     }
     

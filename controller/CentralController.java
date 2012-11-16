@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.TableModel;
 import ls.jtsk.helper.ApgarHelper;
 import ls.jtsk.helper.BabyHelper;
 import ls.jtsk.helper.CasesHelper;
@@ -26,6 +27,8 @@ import ls.jtsk.ui.CaseHistory;
 import ls.jtsk.ui.CreateNewBaby;
 import ls.jtsk.ui.CreateNewCase;
 import ls.jtsk.ui.ViewExistingCase;
+import ls.jtsk.ui.assistant.ApgarPrintableTable;
+import ls.jtsk.ui.model.ApgarTableModel;
 
 /**
  *
@@ -112,9 +115,15 @@ public class CentralController {
     
     
     public static void printExistCase(Cases existCase) {
-        String strForPrint = getPrintableStringFromCase(existCase);
-        String fileName = new Long(System.currentTimeMillis()).toString()+".txt";
-        printToFileAndOpenNotePad(fileName, strForPrint);
+//      String strForPrint = getPrintableStringFromCase(existCase);        
+        if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
+            Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
+            if (baby.getApgars() != null) {
+                String strForPrint = ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(baby.getApgars().toArray()));
+                String fileName = new Long(System.currentTimeMillis()).toString()+".txt";
+                printToFileAndOpenNotePad(fileName, strForPrint);
+            }
+        }
     }
     
     private static String getPrintableStringFromCase(Cases existCase) {

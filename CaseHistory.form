@@ -45,6 +45,8 @@
                       <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+                      <Component id="printButton" min="-2" pref="102" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                       <Component id="apgarScoreButton" min="-2" pref="102" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -52,14 +54,9 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="printButton" min="-2" pref="102" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="previousPageButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="nextPageButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <Component id="previousPageButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="nextPageButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
