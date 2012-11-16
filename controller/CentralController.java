@@ -99,6 +99,7 @@ public class CentralController {
         if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
+    // 打完分后立刻调用打印功能
     public static void saveApgarAndPrint(long momId, long babyId, Collection collections, JFrame apgarFrame) {
         ApgarHelper.addApgar(momId, babyId, collections);
         StringBuffer printableString = new StringBuffer();
@@ -113,49 +114,55 @@ public class CentralController {
         if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
-    
+    // 从case list中调用打印功能
     public static void printExistCase(Cases existCase) {
 //      String strForPrint = getPrintableStringFromCase(existCase);        
         if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
+            String caseTitle = getPrintableCasesTitle(existCase);
             Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
             if (baby.getApgars() != null) {
-                String strForPrint = ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(baby.getApgars().toArray()));
+                String strForPrint = caseTitle + ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(baby.getApgars().toArray()));
                 String fileName = new Long(System.currentTimeMillis()).toString()+".txt";
+                //TODO [待总] 良好的封装函数，会大大减少调整代码和添加新feature的工作量。
                 printToFileAndOpenNotePad(fileName, strForPrint);
             }
         }
     }
     
-    private static String getPrintableStringFromCase(Cases existCase) {
+    private static String getPrintableCasesTitle(Cases existCase) {
         StringBuffer printableString = new StringBuffer();
         Gravida gravida = existCase.getGravida();
         Doctor doctor = existCase.getDoctor();
         Baby firstBaby = (Baby)gravida.getBabys().toArray()[0];
         Collection apgarCollection = firstBaby.getApgars();
-        String hopspitalString = "大夫姓名： " + doctor.getDoctorName() + "    病历号： " + gravida.getMedicNo() + "\r\n";
-        String gravidaString = "产妇姓名： " + gravida.getName() + "    年龄： " + gravida.getAge() + "\r\n";
-        String babyString = "婴儿出生时间： " + firstBaby.getBirthTime() + "    婴儿性别： " + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ) + "\r\n"; 
+        String hopspitalString = ApgarPrintableTable.getFormatedString("大夫姓名： " + doctor.getDoctorName(), "%36s") + ApgarPrintableTable.getFormatedString("病历号  ： " + gravida.getMedicNo(), "%20s") + "\r\n";
+        String gravidaString = ApgarPrintableTable.getFormatedString("产妇姓名： " + gravida.getName(), "%36s") + ApgarPrintableTable.getFormatedString("产妇年龄： " + gravida.getAge(), "%20s") + "\r\n";
+        String babyString = ApgarPrintableTable.getFormatedString("婴儿出生时间： " + firstBaby.getBirthTime(), "%36s") + ApgarPrintableTable.getFormatedString("婴儿性别： " + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ), "%20s") + "\r\n"; 
         printableString.append(hopspitalString);
         printableString.append(gravidaString);
         printableString.append(babyString);
-        printableString.append(getPureApgarPrintableString(apgarCollection));
+        printableString.append("\r\n\r\n");
+//        printableString.append(getPureApgarPrintableString(apgarCollection));
         return printableString.toString();
     }
     
     
     private static String getPureApgarPrintableString(Collection collections) {
-        StringBuffer apgarPrString = new StringBuffer();
-        apgarPrString.append("评分时间   心率   呼吸    肌张力    对刺激反应、怪象   颜色\r\n");
-        apgarPrString.append("----------------------------------------------------------------------------\r\n\r\n");
-        Iterator it = collections.iterator();
-        while (it.hasNext()) { // TODO 这里需要sort，按照1,5,10分钟的打分结果进行排序
-            // TODO 这里还需要严格的控制待打印的数据的format，比如最多几个空格，这样就能得到一个良好format的txt文件。
-            Apgar apgar = (Apgar) it.next();
-            apgarPrString.append(apgar.toPrintableString()+"\r\n\r\n\r\n\r\n");
-        }
+//        StringBuffer apgarPrString = new StringBuffer();
+//        apgarPrString.append("评分时间   心率   呼吸    肌张力    对刺激反应、怪象   颜色\r\n");
+//        apgarPrString.append("----------------------------------------------------------------------------\r\n\r\n");
+//        Iterator it = collections.iterator();
+//        while (it.hasNext()) { // TODO 这里需要sort，按照1,5,10分钟的打分结果进行排序
+//            // TODO 这里还需要严格的控制待打印的数据的format，比如最多几个空格，这样就能得到一个良好format的txt文件。
+//            Apgar apgar = (Apgar) it.next();
+//            apgarPrString.append(apgar.toPrintableString()+"\r\n\r\n\r\n\r\n");
+//        }
+//        
+//        // TODO 这里需要对没有打分的apgar时间间隔进行判定，并全部显示未打分。
+//        return apgarPrString.toString();
         
-        // TODO 这里需要对没有打分的apgar时间间隔进行判定，并全部显示未打分。
-        return apgarPrString.toString();
+        // TODO [待总] 调用最新的打印统一接口
+        return ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(collections.toArray()));
     }
     
     // TODO 需要返回值以确定是否写文件成功，因为IO极大程度会失败
