@@ -22,7 +22,7 @@ public class ApgarPrintableTable {
                 sb.append("\r\n\r\n");
                 for (int j=0; j<tm.getColumnCount(); j++) {
                     if (i == 0) {
-                        getFormatedString(tm.getColumnName(i), "%30s");
+                        getFormatedString(tm.getColumnName(j), "%30s");
                     } else {
                         try {
                             sb.append(String.format("%20d", tm.getValueAt(i, j)));

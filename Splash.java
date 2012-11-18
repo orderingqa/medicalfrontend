@@ -72,6 +72,7 @@ public static void main(String d[]){
 //       s.setValue(10*i);
 //       try {Thread.sleep(1*1000);} catch (InterruptedException e) {e.printStackTrace();}
 //   }
+   try {Thread.sleep(5000);} catch (InterruptedException e) {e.printStackTrace();}
    ch.setLocationRelativeTo(null);
    ch.setVisible(true);
    s.stopSplash();

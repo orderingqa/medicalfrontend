@@ -135,13 +135,13 @@ public class CentralController {
         Doctor doctor = existCase.getDoctor();
         Baby firstBaby = (Baby)gravida.getBabys().toArray()[0];
         Collection apgarCollection = firstBaby.getApgars();
-        String hopspitalString = ApgarPrintableTable.getFormatedString("大夫姓名： " + doctor.getDoctorName(), "%36s") + ApgarPrintableTable.getFormatedString("病历号  ： " + gravida.getMedicNo(), "%20s") + "\r\n";
-        String gravidaString = ApgarPrintableTable.getFormatedString("产妇姓名： " + gravida.getName(), "%36s") + ApgarPrintableTable.getFormatedString("产妇年龄： " + gravida.getAge(), "%20s") + "\r\n";
-        String babyString = ApgarPrintableTable.getFormatedString("婴儿出生时间： " + firstBaby.getBirthTime(), "%36s") + ApgarPrintableTable.getFormatedString("婴儿性别： " + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ), "%20s") + "\r\n"; 
+        String hopspitalString = "大夫姓名：" + doctor.getDoctorName() + " 病历号  ：" + gravida.getMedicNo() + " -- ";
+        String gravidaString = "产妇姓名：" + gravida.getName() + " 产妇年龄：" + gravida.getAge() + " -- ";
+        String babyString = "婴儿出生时间：" + firstBaby.getBirthTime() + " 婴儿性别：" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ); 
         printableString.append(hopspitalString);
         printableString.append(gravidaString);
         printableString.append(babyString);
-        printableString.append("\r\n\r\n");
+        printableString.append("\r\n");
 //        printableString.append(getPureApgarPrintableString(apgarCollection));
         return printableString.toString();
     }

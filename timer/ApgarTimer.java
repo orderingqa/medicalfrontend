@@ -31,7 +31,11 @@ public class ApgarTimer implements Runnable {
     boolean oneMinAlarmShouldStop = false;
     boolean fiveMinAlarmShouldStop = false;
     boolean tenMinAlarmShouldStop = false;
-
+    boolean timerContinue = true;
+    
+    public void stopTimer() {
+        timerContinue = false;
+    }
     
     // TODO 怎么能够一次跳一个标示符而不是一个单词
     public void setOneMinAlarmShouldStop() {
@@ -81,7 +85,8 @@ public class ApgarTimer implements Runnable {
 
     @Override
     public void run() {
-        while (true) {
+        // 当ui界面关闭时，需要释放掉timer资源，停掉timer线程，不然会傻傻的一直叫着。
+        while (timerContinue) {
             autoUpdateTimer();
             fillExternalComponent(extJLabel, getTimerModel());
             triggerAlarm(getMin(), getSec());

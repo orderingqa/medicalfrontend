@@ -265,7 +265,7 @@ public class CreateNewBaby extends javax.swing.JFrame {
         birthDateComBox.setSelectedIndex(1);
 
         cal.setTime(todayForTime);
-        for (int i=0; i<23; i++) {
+        for (int i=0; i<24; i++) {
             birthHourComBox.addItem(giveMeTwoBytes(i));
         }
         
