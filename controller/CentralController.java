@@ -105,7 +105,7 @@ public class CentralController {
         StringBuffer printableString = new StringBuffer();
         printableString.append(apgarFrame.getTitle()+"\r\n");
         printableString.append(getPureApgarPrintableString(collections));
-        String fileName = new Long(System.currentTimeMillis()).toString()+".txt";
+        String fileName ="temp/" + new Long(System.currentTimeMillis()).toString()+".txt";
         
         printToFileAndOpenNotePad(fileName, printableString.toString());
    
@@ -122,7 +122,7 @@ public class CentralController {
             Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
             if (baby.getApgars() != null) {
                 String strForPrint = caseTitle + ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(baby.getApgars().toArray()));
-                String fileName = new Long(System.currentTimeMillis()).toString()+".txt";
+                String fileName ="temp/" + new Long(System.currentTimeMillis()).toString()+".txt";
                 //TODO [待总] 良好的封装函数，会大大减少调整代码和添加新feature的工作量。
                 printToFileAndOpenNotePad(fileName, strForPrint);
             }
@@ -141,7 +141,7 @@ public class CentralController {
         printableString.append(hopspitalString);
         printableString.append(gravidaString);
         printableString.append(babyString);
-        printableString.append("\r\n-----------------------------------------------------------------------------------------------");
+        printableString.append("\r\n-------------------------------------------------------------------------------------------------");
 //        printableString.append(getPureApgarPrintableString(apgarCollection));
         return printableString.toString();
     }

@@ -206,7 +206,7 @@ public class StartUI extends javax.swing.JPanel {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        JFrame fm=new JFrame("BackGround Image Test");
+        JFrame fm=new JFrame("阿氏评分法自动评分仪");
         StartUI panel=new StartUI();
         fm.getContentPane().add(panel);
         fm.setSize(858,669);

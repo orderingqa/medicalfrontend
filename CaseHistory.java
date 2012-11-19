@@ -240,14 +240,20 @@ public class CaseHistory extends javax.swing.JFrame {
     // TODO 这个函数也提供给外部调用，因为如果对一个case做了修改，那么下面的button需要在更改保存后更新。
     public void updateButtonForCurrentCase() {
         currentSelectIndex = caseListTable.getSelectedRow();
-        Cases currentCase = (Cases) modelList.get(currentSelectIndex);
-        if (currentCase.getGravida().getBabys() != null && currentCase.getGravida().getBabys().size() > 0) {
+        // 没有选中任何case时，不应该去更新按钮状态，不然数组越界，因为currentSelectIndex为-1
+        if (currentSelectIndex > -1) {
+            Cases currentCase = (Cases) modelList.get(currentSelectIndex);
+            if (currentCase.getGravida().getBabys() != null && currentCase.getGravida().getBabys().size() > 0) {
 //            int babyNum = currentCase.getGravida().getBabys().size();
-            printButton.setEnabled(true);
-            apgarScoreButton.setEnabled(false);
+                printButton.setEnabled(true);
+                apgarScoreButton.setEnabled(false);
+            } else {
+                printButton.setEnabled(false);
+                apgarScoreButton.setEnabled(true);
+            }
         } else {
             printButton.setEnabled(false);
-            apgarScoreButton.setEnabled(true);
+            apgarScoreButton.setEnabled(false);
         }
         viewExistingCasesButton.setEnabled(true);
     }
