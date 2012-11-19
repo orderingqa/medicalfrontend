@@ -15,6 +15,7 @@ import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
+import ls.jtsk.ui.APGARTab;
 
 /**
  *
@@ -22,6 +23,7 @@ import javax.swing.JLabel;
  */
 public class ApgarTimer implements Runnable {
 
+    private APGARTab at = null;
     private int minute = 0, second = 0;
     JLabel extJLabel = null;
     JLabel oneMinFlashLabel = null, fiveMinFlashLabel = null, tenMinFlashLabel = null;
@@ -114,6 +116,7 @@ public class ApgarTimer implements Runnable {
                 break;
             case 1 + apgarLimitedScoreTime:
                 oneMinFlashLabel.setBackground(defaultBackColor);
+                if (this.at != null) {at.disableOneMinScoreButton();}
                 break;
 
             case 5:
@@ -130,6 +133,7 @@ public class ApgarTimer implements Runnable {
                 break;
             case 5 + apgarLimitedScoreTime:
                 fiveMinFlashLabel.setBackground(defaultBackColor);
+                if (this.at != null) {at.disableFiveMinScoreButton();}
                 break;
 
             case 10:
@@ -146,17 +150,19 @@ public class ApgarTimer implements Runnable {
                 break;
             case 10 + apgarLimitedScoreTime:
                 tenMinFlashLabel.setBackground(defaultBackColor);
+                if (this.at != null) {at.disableTenMinScoreButton();}
             default:
         }
     }
 
-    public static ApgarTimer registerDisplayComponent(JComponent displayTimerLabel, JComponent oneMinFlashLabel, JComponent fiveMinFlashLabel, JComponent tenMinFlashLabel) {
+    public static ApgarTimer registerDisplayComponent(APGARTab apt, JComponent displayTimerLabel, JComponent oneMinFlashLabel, JComponent fiveMinFlashLabel, JComponent tenMinFlashLabel) {
         ApgarTimer ap = new ApgarTimer();
         ap.extJLabel = (JLabel) displayTimerLabel;
         ap.oneMinFlashLabel = (JLabel) oneMinFlashLabel;
         ap.fiveMinFlashLabel = (JLabel) fiveMinFlashLabel;
         ap.tenMinFlashLabel = (JLabel) tenMinFlashLabel;
         ap.defaultBackColor = oneMinFlashLabel.getBackground();
+        ap.at = apt;
         new Thread(ap).start();
         return ap;
     }

@@ -31,7 +31,7 @@ public class APGARTab extends javax.swing.JFrame {
      */
     public APGARTab(long momId, long babyId) {
         initComponents();
-        ap = ApgarTimer.registerDisplayComponent(apgarTimerLabel, oneMinFlashLabel, fiveMinFlashLabel, tenMinFlashLabel);
+        ap = ApgarTimer.registerDisplayComponent(this, apgarTimerLabel, oneMinFlashLabel, fiveMinFlashLabel, tenMinFlashLabel);
         this.momId = momId;
         this.babyId = babyId;
     }
@@ -1209,11 +1209,7 @@ public class APGARTab extends javax.swing.JFrame {
     // TODO 通过引用了一个apgarTimer对象的方式来更新定时器的内部状态，顾不着思考是不是好了。
     private void oneMinConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneMinConfirmButtonActionPerformed
         ap.setOneMinAlarmShouldStop();
-        disableAllRadioButtonsAtEnumeration(xinLvOneminButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(huXiOneminButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(jiZhangLiOneminButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(ciJiOneminButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(fuSeOneMinButtonGroup.getElements());
+        disableOneMinScoreButton();
         
     }//GEN-LAST:event_oneMinConfirmButtonActionPerformed
 
@@ -1225,20 +1221,12 @@ public class APGARTab extends javax.swing.JFrame {
     
     private void tenMinConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenMinConfirmButtonActionPerformed
         ap.setTenMinAlarmShouldStop();
-        disableAllRadioButtonsAtEnumeration(tenMinPulseButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(tenMinGrimanceButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(tenMinRespirationButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(tenMinActivityButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(tenMinAppranceButtonGroup.getElements());
+        disableTenMinScoreButton();
     }//GEN-LAST:event_tenMinConfirmButtonActionPerformed
 
     private void fiveMinConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveMinConfirmButtonActionPerformed
         ap.setFiveMinAlarmShouldStop();
-        disableAllRadioButtonsAtEnumeration(fiveMinPulsebuttonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(fiveMinRespirationButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(fiveMinAppearanceButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(fiveMinGrimaceButtonGroup.getElements());
-        disableAllRadioButtonsAtEnumeration(fiveMinActivityButtonGroup.getElements());
+        disableFiveMinScoreButton();
     }//GEN-LAST:event_fiveMinConfirmButtonActionPerformed
 
     
@@ -1425,4 +1413,28 @@ public class APGARTab extends javax.swing.JFrame {
     private javax.swing.JLabel tenMinTotalLabel;
     private javax.swing.ButtonGroup xinLvOneminButtonGroup;
     // End of variables declaration//GEN-END:variables
+
+    public void disableOneMinScoreButton() {
+        disableAllRadioButtonsAtEnumeration(xinLvOneminButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(huXiOneminButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(jiZhangLiOneminButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(ciJiOneminButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(fuSeOneMinButtonGroup.getElements());
+    }
+
+    public void disableTenMinScoreButton() {
+        disableAllRadioButtonsAtEnumeration(tenMinPulseButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(tenMinGrimanceButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(tenMinRespirationButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(tenMinActivityButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(tenMinAppranceButtonGroup.getElements());
+    }
+
+    public void disableFiveMinScoreButton() {
+        disableAllRadioButtonsAtEnumeration(fiveMinPulsebuttonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(fiveMinRespirationButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(fiveMinAppearanceButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(fiveMinGrimaceButtonGroup.getElements());
+        disableAllRadioButtonsAtEnumeration(fiveMinActivityButtonGroup.getElements());
+    }
 }
