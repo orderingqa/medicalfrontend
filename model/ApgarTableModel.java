@@ -32,7 +32,7 @@ public class ApgarTableModel implements TableModel {
         
         @Override
         public int getRowCount() {
-            return 6;
+            return rowTitle.length;
         }
 
         @Override

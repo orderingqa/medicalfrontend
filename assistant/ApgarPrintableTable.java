@@ -14,22 +14,22 @@ import javax.swing.table.TableModel;
  * @author liushuai
  */
 public class ApgarPrintableTable {
-
     public static String getPrintableApgarString(TableModel tm) {
         StringBuffer sb = new StringBuffer();
         if (tm != null) {
+            // title需要单独处理
+            sb.append("\r\n");
+            for (int j=0; j<tm.getColumnCount(); j++) {
+                sb.append(getFormatedString(tm.getColumnName(j), "%20s"));
+            }
             for (int i=0; i<tm.getRowCount(); i++) {
-                sb.append("\r\n\r\n");
-                for (int j=0; j<tm.getColumnCount(); j++) {
-                    if (i == 0) {
-                        getFormatedString(tm.getColumnName(j), "%30s");
-                    } else {
-                        try {
-                            sb.append(String.format("%20d", tm.getValueAt(i, j)));
-                        } catch (Exception e) {
-                            sb.append(getFormatedString((String)tm.getValueAt(i, j) , "%30s"));
-                        }
-                   }
+                sb.append("\r\n");
+                for (int j=0; j<tm.getColumnCount(); j++) {       
+                    try {
+                        sb.append(String.format("%20d", tm.getValueAt(i, j)));
+                    } catch (Exception e) {
+                        sb.append(getFormatedString((String)tm.getValueAt(i, j) , "%20s"));
+                    }
                 } 
             }
         }

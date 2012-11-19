@@ -67,6 +67,7 @@ public class CaseHistory extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("阿氏评分法自动评分仪PC版");
         setResizable(false);
 
         caseListTable.setModel(new javax.swing.table.DefaultTableModel(

@@ -14,12 +14,17 @@ import ls.jtsk.model.Apgar;
  */
 public class ApgarFactory {
     static ApgarFactory af = null;
+    private long existingBabyId = 0;
     HashMap <Integer, Apgar> apgarHash = new HashMap <Integer, Apgar> ();
-    private ApgarFactory() {
+    private ApgarFactory(long newBabyId) {
+        existingBabyId = newBabyId;
     }
-    public static ApgarFactory getApgarFactory() {
-        if (af != null) return af;
-        af = new ApgarFactory();
+    
+    // TODO [待总] 每一个baby自身打分时，需要同一个factory
+    // 不同的baby打分时，需要不同的factory，故做这个单例时，需要条件。
+    public static ApgarFactory getApgarFactory(long newBabyId) {
+        if (af != null && af.existingBabyId == newBabyId) return af;
+        af = new ApgarFactory(newBabyId);
         return af;
     }
     public Apgar getApgarByInterval(int apgarInternal) {

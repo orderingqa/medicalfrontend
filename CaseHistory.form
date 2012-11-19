@@ -3,6 +3,7 @@
 <Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="&#x963f;&#x6c0f;&#x8bc4;&#x5206;&#x6cd5;&#x81ea;&#x52a8;&#x8bc4;&#x5206;&#x4eea;PC&#x7248;"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>

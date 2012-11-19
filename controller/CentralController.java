@@ -60,7 +60,7 @@ public class CentralController {
         // TODO 怎么样才能使得我想运行上下两个赋值可以通过配置来完成，而不是修改代码？这样我可以随时测试有没有db的代码。
 //        long newCaseId = 0;
         CreateNewBaby cnb = new CreateNewBaby(newCaseId);
-        cnb.setTitle("病历号：" + medicalNo + "    产妇："+gravidaName);
+        cnb.setTitle("大夫姓名:"+doctorName+" 病历号:" + medicalNo + "--产妇姓名："+gravidaName+" 年龄年龄:"+age);
         cnb.setVisible(true);
         if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
@@ -70,7 +70,7 @@ public class CentralController {
             caseHistory = ch;
             long caseId = existCase.getId();
             CreateNewBaby cnb = new CreateNewBaby(caseId);
-            cnb.setTitle("病历号：" + existCase.getGravida().getMedicNo() + "    产妇："+existCase.getGravida().getName());
+            cnb.setTitle("大夫姓名：" + existCase.getDoctor().getDoctorName() +" 病历号:" + existCase.getGravida().getMedicNo() + "--产妇姓名："+existCase.getGravida().getName()+" 年龄年龄:"+existCase.getGravida().getAge());
             cnb.setVisible(true);
         } else {
             showCommonMessageBox();
@@ -82,7 +82,7 @@ public class CentralController {
         long babyId = BabyHelper.addBaby(momId, babyGender, babyBirthTime); // update backend model
 //        long babyId = 0;
         APGARTab apgarWindow = new APGARTab(momId, babyId);
-        apgarWindow.setTitle(babyWindowTitle+" 性别： " + babyGender + " 出生时间: " + babyBirthTime);
+        apgarWindow.setTitle(babyWindowTitle+"--性别:" + (babyGender == Gender.BOY ? "男" : "女" ) + " 出生时间:" + babyBirthTime);
         apgarWindow.setVisible(true);
         if (caseHistory != null) {
             caseHistory.updateModelFromExternal();
@@ -92,7 +92,7 @@ public class CentralController {
     
 
 
-    
+    // 打完分后关闭apgar窗口，不打印
     public static void saveApgarAndDisposeWindow(long momId, long babyId, Collection collections, JFrame apgarFrame){
         ApgarHelper.addApgar(momId, babyId, collections);
         apgarFrame.dispose();
@@ -135,13 +135,13 @@ public class CentralController {
         Doctor doctor = existCase.getDoctor();
         Baby firstBaby = (Baby)gravida.getBabys().toArray()[0];
         Collection apgarCollection = firstBaby.getApgars();
-        String hopspitalString = "大夫姓名：" + doctor.getDoctorName() + " 病历号  ：" + gravida.getMedicNo() + " -- ";
-        String gravidaString = "产妇姓名：" + gravida.getName() + " 产妇年龄：" + gravida.getAge() + " -- ";
-        String babyString = "婴儿出生时间：" + firstBaby.getBirthTime() + " 婴儿性别：" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ); 
+        String hopspitalString = "大夫姓名:" + doctor.getDoctorName() + " 病历号:" + gravida.getMedicNo() + "--";
+        String gravidaString = "产妇姓名:" + gravida.getName() + " 产妇年龄:" + gravida.getAge() + "--";
+        String babyString = "婴儿出生时间:" + firstBaby.getBirthTime() + " 婴儿性别:" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ); 
         printableString.append(hopspitalString);
         printableString.append(gravidaString);
         printableString.append(babyString);
-        printableString.append("\r\n");
+        printableString.append("\r\n-----------------------------------------------------------------------------------------------");
 //        printableString.append(getPureApgarPrintableString(apgarCollection));
         return printableString.toString();
     }
