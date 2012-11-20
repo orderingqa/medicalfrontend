@@ -4,8 +4,11 @@
 package ls.jtsk.ui.controller;
 
 import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.logging.Level;
@@ -103,7 +106,8 @@ public class CentralController {
     public static void saveApgarAndPrint(long momId, long babyId, Collection collections, JFrame apgarFrame) {
         ApgarHelper.addApgar(momId, babyId, collections);
         StringBuffer printableString = new StringBuffer();
-        printableString.append(apgarFrame.getTitle()+"\r\n");
+        printableString.append(apgarFrame.getTitle());
+        printableString.append("\r\n-------------------------------------------------------------------------------------------------");
         printableString.append(getPureApgarPrintableString(collections));
         String fileName ="temp/" + new Long(System.currentTimeMillis()).toString()+".txt";
         
@@ -167,7 +171,7 @@ public class CentralController {
     
     // TODO 需要返回值以确定是否写文件成功，因为IO极大程度会失败
     private static void writeToFile(String fileName, String fileContent) throws IOException{
-        BufferedWriter output = new BufferedWriter(new FileWriter(fileName));
+        OutputStreamWriter output = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
         output.write(fileContent);
         output.close();
     }
