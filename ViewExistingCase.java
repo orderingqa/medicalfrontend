@@ -79,7 +79,7 @@ public class ViewExistingCase extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("修改病历");
+        setTitle("查看病历");
         setResizable(false);
 
         jButton4.setText("退出");
