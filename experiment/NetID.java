@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 // TODO 这个是为了获得活动网卡的地址的程序，但可惜的是以下就获得了所有的网卡。
-package ls.jtsk.ui.utility;
+package ls.jtsk.ui.experiment;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

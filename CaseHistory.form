@@ -196,7 +196,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="printButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x6253;&#x5370;"/>
+        <Property name="text" type="java.lang.String" value="&#x9884;&#x89c8;&#x5e76;&#x6253;&#x5370;"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>

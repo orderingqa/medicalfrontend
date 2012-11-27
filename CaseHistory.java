@@ -124,7 +124,7 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
-        printButton.setText("¥Ú”°");
+        printButton.setText("‘§¿¿≤¢¥Ú”°");
         printButton.setEnabled(false);
         printButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
