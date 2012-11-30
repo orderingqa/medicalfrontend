@@ -230,7 +230,6 @@ public class CaseHistory extends javax.swing.JFrame {
     }//GEN-LAST:event_nextPageButtonActionPerformed
 
     public void updateModelFromExternal() {
-        // 每一次对getCasesSortByField的调用，都会有sessionfactory不释放问题。会不会问题严重，需要dive deep
         modelList = CasesHelper.getCasesSortByField(numbersPerPage, currentPage, "createDate DESC");
         ((CaseTableModel)caseListTable.getModel()).setList(modelList);
         caseListTable.updateUI();
@@ -278,7 +277,7 @@ public class CaseHistory extends javax.swing.JFrame {
 
     private void printButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printButtonActionPerformed
         Cases currentCase = (Cases) modelList.get(currentSelectIndex);
-        CentralController.printExistCase(currentCase);
+        CentralController.viewExistingCase(currentCase);
     }//GEN-LAST:event_printButtonActionPerformed
 
     private void apgarScoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apgarScoreButtonActionPerformed

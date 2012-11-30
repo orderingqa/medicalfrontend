@@ -23,6 +23,7 @@ import javax.swing.table.TableColumnModel;
 /**
  *
  * @author liushuai
+ * 这个文件为打印jTable的关键文件
  */
 public class TablePrintable implements Printable {
 
@@ -40,7 +41,7 @@ public class TablePrintable implements Printable {
     private final Rectangle hclip = new Rectangle(0, 0, 0, 0);
     private final Rectangle tempRect = new Rectangle(0, 0, 0, 0);
     private static final int H_F_SPACE = 8;
-    private static final float HEADER_FONT_SIZE = 18.0f;
+    private static final float HEADER_FONT_SIZE = 12.0f;
     private static final float FOOTER_FONT_SIZE = 12.0f;
     private final Font headerFont;
     private final Font footerFont;

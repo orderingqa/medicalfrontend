@@ -1119,12 +1119,13 @@ public class APGARTab extends javax.swing.JFrame {
     }//GEN-LAST:event_finishAndExitButtonActionPerformed
 
     private void finishAndPrintButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishAndPrintButtonActionPerformed
-           if (CentralController.shouldContinueMessageBox("是否要关闭apgar打分窗口", "请确认您已经完成了1分钟，5分钟，和10分钟的打分，准备关闭apgar窗口并打印？")) {
-            ApgarFactory apgarFactory = ApgarFactory.getApgarFactory(this.babyId);
-            CentralController.saveApgarAndPrint(momId, babyId, apgarFactory.getAllApgars(), this);
+        if (CentralController.shouldContinueMessageBox("是否要关闭apgar打分窗口", "请确认您已经完成了1分钟，5分钟，和10分钟的打分，准备关闭apgar窗口并打印？")) {
             if (ap != null) {
                 ap.stopTimer();
             }
+            ApgarFactory apgarFactory = ApgarFactory.getApgarFactory(this.babyId);
+            CentralController.saveApgarAndPrint(momId, babyId, apgarFactory.getAllApgars(), this);
+            
         }
     }//GEN-LAST:event_finishAndPrintButtonActionPerformed
 

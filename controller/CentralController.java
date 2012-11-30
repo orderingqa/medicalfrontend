@@ -105,20 +105,25 @@ public class CentralController {
     // 打完分后立刻调用打印功能
     public static void saveApgarAndPrint(long momId, long babyId, Collection collections, JFrame apgarFrame) {
         ApgarHelper.addApgar(momId, babyId, collections);
-        StringBuffer printableString = new StringBuffer();
-        printableString.append(apgarFrame.getTitle());
-        printableString.append("\r\n-------------------------------------------------------------------------------------------------");
-        printableString.append(getPureApgarPrintableString(collections));
-        String fileName ="temp/" + new Long(System.currentTimeMillis()).toString()+".txt";
-        
-        printToFileAndOpenNotePad(fileName, printableString.toString());
-   
-        // 记事本打印程序完成后，我还是需要原生的打印研究，这个是low priority。
         apgarFrame.dispose();
         if (caseHistory != null) caseHistory.updateModelFromExternal();
+        Cases existCase = CasesHelper.getCasesById(momId);
+        new ViewExistingCase(existCase).setVisible(true);
+        
+//        StringBuffer printableString = new StringBuffer();
+//        printableString.append(apgarFrame.getTitle());
+//        printableString.append("\r\n-------------------------------------------------------------------------------------------------");
+//        printableString.append(getPureApgarPrintableString(collections));
+//        String fileName ="temp/" + new Long(System.currentTimeMillis()).toString()+".txt";
+//        
+//        printToFileAndOpenNotePad(fileName, printableString.toString());
+//   
+//        // 记事本打印程序完成后，我还是需要原生的打印研究，这个是low priority。
+          
     }
     
     // 从case list中调用打印功能
+    // 基于对话框和java的标准打印接口后，这个函数被弃用。
     public static void printExistCase(Cases existCase) {
 //      String strForPrint = getPrintableStringFromCase(existCase);        
         if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
@@ -133,19 +138,18 @@ public class CentralController {
         }
     }
     
-    private static String getPrintableCasesTitle(Cases existCase) {
+    public static String getPrintableCasesTitle(Cases existCase) {
         StringBuffer printableString = new StringBuffer();
         Gravida gravida = existCase.getGravida();
         Doctor doctor = existCase.getDoctor();
         Baby firstBaby = (Baby)gravida.getBabys().toArray()[0];
-        Collection apgarCollection = firstBaby.getApgars();
-        String hopspitalString = "大夫姓名:" + doctor.getDoctorName() + " 病历号:" + gravida.getMedicNo() + "--";
-        String gravidaString = "产妇姓名:" + gravida.getName() + " 产妇年龄:" + gravida.getAge() + "--";
-        String babyString = "婴儿出生时间:" + firstBaby.getBirthTime() + " 婴儿性别:" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ); 
-        printableString.append(hopspitalString);
+        String gravidaString = "产妇姓名:" + gravida.getName() + "                                    产妇年龄:" + gravida.getAge() + "\n";
+        String hopspitalString = "大夫姓名:" + doctor.getDoctorName() + "                                    病历号:" + gravida.getMedicNo() + "\n";
+        String babyString = "婴儿出生时间:" + firstBaby.getBirthTime() + "          婴儿性别:" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ); 
         printableString.append(gravidaString);
+        printableString.append(hopspitalString);
         printableString.append(babyString);
-        printableString.append("\r\n-------------------------------------------------------------------------------------------------");
+//        printableString.append("\r\n-------------------------------------------------------------------------------------------------");
 //        printableString.append(getPureApgarPrintableString(apgarCollection));
         return printableString.toString();
     }

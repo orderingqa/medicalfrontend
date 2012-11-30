@@ -17,10 +17,7 @@ public class JTablePrinter {
     private static Boolean fitWidth = true;
     
     public static void printJTable(JTable gradesTable, String headerString, String footerString) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("这个是页头第一行\n");
-        sb.append("这个是页头第二行");
-        MessageFormat header = new MessageFormat(sb.toString());
+        MessageFormat header = new MessageFormat(headerString);
         MessageFormat footer = new MessageFormat("这个是页脚");
         
         /* determine the print mode */
