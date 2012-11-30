@@ -27,12 +27,12 @@ import ls.jtsk.ui.utility.TablePrintable;
  *
  * @author liushuai
  */
-public class ViewExistingCase extends javax.swing.JFrame {
+public class ModifyExistsCase extends javax.swing.JFrame {
     Cases existCase = null;
     /**
      * Creates new form CaseHistoryViewFrame
      */
-    public ViewExistingCase(Cases existCase) {
+    public ModifyExistsCase(Cases existCase) {
         initComponents();
         this.existCase = existCase;
         fillUIWithCaseData(existCase);
@@ -53,11 +53,9 @@ public class ViewExistingCase extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         medicalNoLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        doctorNameLabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         gravidaNameLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        gravidaAgeLabel = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         babyGenderLabel = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -69,7 +67,13 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 return new TablePrintable(this, printMode, headerFormat, footerFormat);
             }
         };
-        printCaseButton = new javax.swing.JButton();
+        modifyCaseButton = new javax.swing.JButton();
+        medicalNoInput = new javax.swing.JTextField();
+        gravidaInput = new javax.swing.JTextField();
+        doctorInput = new javax.swing.JTextField();
+        ageInput = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -111,15 +115,11 @@ public class ViewExistingCase extends javax.swing.JFrame {
 
         jLabel3.setText("主治医师");
 
-        doctorNameLabel.setText("王大夫");
-
         jLabel5.setText("产妇姓名");
 
         gravidaNameLabel.setText("王菲");
 
         jLabel7.setText("产妇年龄");
-
-        gravidaAgeLabel.setText("30");
 
         jLabel9.setText("婴儿性别");
 
@@ -139,13 +139,28 @@ public class ViewExistingCase extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(apgarScoreTable);
 
-        printCaseButton.setText("打印");
-        printCaseButton.setEnabled(false);
-        printCaseButton.addActionListener(new java.awt.event.ActionListener() {
+        modifyCaseButton.setText("确认修改");
+        modifyCaseButton.setActionCommand("修改");
+        modifyCaseButton.setEnabled(false);
+        modifyCaseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                printCaseButtonActionPerformed(evt);
+                modifyCaseButtonActionPerformed(evt);
             }
         });
+
+        medicalNoInput.setText("jTextField1");
+
+        gravidaInput.setText("jTextField1");
+
+        doctorInput.setText("jTextField2");
+
+        ageInput.setText("jTextField3");
+
+        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel2.setText("(请输入数字)");
+
+        jLabel4.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel4.setText("(请输入数字)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,68 +170,87 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(printCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(modifyCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(362, 362, 362)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel9)
-                                    .addGap(35, 35, 35)
-                                    .addComponent(babyGenderLabel))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel1)
-                                        .addComponent(jLabel5))
-                                    .addGap(35, 35, 35)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(medicalNoLabel)
-                                        .addComponent(gravidaNameLabel))))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel7)
-                                .addComponent(jLabel11))
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(babyBirthDateLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(gravidaAgeLabel)
-                                        .addComponent(doctorNameLabel))
-                                    .addGap(83, 83, 83))))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 789, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 34, Short.MAX_VALUE))
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel9)
+                                        .addGap(35, 35, 35)
+                                        .addComponent(babyGenderLabel))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel1)
+                                            .addComponent(jLabel5))
+                                        .addGap(35, 35, 35)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(medicalNoLabel)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(gravidaNameLabel)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(35, 35, 35)
+                                        .addComponent(jLabel2)))
+                                .addGap(128, 128, 128)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel4))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel11))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(babyBirthDateLabel)
+                                            .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 789, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(medicalNoLabel)
-                    .addComponent(jLabel3)
-                    .addComponent(doctorNameLabel))
-                .addGap(30, 30, 30)
+                    .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(gravidaNameLabel))
+                        .addComponent(gravidaNameLabel)
+                        .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel7)
-                        .addComponent(gravidaAgeLabel)))
+                        .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(babyGenderLabel)
-                    .addComponent(jLabel11)
-                    .addComponent(babyBirthDateLabel))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel9)
+                        .addComponent(babyGenderLabel))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11)
+                        .addComponent(babyBirthDateLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(printCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(modifyCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
         );
@@ -228,28 +262,46 @@ public class ViewExistingCase extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_exit
 
-    private void printCaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printCaseButtonActionPerformed
-//        if (existCase != null) {
-//            if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
-//                Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
-//                JTable apgarTable = new JTable();
-//                apgarTable.setModel(new ApgarTableModel(baby.getApgars().toArray()));
-//        TODO [待总]要想打印出东西，这个东西必须已经在swing上画出来，能看到才能打印。
-        if (existCase != null) {
-//                System.err.println(CentralController.getPrintableCasesTitle(existCase));
-                JTablePrinter.printJTable(apgarScoreTable, CentralController.getPrintableCasesTitle(existCase), 
-                        "日期： "+new SimpleDateFormat("yyyy年MM月dd日").format(new Date())+"        大夫签名：__________________");
+    private void modifyCaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyCaseButtonActionPerformed
+        if (!validInput()) {
+            CentralController.showCommonMessageBox();    
+            return;
+        } else {
+            CentralController.modifyCase(existCase.getId(), gravidaInput.getText(), Integer.parseInt(ageInput.getText()), Integer.parseInt(medicalNoInput.getText()), doctorInput.getText(), this);
         }
-//            }
-//        }
-    }//GEN-LAST:event_printCaseButtonActionPerformed
+    }//GEN-LAST:event_modifyCaseButtonActionPerformed
 
+    private boolean validInput() {
+        String medicalNoValue = medicalNoInput.getText();
+        String ageValue = ageInput.getText();
+        
+        if (medicalNoValue != null && medicalNoValue.trim().length() > 0 && ageValue != null && ageValue.trim().length() > 0 
+                && doctorInput.getText() != null && doctorInput.getText().trim().length() > 0
+                && gravidaInput.getText() != null && gravidaInput.getText().trim().length() > 0 ) {
+            try {
+                Integer.parseInt(medicalNoValue);
+                Integer.parseInt(ageValue);
+                return true;
+            }
+            catch (Exception e) {
+                return false;
+            }
+        
+        }
+        return false;
+    }
+    
     private void fillUIWithCaseData(Cases existCase) {
         if (existCase != null) {
-            medicalNoLabel.setText(new Integer(existCase.getGravida().getMedicNo()).toString());
-            doctorNameLabel.setText(existCase.getDoctor().getDoctorName());
-            gravidaNameLabel.setText(existCase.getGravida().getName());
-            gravidaAgeLabel.setText(new Integer(existCase.getGravida().getAge()).toString());
+//            medicalNoLabel.setText(new Integer(existCase.getGravida().getMedicNo()).toString());
+            medicalNoInput.setText(new Integer(existCase.getGravida().getMedicNo()).toString());
+//            doctorNameLabel.setText(existCase.getDoctor().getDoctorName());
+            doctorInput.setText(existCase.getDoctor().getDoctorName());
+//            gravidaNameLabel.setText(existCase.getGravida().getName());
+            gravidaInput.setText(existCase.getGravida().getName());
+            
+//            gravidaAgeLabel.setText(new Integer(existCase.getGravida().getAge()).toString());
+            ageInput.setText(new Integer(existCase.getGravida().getAge()).toString());
             if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
                 Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
                 babyBirthDateLabel.setText(baby.getBirthTime());
@@ -259,12 +311,12 @@ public class ViewExistingCase extends javax.swing.JFrame {
 // 所有的显示逻辑都由ApgarTableModel来控制。
                 if (baby.getApgars() != null) {
                     apgarScoreTable.setModel(new ApgarTableModel(baby.getApgars().toArray()));
-                    printCaseButton.setEnabled(true);
+                    modifyCaseButton.setEnabled(true);
                 }
             } else {
                 babyBirthDateLabel.setText("");
                 babyGenderLabel.setText("");
-                printCaseButton.setEnabled(false);
+                modifyCaseButton.setEnabled(false);
             }
             
 //            Object[] tableModel = new Object [][] {
@@ -305,41 +357,45 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ViewExistingCase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ModifyExistsCase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ViewExistingCase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ModifyExistsCase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ViewExistingCase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ModifyExistsCase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ViewExistingCase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ModifyExistsCase.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewExistingCase(CasesHelper.getCasesById(1)).setVisible(true);
+                new ModifyExistsCase(CasesHelper.getCasesById(1)).setVisible(true);
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ageInput;
     private javax.swing.JTable apgarScoreTable;
     private javax.swing.JLabel babyBirthDateLabel;
     private javax.swing.JLabel babyGenderLabel;
-    private javax.swing.JLabel doctorNameLabel;
-    private javax.swing.JLabel gravidaAgeLabel;
+    private javax.swing.JTextField doctorInput;
+    private javax.swing.JTextField gravidaInput;
     private javax.swing.JLabel gravidaNameLabel;
     private javax.swing.JButton jButton4;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField medicalNoInput;
     private javax.swing.JLabel medicalNoLabel;
-    private javax.swing.JButton printCaseButton;
+    private javax.swing.JButton modifyCaseButton;
     // End of variables declaration//GEN-END:variables
 }

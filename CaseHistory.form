@@ -42,9 +42,9 @@
                   <Group type="102" attributes="0">
                       <Component id="viewExistingCasesButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="modifyCaseButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                      <Component id="deleteCaseButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="printButton" min="-2" pref="102" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
@@ -86,8 +86,8 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="viewExistingCasesButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="modifyCaseButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="deleteCaseButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="apgarScoreButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="printButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -166,23 +166,24 @@
     </Component>
     <Component class="javax.swing.JButton" name="viewExistingCasesButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x67e5;&#x770b;&#x75c5;&#x5386;"/>
+        <Property name="text" type="java.lang.String" value="&#x4fee;&#x6539;&#x75c5;&#x5386;"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewExistingCasesButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="modifyCaseButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x4fee;&#x6539;&#x75c5;&#x5386;"/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modifyCaseButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="deleteCaseButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x5220;&#x9664;&#x75c5;&#x5386;"/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="apgarScoreButton">

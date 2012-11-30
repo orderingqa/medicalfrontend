@@ -29,6 +29,7 @@ import ls.jtsk.ui.APGARTab;
 import ls.jtsk.ui.CaseHistory;
 import ls.jtsk.ui.CreateNewBaby;
 import ls.jtsk.ui.CreateNewCase;
+import ls.jtsk.ui.ModifyExistsCase;
 import ls.jtsk.ui.ViewExistingCase;
 import ls.jtsk.ui.assistant.ApgarPrintableTable;
 import ls.jtsk.ui.model.ApgarTableModel;
@@ -94,6 +95,8 @@ public class CentralController {
     }
     
 
+   
+    
 
     // 打完分后关闭apgar窗口，不打印
     public static void saveApgarAndDisposeWindow(long momId, long babyId, Collection collections, JFrame apgarFrame){
@@ -123,7 +126,7 @@ public class CentralController {
     }
     
     // 从case list中调用打印功能
-    // 基于对话框和java的标准打印接口后，这个函数被弃用。
+    // 这个函数被弃用了，目前我们采用标准的对话框和java的标准打印接口后，。
     public static void printExistCase(Cases existCase) {
 //      String strForPrint = getPrintableStringFromCase(existCase);        
         if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
@@ -201,6 +204,21 @@ public class CentralController {
         new ViewExistingCase(existCase).setVisible(true);
     }
 
+    public static void modifyExistingCase (Cases existCases) {
+        new ModifyExistsCase(existCases).setVisible(true);
+    }
+    
+    public static void modifyCase(long caseId, String gravidaName, int age, int medicalNo, String doctorName, JFrame modifyWindow) {
+        CasesHelper.modifyCase(caseId, gravidaName, age, medicalNo, doctorName);
+        modifyWindow.dispose();
+        if (caseHistory != null) {
+            caseHistory.updateModelFromExternal();
+            caseHistory.updateButtonForCurrentCase();
+        }
+        
+    }
+    
+    
     private static void printToFileAndOpenNotePad(String fileName, String printableString) {
         try{
             writeToFile(fileName, printableString);

@@ -18,7 +18,7 @@ public class JTablePrinter {
     
     public static void printJTable(JTable gradesTable, String headerString, String footerString) {
         MessageFormat header = new MessageFormat(headerString);
-        MessageFormat footer = new MessageFormat("Õâ¸öÊÇÒ³½Å");
+        MessageFormat footer = new MessageFormat(footerString);
         
         /* determine the print mode */
         JTable.PrintMode mode = fitWidth ? JTable.PrintMode.FIT_WIDTH
