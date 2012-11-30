@@ -195,12 +195,13 @@ public class ViewExistingCase extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(doctorNameLabel))
                 .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(gravidaAgeLabel)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(gravidaNameLabel)))
+                        .addComponent(gravidaNameLabel))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel7)
+                        .addComponent(gravidaAgeLabel)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
@@ -231,7 +232,8 @@ public class ViewExistingCase extends javax.swing.JFrame {
 //                apgarTable.setModel(new ApgarTableModel(baby.getApgars().toArray()));
 //        TODO [待总]要想打印出东西，这个东西必须已经在swing上画出来，能看到才能打印。
         
-                JTablePrinter.printJTable(apgarScoreTable, null, null);
+        
+        JTablePrinter.printJTable(apgarScoreTable, null, null);
 //            }
 //        }
     }//GEN-LAST:event_printCaseButtonActionPerformed
