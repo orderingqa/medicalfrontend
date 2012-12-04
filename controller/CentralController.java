@@ -46,7 +46,7 @@ public class CentralController {
     
     
     public static void saveCaseAndExit(String medicalNo, String doctorName, String gravidaName, String age) {
-        ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age));
+        ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age), null);
         if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
@@ -60,7 +60,7 @@ public class CentralController {
      * @param age 
      */
     public static void saveCaseAndShowBabyInputWindow(String medicalNo, String doctorName, String gravidaName, String age) {
-        long newCaseId = ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age)); // 模型更新完毕，接下来拼装新的视图。
+        long newCaseId = ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age), null); // 模型更新完毕，接下来拼装新的视图。
         // TODO 怎么样才能使得我想运行上下两个赋值可以通过配置来完成，而不是修改代码？这样我可以随时测试有没有db的代码。
 //        long newCaseId = 0;
         CreateNewBaby cnb = new CreateNewBaby(newCaseId);
@@ -223,7 +223,7 @@ public class CentralController {
     // 在修改病历的窗口上点击"确认修改"后调用。
     public static void modifyCase(long caseId, String gravidaName, int age, int medicalNo, String doctorName, JFrame modifyWindow) {
         
-        CasesHelper.modifyCase(caseId, gravidaName, age, medicalNo, doctorName);
+        CasesHelper.modifyCase(caseId, gravidaName, age, medicalNo, doctorName, null);
         modifyWindow.dispose();
         if (caseHistory != null) {
             caseHistory.updateModelFromExternal();
@@ -259,6 +259,9 @@ public class CentralController {
         JOptionPane.showMessageDialog(null, "请按照提示输入正确的格式");
     }
     
+    public static void showCommonMessageBox(String customerizedMessageDisplay) {
+        JOptionPane.showMessageDialog(null, customerizedMessageDisplay);
+    }
     
     public static boolean shouldContinueMessageBox(String promptTitle, String promptMessageBody) {
         Object[] options = {"确定","取消"}; 

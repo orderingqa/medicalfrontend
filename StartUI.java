@@ -7,6 +7,8 @@ package ls.jtsk.ui;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import ls.jtsk.ui.controller.CentralController;
+import ls.jtsk.util.NetID;
 
 /**
  *
@@ -44,12 +46,15 @@ public class StartUI extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         jLabel1.setText("医院科室");
 
         hosInput.setText("宣武医院妇产科");
 
-        jLabel4.setText("新用户请输入信息，点击生成序列号，发给刘大夫获取激活码");
+        jLabel4.setText("请输入信息，点击生成序列号，发给刘大夫获取激活码");
 
         doctorInput.setText("王丽");
 
@@ -77,7 +82,7 @@ public class StartUI extends javax.swing.JPanel {
             }
         });
 
-        jLabel9.setText("您已经激活，还剩29天使用");
+        jLabel9.setText("您已经激活");
         jLabel9.setEnabled(false);
 
         jButton3.setText("进入apgar自动评分仪");
@@ -86,20 +91,32 @@ public class StartUI extends javax.swing.JPanel {
 
         jLabel3.setText("已获得激活码的用户，请输入并继续");
 
+        jLabel6.setFont(new java.awt.Font("宋体", 1, 12)); // NOI18N
+        jLabel6.setText("第一步");
+
+        jLabel8.setFont(new java.awt.Font("宋体", 1, 12)); // NOI18N
+        jLabel8.setText("第二步");
+
+        jLabel10.setFont(new java.awt.Font("宋体", 1, 12)); // NOI18N
+        jLabel10.setText("第三步");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel10))
+                .addGap(139, 139, 139)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
                         .addComponent(snLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -108,22 +125,26 @@ public class StartUI extends javax.swing.JPanel {
                                 .addComponent(jLabel5))
                             .addGap(18, 18, 18)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(hosInput, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                                .addComponent(doctorInput))))
+                                .addComponent(hosInput)
+                                .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addComponent(jLabel2)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(actInput, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(526, Short.MAX_VALUE))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(129, 129, 129)
-                .addComponent(jLabel4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel6))
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -138,24 +159,30 @@ public class StartUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(snLabel))
-                .addGap(83, 83, 83)
-                .addComponent(jLabel3)
+                .addGap(82, 82, 82)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(actInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addGap(23, 23, 23))
+                .addGap(44, 44, 44))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (hosInput.getText() != null && doctorInput.getText() != null && doctorInput.getText().trim().length() > 0 && hosInput.getText().trim().length() > 0) {
+            snLabel.setText(new Long(NetID.generateApplyNumber()).toString());
+            actInput.setText(NetID.finalActivateNumberGenerate(NetID.generateApplyNumber()));
             snLabel.setVisible(true);
         } else {
             snLabel.setVisible(false);
@@ -164,11 +191,23 @@ public class StartUI extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if (actInput.getText() != null && actInput.getText().equals("12345678901")) {
-            ((JFrame)this.getTopLevelAncestor()).dispose();
-            CaseHistory ch = new CaseHistory();
-            ch.setLocationRelativeTo(null);
-            ch.setVisible(true);
+        
+        if (actInput.getText() != null && actInput.getText().trim().length() > 0) {       
+            try {
+                long userInputActivateSN = Long.parseLong(actInput.getText().trim());
+                if (NetID.isValidActivateNumber(userInputActivateSN)) {
+                    ((JFrame)this.getTopLevelAncestor()).dispose();
+                    CaseHistory ch = new CaseHistory();
+                    ch.setLocationRelativeTo(null);
+                    ch.setVisible(true);
+                } else {
+                    CentralController.showCommonMessageBox("激活码错误，请核实并输入正确的9位激活码");
+                }
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+                CentralController.showCommonMessageBox("激活码错误，请核实并输入正确的9位激活码");
+            }
             
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -181,20 +220,23 @@ public class StartUI extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel snLabel;
     // End of variables declaration//GEN-END:variables
 
     
-    @Override
-    public void paintComponent(Graphics g) {
-        g.drawImage(new ImageIcon("baby.jpg").getImage(), 0, 0, this);  
-    }
+//    @Override
+//    public void paintComponent(Graphics g) {
+//        g.drawImage(new ImageIcon("baby.jpg").getImage(), 0, 0, this);  
+//    }
     public static void main(String[] args) {  
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

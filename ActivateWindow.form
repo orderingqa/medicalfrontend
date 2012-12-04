@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -21,7 +27,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -32,7 +38,7 @@
                       <Component id="snLabel" min="-2" pref="138" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="generateApplyButton" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -40,16 +46,16 @@
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="hosInput" max="32767" attributes="0"/>
-                              <Component id="doctorInput" min="-2" pref="184" max="-2" attributes="0"/>
+                              <Component id="hosInput" alignment="0" max="32767" attributes="0"/>
+                              <Component id="doctorInput" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Component id="jLabel3" alignment="0" min="-2" pref="262" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jButton3" alignment="0" max="32767" attributes="0"/>
+                      <Component id="enterApgarButton" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="inputActivateContinueButton" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -57,14 +63,14 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="126" max="32767" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -80,13 +86,13 @@
                   <Component id="doctorInput" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="generateApplyButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="snLabel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -97,95 +103,34 @@
                   <Component id="actInput" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="110" max="32767" attributes="0"/>
+              <Component id="inputActivateContinueButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="92" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+              <Component id="enterApgarButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x533b;&#x9662;&#x79d1;&#x5ba4;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="hosInput">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x5ba3;&#x6b66;&#x533b;&#x9662;&#x5987;&#x4ea7;&#x79d1;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="actInput">
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x8bf7;&#x8f93;&#x5165;&#x4fe1;&#x606f;&#xff0c;&#x70b9;&#x51fb;&#x751f;&#x6210;&#x5e8f;&#x5217;&#x53f7;&#xff0c;&#x53d1;&#x7ed9;&#x5218;&#x5927;&#x592b;&#x83b7;&#x53d6;&#x6fc0;&#x6d3b;&#x7801;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="doctorInput">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x738b;&#x4e3d;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x5927;&#x592b;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x5e8f;&#x5217;&#x53f7;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="snLabel">
+    <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="&#x5b8b;&#x4f53;" size="15" style="1"/>
+          <Font name="&#x5b8b;&#x4f53;" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="AJ-BK-CL-DM-EN"/>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="snLabel.setVisible(false);"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x751f;&#x6210;&#x5e8f;&#x5217;&#x53f7;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x8bf7;&#x8f93;&#x5165;&#x6fc0;&#x6d3b;&#x7801;"/>
+        <Property name="text" type="java.lang.String" value="&#x7b2c;&#x4e8c;&#x6b65;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x8f93;&#x5165;&#x6fc0;&#x6d3b;&#x7801;&#x5e76;&#x7ee7;&#x7eed;"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel9">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x60a8;&#x5df2;&#x7ecf;&#x6fc0;&#x6d3b;"/>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x8fdb;&#x5165;apgar&#x81ea;&#x52a8;&#x8bc4;&#x5206;&#x4eea;"/>
-        <Property name="actionCommand" type="java.lang.String" value="&#x8fdb;&#x5165;&#x963f;&#x6c0f;&#x8bc4;&#x5206;&#x6cd5;&#x81ea;&#x52a8;&#x8bc4;&#x5206;&#x4eea;"/>
-        <Property name="enabled" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="&#x5b8b;&#x4f53;" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x7b2c;&#x4e09;&#x6b65;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -201,20 +146,84 @@
         <Property name="text" type="java.lang.String" value="&#x7b2c;&#x4e00;&#x6b65;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
+    <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="&#x5b8b;&#x4f53;" size="12" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&#x7b2c;&#x4e8c;&#x6b65;"/>
+        <Property name="text" type="java.lang.String" value="&#x60a8;&#x5df2;&#x7ecf;&#x6fc0;&#x6d3b;"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
+    <Component class="javax.swing.JButton" name="enterApgarButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x8fdb;&#x5165;apgar&#x81ea;&#x52a8;&#x8bc4;&#x5206;&#x4eea;"/>
+        <Property name="actionCommand" type="java.lang.String" value="&#x8fdb;&#x5165;&#x963f;&#x6c0f;&#x8bc4;&#x5206;&#x6cd5;&#x81ea;&#x52a8;&#x8bc4;&#x5206;&#x4eea;"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enterApgarButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x8bf7;&#x8f93;&#x5165;&#x6fc0;&#x6d3b;&#x7801;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="inputActivateContinueButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x8f93;&#x5165;&#x6fc0;&#x6d3b;&#x7801;&#x5e76;&#x7ee7;&#x7eed;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputActivateContinueButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="hosInput">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x5ba3;&#x6b66;&#x533b;&#x9662;&#x5987;&#x4ea7;&#x79d1;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x533b;&#x9662;&#x79d1;&#x5ba4;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="generateApplyButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x751f;&#x6210;&#x5e8f;&#x5217;&#x53f7;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateApplyButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x5927;&#x592b;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="doctorInput">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x738b;&#x4e3d;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x8bf7;&#x8f93;&#x5165;&#x4fe1;&#x606f;&#xff0c;&#x751f;&#x6210;&#x6fc0;&#x6d3b;&#x7533;&#x8bf7;&#x53f7;&#xff0c;&#x53d1;&#x7ed9;&#x5218;&#x5927;&#x592b;&#x83b7;&#x53d6;&#x6fc0;&#x6d3b;&#x7801;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="actInput">
+    </Component>
+    <Component class="javax.swing.JLabel" name="snLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="&#x5b8b;&#x4f53;" size="12" style="1"/>
+          <Font name="&#x5b8b;&#x4f53;" size="15" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x7b2c;&#x4e09;&#x6b65;"/>
+        <Property name="text" type="java.lang.String" value="000000000000"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="snLabel.setVisible(false);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x6fc0;&#x6d3b;&#x7533;&#x8bf7;&#x53f7;"/>
       </Properties>
     </Component>
   </SubComponents>
