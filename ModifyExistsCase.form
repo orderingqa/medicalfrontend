@@ -80,17 +80,12 @@
                                           <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="medicalNoLabel" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                                               <Component id="medicalNoInput" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="gravidaNameLabel" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="gravidaInput" min="-2" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="gravidaInput" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -132,7 +127,6 @@
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicalNoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="medicalNoInput" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="doctorInput" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -142,7 +136,6 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="gravidaNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="gravidaInput" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -188,14 +181,6 @@
         <Property name="text" type="java.lang.String" value="&#x4f4f;&#x9662;&#x53f7;"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="medicalNoLabel">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="&#x5b8b;&#x4f53;" size="15" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="0000001"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x4e3b;&#x6cbb;&#x533b;&#x5e08;"/>
@@ -204,11 +189,6 @@
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x4ea7;&#x5987;&#x59d3;&#x540d;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="gravidaNameLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x738b;&#x83f2;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
@@ -274,22 +254,46 @@
     <Component class="javax.swing.JTextField" name="medicalNoInput">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField1"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 24]"/>
+        </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTextField(10);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="gravidaInput">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField1"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 24]"/>
+        </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTextField(10);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="doctorInput">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField2"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 24]"/>
+        </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTextField(10);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="ageInput">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField3"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[100, 24]"/>
+        </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JTextField(10);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>

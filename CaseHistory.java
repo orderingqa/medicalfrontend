@@ -102,7 +102,7 @@ public class CaseHistory extends javax.swing.JFrame {
 
         jLabel6.setText("页");
 
-        viewExistingCasesButton.setText("修改病历");
+        viewExistingCasesButton.setText("查看病历");
         viewExistingCasesButton.setEnabled(false);
         viewExistingCasesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +111,7 @@ public class CaseHistory extends javax.swing.JFrame {
         });
 
         modifyCaseButton.setText("修改病历");
+        modifyCaseButton.setEnabled(false);
         modifyCaseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modifyCaseButtonActionPerformed(evt);
@@ -118,6 +119,12 @@ public class CaseHistory extends javax.swing.JFrame {
         });
 
         deleteCaseButton.setText("删除病历");
+        deleteCaseButton.setEnabled(false);
+        deleteCaseButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteCaseButtonActionPerformed(evt);
+            }
+        });
 
         apgarScoreButton.setText("apgar打分");
         apgarScoreButton.setEnabled(false);
@@ -258,6 +265,8 @@ public class CaseHistory extends javax.swing.JFrame {
             apgarScoreButton.setEnabled(false);
         }
         viewExistingCasesButton.setEnabled(true);
+        modifyCaseButton.setEnabled(true);
+        deleteCaseButton.setEnabled(true);
     }
     
     private void createCaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createCaseButtonActionPerformed
@@ -290,8 +299,13 @@ public class CaseHistory extends javax.swing.JFrame {
 
     private void modifyCaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyCaseButtonActionPerformed
         Cases currentCase = (Cases) modelList.get(currentSelectIndex);
-        CentralController.modifyExistingCase(currentCase);
+        CentralController.modifyExistingCase(currentCase, this);
     }//GEN-LAST:event_modifyCaseButtonActionPerformed
+
+    private void deleteCaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCaseButtonActionPerformed
+        Cases currentCase = (Cases) modelList.get(currentSelectIndex);
+        CentralController.deleteExistCase(currentCase, this);
+    }//GEN-LAST:event_deleteCaseButtonActionPerformed
 
     /**
      * @param args the command line arguments

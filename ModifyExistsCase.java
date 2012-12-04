@@ -51,10 +51,8 @@ public class ModifyExistsCase extends javax.swing.JFrame {
         jDialog2 = new javax.swing.JDialog();
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        medicalNoLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        gravidaNameLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         babyGenderLabel = new javax.swing.JLabel();
@@ -68,10 +66,10 @@ public class ModifyExistsCase extends javax.swing.JFrame {
             }
         };
         modifyCaseButton = new javax.swing.JButton();
-        medicalNoInput = new javax.swing.JTextField();
-        gravidaInput = new javax.swing.JTextField();
-        doctorInput = new javax.swing.JTextField();
-        ageInput = new javax.swing.JTextField();
+        medicalNoInput = new javax.swing.JTextField(10);
+        gravidaInput = new javax.swing.JTextField(10);
+        doctorInput = new javax.swing.JTextField(10);
+        ageInput = new javax.swing.JTextField(10);
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -110,14 +108,9 @@ public class ModifyExistsCase extends javax.swing.JFrame {
 
         jLabel1.setText("住院号");
 
-        medicalNoLabel.setFont(new java.awt.Font("宋体", 1, 15)); // NOI18N
-        medicalNoLabel.setText("0000001");
-
         jLabel3.setText("主治医师");
 
         jLabel5.setText("产妇姓名");
-
-        gravidaNameLabel.setText("王菲");
 
         jLabel7.setText("产妇年龄");
 
@@ -149,12 +142,16 @@ public class ModifyExistsCase extends javax.swing.JFrame {
         });
 
         medicalNoInput.setText("jTextField1");
+        medicalNoInput.setMinimumSize(new java.awt.Dimension(100, 24));
 
         gravidaInput.setText("jTextField1");
+        gravidaInput.setMinimumSize(new java.awt.Dimension(100, 24));
 
         doctorInput.setText("jTextField2");
+        doctorInput.setMinimumSize(new java.awt.Dimension(100, 24));
 
         ageInput.setText("jTextField3");
+        ageInput.setMinimumSize(new java.awt.Dimension(100, 24));
 
         jLabel2.setForeground(new java.awt.Color(51, 153, 0));
         jLabel2.setText("(请输入数字)");
@@ -187,15 +184,11 @@ public class ModifyExistsCase extends javax.swing.JFrame {
                                             .addComponent(jLabel1)
                                             .addComponent(jLabel5))
                                         .addGap(35, 35, 35)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addComponent(medicalNoLabel)
-                                                .addGap(18, 18, 18)
+                                                .addGap(81, 81, 81)
                                                 .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(gravidaNameLabel)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(gravidaInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(35, 35, 35)
                                         .addComponent(jLabel2)))
                                 .addGap(128, 128, 128)
@@ -223,7 +216,6 @@ public class ModifyExistsCase extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(medicalNoLabel)
                     .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
@@ -232,7 +224,6 @@ public class ModifyExistsCase extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(gravidaNameLabel)
                         .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel7)
@@ -381,7 +372,6 @@ public class ModifyExistsCase extends javax.swing.JFrame {
     private javax.swing.JLabel babyGenderLabel;
     private javax.swing.JTextField doctorInput;
     private javax.swing.JTextField gravidaInput;
-    private javax.swing.JLabel gravidaNameLabel;
     private javax.swing.JButton jButton4;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
@@ -395,7 +385,6 @@ public class ModifyExistsCase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField medicalNoInput;
-    private javax.swing.JLabel medicalNoLabel;
     private javax.swing.JButton modifyCaseButton;
     // End of variables declaration//GEN-END:variables
 }

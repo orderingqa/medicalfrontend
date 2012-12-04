@@ -166,7 +166,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="viewExistingCasesButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&#x4fee;&#x6539;&#x75c5;&#x5386;"/>
+        <Property name="text" type="java.lang.String" value="&#x67e5;&#x770b;&#x75c5;&#x5386;"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
@@ -176,6 +176,7 @@
     <Component class="javax.swing.JButton" name="modifyCaseButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x4fee;&#x6539;&#x75c5;&#x5386;"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modifyCaseButtonActionPerformed"/>
@@ -184,7 +185,11 @@
     <Component class="javax.swing.JButton" name="deleteCaseButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x5220;&#x9664;&#x75c5;&#x5386;"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteCaseButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="apgarScoreButton">
       <Properties>

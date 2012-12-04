@@ -71,7 +71,7 @@ public class CentralController {
     
     public static void showBabyInputFromCaseList(Cases existCase, CaseHistory ch) {
         if (existCase != null) {
-            caseHistory = ch;
+            initCaseHistory(ch);
             long caseId = existCase.getId();
             CreateNewBaby cnb = new CreateNewBaby(caseId);
             cnb.setTitle("大夫姓名：" + existCase.getDoctor().getDoctorName() +" 病历号:" + existCase.getGravida().getMedicNo() + "--产妇姓名："+existCase.getGravida().getName()+" 年龄年龄:"+existCase.getGravida().getAge());
@@ -125,21 +125,23 @@ public class CentralController {
           
     }
     
+    
+    
     // 从case list中调用打印功能
     // 这个函数被弃用了，目前我们采用标准的对话框和java的标准打印接口后，。
-    public static void printExistCase(Cases existCase) {
-//      String strForPrint = getPrintableStringFromCase(existCase);        
-        if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
-            String caseTitle = getPrintableCasesTitle(existCase);
-            Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
-            if (baby.getApgars() != null) {
-                String strForPrint = caseTitle + ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(baby.getApgars().toArray()));
-                String fileName ="temp/" + new Long(System.currentTimeMillis()).toString()+".txt";
-                //TODO [待总] 良好的封装函数，会大大减少调整代码和添加新feature的工作量。
-                printToFileAndOpenNotePad(fileName, strForPrint);
-            }
-        }
-    }
+//    public static void printExistCase(Cases existCase) {
+////      String strForPrint = getPrintableStringFromCase(existCase);        
+//        if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
+//            String caseTitle = getPrintableCasesTitle(existCase);
+//            Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
+//            if (baby.getApgars() != null) {
+//                String strForPrint = caseTitle + ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(baby.getApgars().toArray()));
+//                String fileName ="temp/" + new Long(System.currentTimeMillis()).toString()+".txt";
+//                //TODO [待总] 良好的封装函数，会大大减少调整代码和添加新feature的工作量。
+//                printToFileAndOpenNotePad(fileName, strForPrint);
+//            }
+//        }
+//    }
     
     public static String getPrintableCasesTitle(Cases existCase) {
         StringBuffer printableString = new StringBuffer();
@@ -158,37 +160,43 @@ public class CentralController {
     }
     
     
-    private static String getPureApgarPrintableString(Collection collections) {
-//        StringBuffer apgarPrString = new StringBuffer();
-//        apgarPrString.append("评分时间   心率   呼吸    肌张力    对刺激反应、怪象   颜色\r\n");
-//        apgarPrString.append("----------------------------------------------------------------------------\r\n\r\n");
-//        Iterator it = collections.iterator();
-//        while (it.hasNext()) { // TODO 这里需要sort，按照1,5,10分钟的打分结果进行排序
-//            // TODO 这里还需要严格的控制待打印的数据的format，比如最多几个空格，这样就能得到一个良好format的txt文件。
-//            Apgar apgar = (Apgar) it.next();
-//            apgarPrString.append(apgar.toPrintableString()+"\r\n\r\n\r\n\r\n");
-//        }
+//    private static String getPureApgarPrintableString(Collection collections) {
+////        StringBuffer apgarPrString = new StringBuffer();
+////        apgarPrString.append("评分时间   心率   呼吸    肌张力    对刺激反应、怪象   颜色\r\n");
+////        apgarPrString.append("----------------------------------------------------------------------------\r\n\r\n");
+////        Iterator it = collections.iterator();
+////        while (it.hasNext()) { // TODO 这里需要sort，按照1,5,10分钟的打分结果进行排序
+////            // TODO 这里还需要严格的控制待打印的数据的format，比如最多几个空格，这样就能得到一个良好format的txt文件。
+////            Apgar apgar = (Apgar) it.next();
+////            apgarPrString.append(apgar.toPrintableString()+"\r\n\r\n\r\n\r\n");
+////        }
+////        
+////        // TODO 这里需要对没有打分的apgar时间间隔进行判定，并全部显示未打分。
+////        return apgarPrString.toString();
 //        
-//        // TODO 这里需要对没有打分的apgar时间间隔进行判定，并全部显示未打分。
-//        return apgarPrString.toString();
-        
-        // TODO [待总] 调用最新的打印统一接口
-        return ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(collections.toArray()));
-    }
+//        // TODO [待总] 调用最新的打印统一接口
+//        return ApgarPrintableTable.getPrintableApgarString(new ApgarTableModel(collections.toArray()));
+//    }
     
-    // TODO 需要返回值以确定是否写文件成功，因为IO极大程度会失败
-    private static void writeToFile(String fileName, String fileContent) throws IOException{
-        OutputStreamWriter output = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
-        output.write(fileContent);
-        output.close();
-    }
+//    // TODO 需要返回值以确定是否写文件成功，因为IO极大程度会失败
+//    private static void writeToFile(String fileName, String fileContent) throws IOException{
+//        OutputStreamWriter output = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
+//        output.write(fileContent);
+//        output.close();
+//    }
     
-    private static void callExternalCommand(String commandString) {
-    Runtime rt = Runtime.getRuntime();
-        try {
-            rt.exec(commandString);
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+//    private static void callExternalCommand(String commandString) {
+//    Runtime rt = Runtime.getRuntime();
+//        try {
+//            rt.exec(commandString);
+//        } catch (IOException ex) {
+//            System.out.println(ex.getMessage());
+//        }
+//    }
+    
+    private static void initCaseHistory(CaseHistory ch) {
+        if (caseHistory == null) {
+            caseHistory = ch;
         }
     }
     
@@ -197,38 +205,55 @@ public class CentralController {
         cnc.setChForUpdate(ch);
         cnc.setTitle("创建新的病历");
         cnc.setVisible(true);
-        caseHistory = ch;
+        // 对case本身进行创建，修改，删除，以及apgar打分时，我们都需要更新外部的病历列表
+        initCaseHistory(ch);
     }
     
     public static void viewExistingCase(Cases existCase) {
         new ViewExistingCase(existCase).setVisible(true);
     }
 
-    public static void modifyExistingCase (Cases existCases) {
+    // 病历列表上调用，呼出修改病历界面。
+    public static void modifyExistingCase (Cases existCases, CaseHistory ch) {
+        if (existCases == null) return ;
         new ModifyExistsCase(existCases).setVisible(true);
+        initCaseHistory(ch);
     }
     
+    // 在修改病历的窗口上点击"确认修改"后调用。
     public static void modifyCase(long caseId, String gravidaName, int age, int medicalNo, String doctorName, JFrame modifyWindow) {
+        
         CasesHelper.modifyCase(caseId, gravidaName, age, medicalNo, doctorName);
         modifyWindow.dispose();
         if (caseHistory != null) {
             caseHistory.updateModelFromExternal();
             caseHistory.updateButtonForCurrentCase();
         }
-        
     }
     
-    
-    private static void printToFileAndOpenNotePad(String fileName, String printableString) {
-        try{
-            writeToFile(fileName, printableString);
+    // TODO 我依然对任何的调用的返回值，以及exception都没有处理。根据互联网程序的分布式与容灾处理，我似乎什么都没有做。
+    public static void deleteExistCase(Cases existCases, CaseHistory ch) {
+        if (existCases == null) return ;
+        if (CentralController.shouldContinueMessageBox("确认删除当前病历", "确认后会永久性的删掉病历，是否确认？")) {
+            CasesHelper.deleteCase(existCases.getId());
+            initCaseHistory(ch);
+            if (caseHistory != null) {
+                caseHistory.updateModelFromExternal();
+                caseHistory.updateButtonForCurrentCase();
+            }
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        
-        callExternalCommand("notepad.exe "+fileName);
     }
+    
+//    private static void printToFileAndOpenNotePad(String fileName, String printableString) {
+//        try{
+//            writeToFile(fileName, printableString);
+//        }
+//        catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        
+//        callExternalCommand("notepad.exe "+fileName);
+//    }
     
     public static void showCommonMessageBox() {
         JOptionPane.showMessageDialog(null, "请按照提示输入正确的格式");
@@ -245,11 +270,11 @@ public class CentralController {
     }
     
     public static void main(String[] args) {
-        try {
-            writeToFile("a.txt", "bcde");
-            callExternalCommand("notepad.exe " + "a.txt");
-        } catch (IOException ex) {
-            Logger.getLogger(CentralController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try {
+//            writeToFile("a.txt", "bcde");
+//            callExternalCommand("notepad.exe " + "a.txt");
+//        } catch (IOException ex) {
+//            Logger.getLogger(CentralController.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
 }
