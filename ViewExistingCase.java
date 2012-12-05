@@ -281,8 +281,8 @@ public class ViewExistingCase extends javax.swing.JFrame {
                     printCaseButton.setEnabled(true);
 //                    apgarScoreTable.setBorder(new MatteBorder(1, 0, 1, 0, Color.RED));
                     JTableHeader thdExam = apgarScoreTable.getTableHeader();                  
-                    thdExam.setPreferredSize(new Dimension(thdExam.getWidth(), apgarScoreTable.getRowHeight()*2));
-                    apgarScoreTable.setRowHeight(5, apgarScoreTable.getRowHeight()*2);
+                    thdExam.setPreferredSize(new Dimension(thdExam.getWidth(), apgarScoreTable.getRowHeight()*3));
+                    apgarScoreTable.setRowHeight(apgarScoreTable.getRowHeight()*3);
                 }
             } else {
                 babyBirthDateLabel.setText("");

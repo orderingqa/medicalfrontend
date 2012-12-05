@@ -148,9 +148,10 @@ public class CentralController {
         Gravida gravida = existCase.getGravida();
         Doctor doctor = existCase.getDoctor();
         Baby firstBaby = (Baby)gravida.getBabys().toArray()[0];
-        String gravidaString = "产妇姓名:" + gravida.getName() + "                                    产妇年龄:" + gravida.getAge() + "\n";
-        String hopspitalString = "大夫姓名:" + doctor.getDoctorName() + "                                    病历号:" + gravida.getMedicNo() + "\n";
-        String babyString = "婴儿出生时间:" + firstBaby.getBirthTime() + "          婴儿性别:" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ) + "\n"; 
+        String gravidaString = "产妇姓名:" + gravida.getName() + "\n"+
+                "产妇年龄:" + gravida.getAge() + "\n";
+        String hopspitalString = "大夫姓名:" + doctor.getDoctorName() + "\n病历号:" + gravida.getMedicNo() + "\n";
+        String babyString = "婴儿出生时间:" + firstBaby.getBirthTime() + "\n婴儿性别:" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ) + "\n"; 
         String commentString = "备注：" + gravida.getComment();
         printableString.append(gravidaString);
         printableString.append(hopspitalString);

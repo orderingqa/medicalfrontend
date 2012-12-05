@@ -50,5 +50,5 @@ public class JTablePrinter {
                                           "Printing Result",
                                           JOptionPane.ERROR_MESSAGE);
         }
-}
+    }
 }

@@ -42,8 +42,8 @@ public class TablePrintable implements Printable {
     private final Rectangle hclip = new Rectangle(0, 0, 0, 0);
     private final Rectangle tempRect = new Rectangle(0, 0, 0, 0);
     private static final int H_F_SPACE = 8;
-    private static final float HEADER_FONT_SIZE = 12.0f;
-    private static final float FOOTER_FONT_SIZE = 12.0f;
+    private static final float HEADER_FONT_SIZE = 10.0f;
+    private static final float FOOTER_FONT_SIZE = 10.0f;
     private final Font headerFont;
     private final Font footerFont;
 
@@ -117,10 +117,12 @@ public class TablePrintable implements Printable {
             int nbLines = headerText.split("\n").length;
             hRect = graphics.getFontMetrics().getStringBounds(headerText, graphics);
 
+
             hRect = new Rectangle2D.Double(hRect.getX(), Math.abs(hRect.getY()), hRect.getWidth(),
                     hRect.getHeight() * nbLines);
 
-            headerTextSpace = (int) Math.ceil(hRect.getHeight() * nbLines);
+//            headerTextSpace = (int) Math.ceil(hRect.getHeight() * nbLines);
+            headerTextSpace = (int) Math.ceil(hRect.getHeight()); // TODO 现在打印出来的效果是行数越多，表格往下平移的越多，我希望是个基本紧挨着的效果。故去掉行数相乘的代码。
             availableSpace -= headerTextSpace + H_F_SPACE;
         }
 
@@ -282,20 +284,20 @@ public class TablePrintable implements Printable {
         for (int i = 0; i < lines.length; i++) {
             int tx;
 
-            // if the text is small enough to fit, center it
-            if (rect.getWidth() < imgWidth) {
-                tx = (int) (imgWidth / 2 - g2d.getFontMetrics().getStringBounds(lines[i], g2d).getWidth() / 2);
-
-                // otherwise, if the table is LTR, ensure the left side of
-                // the text shows; the right can be clipped
-            } else if (table.getComponentOrientation().isLeftToRight()) {
-                tx = 0;
-
-                // otherwise, ensure the right side of the text shows
-            } else {
-                tx = -(int) (Math.ceil(rect.getWidth()) - imgWidth);
-            }
-
+//            // if the text is small enough to fit, center it
+//            if (rect.getWidth() < imgWidth) {
+//                tx = (int) (imgWidth / 2 - g2d.getFontMetrics().getStringBounds(lines[i], g2d).getWidth() / 2);
+//
+//                // otherwise, if the table is LTR, ensure the left side of
+//                // the text shows; the right can be clipped
+//            } else if (table.getComponentOrientation().isLeftToRight()) {
+//                tx = 0;
+//
+//                // otherwise, ensure the right side of the text shows
+//            } else {
+//                tx = -(int) (Math.ceil(rect.getWidth()) - imgWidth);
+//            }
+            tx = 0; // 这个强制赋值是为了保证每次打印头和尾时都采用自左到右打印次序。
             int ty = (int) Math.ceil(Math.abs(rect.getY() + i * rect.getHeight() / lines.length));
             g2d.drawString(lines[i], tx, ty);
         }
