@@ -4,13 +4,17 @@
  */
 package ls.jtsk.ui;
 
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.WindowEvent;
 import java.awt.print.Printable;
 import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JTable;
+import javax.swing.border.MatteBorder;
 import javax.swing.event.TableModelListener;
+import javax.swing.table.JTableHeader;
 import javax.swing.table.TableModel;
 import ls.jtsk.helper.CasesHelper;
 import ls.jtsk.model.Apgar;
@@ -275,6 +279,10 @@ public class ViewExistingCase extends javax.swing.JFrame {
                 if (baby.getApgars() != null) {
                     apgarScoreTable.setModel(new ApgarTableModel(baby.getApgars().toArray()));
                     printCaseButton.setEnabled(true);
+//                    apgarScoreTable.setBorder(new MatteBorder(1, 0, 1, 0, Color.RED));
+                    JTableHeader thdExam = apgarScoreTable.getTableHeader();                  
+                    thdExam.setPreferredSize(new Dimension(thdExam.getWidth(), apgarScoreTable.getRowHeight()*2));
+                    apgarScoreTable.setRowHeight(5, apgarScoreTable.getRowHeight()*2);
                 }
             } else {
                 babyBirthDateLabel.setText("");
