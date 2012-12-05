@@ -66,12 +66,7 @@
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                  <Component id="babyGenderLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -81,6 +76,17 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="medicalNoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="gravidaNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="commentLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="babyGenderLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -137,8 +143,13 @@
                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="babyBirthDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="508" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="commentLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="421" max="-2" attributes="0"/>
               <EmptySpace pref="31" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="printCaseButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
@@ -254,6 +265,16 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="printCaseButtonActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x5907;&#x6ce8;&#x4fe1;&#x606f;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="commentLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x5907;&#x6ce8;&#x4fe1;&#x606f;"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

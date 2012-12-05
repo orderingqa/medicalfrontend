@@ -70,6 +70,8 @@ public class ViewExistingCase extends javax.swing.JFrame {
             }
         };
         printCaseButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        commentLabel = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -147,6 +149,10 @@ public class ViewExistingCase extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setText("备注信息");
+
+        commentLabel.setText("备注信息");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -160,11 +166,7 @@ public class ViewExistingCase extends javax.swing.JFrame {
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel9)
-                                    .addGap(35, 35, 35)
-                                    .addComponent(babyGenderLabel))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel1)
@@ -172,7 +174,15 @@ public class ViewExistingCase extends javax.swing.JFrame {
                                     .addGap(35, 35, 35)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(medicalNoLabel)
-                                        .addComponent(gravidaNameLabel))))
+                                        .addComponent(gravidaNameLabel)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel9)
+                                        .addComponent(jLabel2))
+                                    .addGap(35, 35, 35)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(commentLabel)
+                                        .addComponent(babyGenderLabel))))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel3)
@@ -212,8 +222,12 @@ public class ViewExistingCase extends javax.swing.JFrame {
                     .addComponent(babyGenderLabel)
                     .addComponent(jLabel11)
                     .addComponent(babyBirthDateLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(commentLabel))
+                .addGap(42, 42, 42)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(printCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -250,6 +264,7 @@ public class ViewExistingCase extends javax.swing.JFrame {
             doctorNameLabel.setText(existCase.getDoctor().getDoctorName());
             gravidaNameLabel.setText(existCase.getGravida().getName());
             gravidaAgeLabel.setText(new Integer(existCase.getGravida().getAge()).toString());
+            commentLabel.setText(existCase.getGravida().getComment());
             if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
                 Baby baby = (Baby) existCase.getGravida().getBabys().iterator().next();
                 babyBirthDateLabel.setText(baby.getBirthTime());
@@ -326,6 +341,7 @@ public class ViewExistingCase extends javax.swing.JFrame {
     private javax.swing.JTable apgarScoreTable;
     private javax.swing.JLabel babyBirthDateLabel;
     private javax.swing.JLabel babyGenderLabel;
+    private javax.swing.JLabel commentLabel;
     private javax.swing.JLabel doctorNameLabel;
     private javax.swing.JLabel gravidaAgeLabel;
     private javax.swing.JLabel gravidaNameLabel;
@@ -334,6 +350,7 @@ public class ViewExistingCase extends javax.swing.JFrame {
     private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;

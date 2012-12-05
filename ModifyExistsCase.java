@@ -72,6 +72,9 @@ public class ModifyExistsCase extends javax.swing.JFrame {
         ageInput = new javax.swing.JTextField(10);
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        commentsInput = new javax.swing.JTextArea();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -134,7 +137,6 @@ public class ModifyExistsCase extends javax.swing.JFrame {
 
         modifyCaseButton.setText("确认修改");
         modifyCaseButton.setActionCommand("修改");
-        modifyCaseButton.setEnabled(false);
         modifyCaseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modifyCaseButtonActionPerformed(evt);
@@ -159,26 +161,30 @@ public class ModifyExistsCase extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(51, 153, 0));
         jLabel4.setText("(请输入数字)");
 
+        jLabel6.setText("备注");
+
+        commentsInput.setColumns(20);
+        commentsInput.setRows(5);
+        jScrollPane2.setViewportView(commentsInput);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(modifyCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(362, 362, 362)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
-                                        .addGap(35, 35, 35)
-                                        .addComponent(babyGenderLabel))
+                                    .addComponent(jLabel9)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel1)
@@ -188,7 +194,9 @@ public class ModifyExistsCase extends javax.swing.JFrame {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGap(81, 81, 81)
                                                 .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(gravidaInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(babyGenderLabel)
+                                                .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(35, 35, 35)
                                         .addComponent(jLabel2)))
                                 .addGap(128, 128, 128)
@@ -207,8 +215,15 @@ public class ModifyExistsCase extends javax.swing.JFrame {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(babyBirthDateLabel)
                                             .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 789, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 789, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(132, 132, 132)
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addContainerGap(18, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,8 +252,16 @@ public class ModifyExistsCase extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel11)
                         .addComponent(babyBirthDateLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel6)
+                        .addGap(44, 44, 44))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(modifyCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -258,7 +281,7 @@ public class ModifyExistsCase extends javax.swing.JFrame {
             CentralController.showCommonMessageBox();    
             return;
         } else {
-            CentralController.modifyCase(existCase.getId(), gravidaInput.getText(), Integer.parseInt(ageInput.getText()), Integer.parseInt(medicalNoInput.getText()), doctorInput.getText(), this);
+            CentralController.modifyCase(existCase.getId(), gravidaInput.getText(), Integer.parseInt(ageInput.getText()), Integer.parseInt(medicalNoInput.getText()), doctorInput.getText(),commentsInput.getText(), this);
         }
     }//GEN-LAST:event_modifyCaseButtonActionPerformed
 
@@ -290,7 +313,7 @@ public class ModifyExistsCase extends javax.swing.JFrame {
             doctorInput.setText(existCase.getDoctor().getDoctorName());
 //            gravidaNameLabel.setText(existCase.getGravida().getName());
             gravidaInput.setText(existCase.getGravida().getName());
-            
+            commentsInput.setText(existCase.getGravida().getComment());
 //            gravidaAgeLabel.setText(new Integer(existCase.getGravida().getAge()).toString());
             ageInput.setText(new Integer(existCase.getGravida().getAge()).toString());
             if (existCase.getGravida().getBabys() != null && existCase.getGravida().getBabys().size() > 0) {
@@ -302,12 +325,12 @@ public class ModifyExistsCase extends javax.swing.JFrame {
 // 所有的显示逻辑都由ApgarTableModel来控制。
                 if (baby.getApgars() != null) {
                     apgarScoreTable.setModel(new ApgarTableModel(baby.getApgars().toArray()));
-                    modifyCaseButton.setEnabled(true);
+//                    modifyCaseButton.setEnabled(true);
                 }
             } else {
                 babyBirthDateLabel.setText("");
                 babyGenderLabel.setText("");
-                modifyCaseButton.setEnabled(false);
+//                modifyCaseButton.setEnabled(false);
             }
             
 //            Object[] tableModel = new Object [][] {
@@ -370,6 +393,7 @@ public class ModifyExistsCase extends javax.swing.JFrame {
     private javax.swing.JTable apgarScoreTable;
     private javax.swing.JLabel babyBirthDateLabel;
     private javax.swing.JLabel babyGenderLabel;
+    private javax.swing.JTextArea commentsInput;
     private javax.swing.JTextField doctorInput;
     private javax.swing.JTextField gravidaInput;
     private javax.swing.JButton jButton4;
@@ -381,9 +405,11 @@ public class ModifyExistsCase extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField medicalNoInput;
     private javax.swing.JButton modifyCaseButton;
     // End of variables declaration//GEN-END:variables

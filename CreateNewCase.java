@@ -46,6 +46,9 @@ public class CreateNewCase extends javax.swing.JFrame {
         ageInput = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        gravidaCommentInput = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("新建病历");
@@ -99,6 +102,13 @@ public class CreateNewCase extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(51, 153, 0));
         jLabel3.setText("(请输入数字)");
 
+        jLabel2.setText("备注信息");
+
+        gravidaCommentInput.setColumns(20);
+        gravidaCommentInput.setRows(5);
+        gravidaCommentInput.setText("请输入类似孕高症等其他备注信息");
+        jScrollPane1.setViewportView(gravidaCommentInput);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -107,38 +117,44 @@ public class CreateNewCase extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(medicalNoLabel)
-                            .addComponent(gravidaNameLabel))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel1))
-                            .addComponent(gravidaInput)))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(saveButton)
                         .addGap(142, 142, 142)
-                        .addComponent(apgarButton)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(apgarButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(gravidaAgeLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel3))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(doctorNameLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(16, 16, 16))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(cancelButton)
+                                .addGap(54, 54, 54))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(medicalNoLabel)
+                            .addComponent(gravidaNameLabel)
+                            .addComponent(jLabel2))
+                        .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(gravidaAgeLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(doctorNameLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(16, 16, 16))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(cancelButton)
-                        .addGap(54, 54, 54))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel1)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,12 +173,18 @@ public class CreateNewCase extends javax.swing.JFrame {
                     .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(40, 40, 40))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
                     .addComponent(apgarButton)
                     .addComponent(cancelButton))
-                .addGap(48, 48, 48))
+                .addContainerGap())
         );
 
         pack();
@@ -195,7 +217,7 @@ public class CreateNewCase extends javax.swing.JFrame {
             return;
         }
         this.dispose();
-        CentralController.saveCaseAndExit(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
+        CentralController.saveCaseAndExit(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText(), gravidaCommentInput.getText());
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
@@ -210,7 +232,7 @@ public class CreateNewCase extends javax.swing.JFrame {
             return;
         }
         this.dispose();
-        CentralController.saveCaseAndShowBabyInputWindow(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText());
+        CentralController.saveCaseAndShowBabyInputWindow(medicalNoInput.getText(), doctorInput.getText(), gravidaInput.getText(), ageInput.getText(), gravidaCommentInput.getText());
         
     }//GEN-LAST:event_apgarButtonActionPerformed
 
@@ -271,10 +293,13 @@ public class CreateNewCase extends javax.swing.JFrame {
     private javax.swing.JTextField doctorInput;
     private javax.swing.JLabel doctorNameLabel;
     private javax.swing.JLabel gravidaAgeLabel;
+    private javax.swing.JTextArea gravidaCommentInput;
     private javax.swing.JTextField gravidaInput;
     private javax.swing.JLabel gravidaNameLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField medicalNoInput;
     private javax.swing.JLabel medicalNoLabel;
     private javax.swing.JButton saveButton;

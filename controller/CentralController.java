@@ -45,8 +45,8 @@ public class CentralController {
     private static CaseHistory caseHistory = null;
     
     
-    public static void saveCaseAndExit(String medicalNo, String doctorName, String gravidaName, String age) {
-        ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age), null);
+    public static void saveCaseAndExit(String medicalNo, String doctorName, String gravidaName, String age, String comment) {
+        ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age), comment);
         if (caseHistory != null) caseHistory.updateModelFromExternal();
     }
     
@@ -59,8 +59,8 @@ public class CentralController {
      * @param gravidaName
      * @param age 
      */
-    public static void saveCaseAndShowBabyInputWindow(String medicalNo, String doctorName, String gravidaName, String age) {
-        long newCaseId = ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age), null); // 模型更新完毕，接下来拼装新的视图。
+    public static void saveCaseAndShowBabyInputWindow(String medicalNo, String doctorName, String gravidaName, String age, String comment) {
+        long newCaseId = ch.addCase(Integer.parseInt(medicalNo), doctorName, gravidaName, Integer.parseInt(age), comment); // 模型更新完毕，接下来拼装新的视图。
         // TODO 怎么样才能使得我想运行上下两个赋值可以通过配置来完成，而不是修改代码？这样我可以随时测试有没有db的代码。
 //        long newCaseId = 0;
         CreateNewBaby cnb = new CreateNewBaby(newCaseId);
@@ -150,10 +150,12 @@ public class CentralController {
         Baby firstBaby = (Baby)gravida.getBabys().toArray()[0];
         String gravidaString = "产妇姓名:" + gravida.getName() + "                                    产妇年龄:" + gravida.getAge() + "\n";
         String hopspitalString = "大夫姓名:" + doctor.getDoctorName() + "                                    病历号:" + gravida.getMedicNo() + "\n";
-        String babyString = "婴儿出生时间:" + firstBaby.getBirthTime() + "          婴儿性别:" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ); 
+        String babyString = "婴儿出生时间:" + firstBaby.getBirthTime() + "          婴儿性别:" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ) + "\n"; 
+        String commentString = "备注：" + gravida.getComment();
         printableString.append(gravidaString);
         printableString.append(hopspitalString);
         printableString.append(babyString);
+        printableString.append(commentString);
 //        printableString.append("\r\n-------------------------------------------------------------------------------------------------");
 //        printableString.append(getPureApgarPrintableString(apgarCollection));
         return printableString.toString();
@@ -221,9 +223,9 @@ public class CentralController {
     }
     
     // 在修改病历的窗口上点击"确认修改"后调用。
-    public static void modifyCase(long caseId, String gravidaName, int age, int medicalNo, String doctorName, JFrame modifyWindow) {
+    public static void modifyCase(long caseId, String gravidaName, int age, int medicalNo, String doctorName, String comment, JFrame modifyWindow) {
         
-        CasesHelper.modifyCase(caseId, gravidaName, age, medicalNo, doctorName, null);
+        CasesHelper.modifyCase(caseId, gravidaName, age, medicalNo, doctorName, comment);
         modifyWindow.dispose();
         if (caseHistory != null) {
             caseHistory.updateModelFromExternal();
