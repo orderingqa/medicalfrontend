@@ -141,11 +141,17 @@ public class APGARTab extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         xinLvOneminButtonGroup.add(jRadioButton55);
+        jRadioButton55.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton55.setText("1");
         jRadioButton55.setActionCommand("1_pulse_1");
         jRadioButton55.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +161,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         xinLvOneminButtonGroup.add(jRadioButton54);
+        jRadioButton54.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton54.setText("0");
         jRadioButton54.setActionCommand("1_pulse_0");
         jRadioButton54.addActionListener(new java.awt.event.ActionListener() {
@@ -164,6 +171,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         xinLvOneminButtonGroup.add(jRadioButton56);
+        jRadioButton56.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton56.setText("2");
         jRadioButton56.setActionCommand("1_pulse_2");
         jRadioButton56.addActionListener(new java.awt.event.ActionListener() {
@@ -172,29 +180,38 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        jLabel18.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel18.setText("0：无");
 
+        jLabel19.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel19.setText("1：小于100");
 
+        jLabel20.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel20.setText("2：大于等于100");
 
-        oneMinFlashLabel.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        oneMinFlashLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         oneMinFlashLabel.setText("1分钟");
 
-        tenMinFlashLabel.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        tenMinFlashLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         tenMinFlashLabel.setText("10分钟");
 
+        jLabel25.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel25.setText("2：规则、哭声洪亮");
 
+        jLabel29.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel29.setText("0：无");
 
+        jLabel30.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel30.setText("1：慢、不规则");
 
+        jLabel34.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel34.setText("2：四肢活动好");
 
+        jLabel36.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel36.setText("0：松弛");
 
         huXiOneminButtonGroup.add(jRadioButton21);
+        jRadioButton21.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton21.setText("0");
         jRadioButton21.setActionCommand("1_respiration_0");
         jRadioButton21.addActionListener(new java.awt.event.ActionListener() {
@@ -204,6 +221,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         huXiOneminButtonGroup.add(jRadioButton22);
+        jRadioButton22.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton22.setText("1");
         jRadioButton22.setActionCommand("1_respiration_1");
         jRadioButton22.addActionListener(new java.awt.event.ActionListener() {
@@ -213,6 +231,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         huXiOneminButtonGroup.add(jRadioButton23);
+        jRadioButton23.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton23.setText("2");
         jRadioButton23.setActionCommand("1_respiration_2");
         jRadioButton23.addActionListener(new java.awt.event.ActionListener() {
@@ -222,6 +241,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinRespirationButtonGroup.add(jRadioButton24);
+        jRadioButton24.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton24.setText("0");
         jRadioButton24.setActionCommand("10_respiration_0");
         jRadioButton24.addActionListener(new java.awt.event.ActionListener() {
@@ -231,6 +251,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinRespirationButtonGroup.add(jRadioButton25);
+        jRadioButton25.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton25.setText("1");
         jRadioButton25.setActionCommand("10_respiration_1");
         jRadioButton25.addActionListener(new java.awt.event.ActionListener() {
@@ -240,6 +261,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinRespirationButtonGroup.add(jRadioButton26);
+        jRadioButton26.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton26.setText("2");
         jRadioButton26.setActionCommand("10_respiration_2");
         jRadioButton26.addActionListener(new java.awt.event.ActionListener() {
@@ -249,6 +271,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         jiZhangLiOneminButtonGroup.add(jRadioButton27);
+        jRadioButton27.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton27.setText("0");
         jRadioButton27.setActionCommand("1_activity_0");
         jRadioButton27.addActionListener(new java.awt.event.ActionListener() {
@@ -258,6 +281,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         jiZhangLiOneminButtonGroup.add(jRadioButton28);
+        jRadioButton28.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton28.setText("1");
         jRadioButton28.setActionCommand("1_activity_1");
         jRadioButton28.addActionListener(new java.awt.event.ActionListener() {
@@ -267,6 +291,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         jiZhangLiOneminButtonGroup.add(jRadioButton29);
+        jRadioButton29.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton29.setText("2");
         jRadioButton29.setActionCommand("1_activity_2");
         jRadioButton29.addActionListener(new java.awt.event.ActionListener() {
@@ -276,6 +301,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinActivityButtonGroup.add(jRadioButton31);
+        jRadioButton31.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton31.setText("0");
         jRadioButton31.setActionCommand("10_activity_0");
         jRadioButton31.addActionListener(new java.awt.event.ActionListener() {
@@ -285,6 +311,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinActivityButtonGroup.add(jRadioButton49);
+        jRadioButton49.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton49.setText("2");
         jRadioButton49.setActionCommand("10_activity_2");
         jRadioButton49.addActionListener(new java.awt.event.ActionListener() {
@@ -294,6 +321,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinActivityButtonGroup.add(jRadioButton50);
+        jRadioButton50.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton50.setText("1");
         jRadioButton50.setActionCommand("10_activity_1");
         jRadioButton50.addActionListener(new java.awt.event.ActionListener() {
@@ -303,6 +331,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinPulseButtonGroup.add(jRadioButton53);
+        jRadioButton53.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton53.setText("1");
         jRadioButton53.setActionCommand("10_pulse_1");
         jRadioButton53.addActionListener(new java.awt.event.ActionListener() {
@@ -312,6 +341,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinPulseButtonGroup.add(jRadioButton52);
+        jRadioButton52.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton52.setText("2");
         jRadioButton52.setActionCommand("10_pulse_2");
         jRadioButton52.addActionListener(new java.awt.event.ActionListener() {
@@ -321,6 +351,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinPulseButtonGroup.add(jRadioButton58);
+        jRadioButton58.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton58.setText("0");
         jRadioButton58.setActionCommand("10_pulse_0");
         jRadioButton58.addActionListener(new java.awt.event.ActionListener() {
@@ -329,9 +360,11 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        jLabel37.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel37.setText("1：四肢屈曲");
 
         ciJiOneminButtonGroup.add(jRadioButton61);
+        jRadioButton61.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton61.setText("0");
         jRadioButton61.setActionCommand("1_grimace_0");
         jRadioButton61.addActionListener(new java.awt.event.ActionListener() {
@@ -341,6 +374,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         ciJiOneminButtonGroup.add(jRadioButton60);
+        jRadioButton60.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton60.setText("1");
         jRadioButton60.setActionCommand("1_grimace_1");
         jRadioButton60.addActionListener(new java.awt.event.ActionListener() {
@@ -350,6 +384,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         ciJiOneminButtonGroup.add(jRadioButton68);
+        jRadioButton68.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton68.setText("2");
         jRadioButton68.setActionCommand("1_grimace_2");
         jRadioButton68.addActionListener(new java.awt.event.ActionListener() {
@@ -359,6 +394,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinGrimanceButtonGroup.add(jRadioButton62);
+        jRadioButton62.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton62.setText("1");
         jRadioButton62.setActionCommand("10_grimace_1");
         jRadioButton62.addActionListener(new java.awt.event.ActionListener() {
@@ -368,6 +404,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinGrimanceButtonGroup.add(jRadioButton63);
+        jRadioButton63.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton63.setText("2");
         jRadioButton63.setActionCommand("10_grimace_2");
         jRadioButton63.addActionListener(new java.awt.event.ActionListener() {
@@ -377,6 +414,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinGrimanceButtonGroup.add(jRadioButton66);
+        jRadioButton66.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton66.setText("0");
         jRadioButton66.setActionCommand("10_grimace_0");
         jRadioButton66.addActionListener(new java.awt.event.ActionListener() {
@@ -385,17 +423,23 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        jLabel35.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel35.setText("2：喷嚏、哭");
 
+        jLabel39.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel39.setText("1：略有反应(怪脸、弱反应) ");
 
+        jLabel38.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel38.setText("0：无反应");
 
+        jLabel40.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel40.setText("0：全身青紫或苍白");
 
+        jLabel41.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel41.setText("1：躯干红、四肢紫(灰)");
 
         tenMinAppranceButtonGroup.add(jRadioButton69);
+        jRadioButton69.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton69.setText("2");
         jRadioButton69.setActionCommand("10_appearance_2");
         jRadioButton69.addActionListener(new java.awt.event.ActionListener() {
@@ -405,6 +449,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         tenMinAppranceButtonGroup.add(jRadioButton70);
+        jRadioButton70.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton70.setText("1");
         jRadioButton70.setActionCommand("10_appearance_1");
         jRadioButton70.addActionListener(new java.awt.event.ActionListener() {
@@ -414,6 +459,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fuSeOneMinButtonGroup.add(jRadioButton71);
+        jRadioButton71.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton71.setText("0");
         jRadioButton71.setActionCommand("1_appearance_0");
         jRadioButton71.addActionListener(new java.awt.event.ActionListener() {
@@ -423,6 +469,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fuSeOneMinButtonGroup.add(jRadioButton72);
+        jRadioButton72.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton72.setText("2");
         jRadioButton72.setActionCommand("1_appearance_2");
         jRadioButton72.addActionListener(new java.awt.event.ActionListener() {
@@ -432,6 +479,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fuSeOneMinButtonGroup.add(jRadioButton73);
+        jRadioButton73.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton73.setText("1");
         jRadioButton73.setActionCommand("1_appearance_1");
         jRadioButton73.addActionListener(new java.awt.event.ActionListener() {
@@ -440,9 +488,11 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        jLabel42.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel42.setText("2：粉红色");
 
         tenMinAppranceButtonGroup.add(jRadioButton77);
+        jRadioButton77.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton77.setText("0");
         jRadioButton77.setActionCommand("10_appearance_0");
         jRadioButton77.addActionListener(new java.awt.event.ActionListener() {
@@ -452,6 +502,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinActivityButtonGroup.add(jRadioButton76);
+        jRadioButton76.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton76.setText("1");
         jRadioButton76.setActionCommand("5_activity_1");
         jRadioButton76.addActionListener(new java.awt.event.ActionListener() {
@@ -461,6 +512,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinPulsebuttonGroup.add(jRadioButton51);
+        jRadioButton51.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton51.setText("0");
         jRadioButton51.setActionCommand("5_pulse_0");
         jRadioButton51.addActionListener(new java.awt.event.ActionListener() {
@@ -470,6 +522,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinActivityButtonGroup.add(jRadioButton75);
+        jRadioButton75.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton75.setText("0");
         jRadioButton75.setActionCommand("5_activity_0");
         jRadioButton75.addActionListener(new java.awt.event.ActionListener() {
@@ -479,6 +532,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinPulsebuttonGroup.add(jRadioButton59);
+        jRadioButton59.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton59.setText("1");
         jRadioButton59.setActionCommand("5_pulse_1");
         jRadioButton59.addActionListener(new java.awt.event.ActionListener() {
@@ -488,6 +542,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinPulsebuttonGroup.add(jRadioButton57);
+        jRadioButton57.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton57.setText("2");
         jRadioButton57.setActionCommand("5_pulse_2");
         jRadioButton57.addActionListener(new java.awt.event.ActionListener() {
@@ -497,6 +552,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinGrimaceButtonGroup.add(jRadioButton30);
+        jRadioButton30.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton30.setText("2");
         jRadioButton30.setActionCommand("5_grimace_2");
         jRadioButton30.addActionListener(new java.awt.event.ActionListener() {
@@ -506,6 +562,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinGrimaceButtonGroup.add(jRadioButton32);
+        jRadioButton32.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton32.setText("0");
         jRadioButton32.setActionCommand("5_grimace_0");
         jRadioButton32.addActionListener(new java.awt.event.ActionListener() {
@@ -515,6 +572,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinGrimaceButtonGroup.add(jRadioButton48);
+        jRadioButton48.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton48.setText("1");
         jRadioButton48.setActionCommand("5_grimace_1");
         jRadioButton48.addActionListener(new java.awt.event.ActionListener() {
@@ -524,6 +582,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinRespirationButtonGroup.add(jRadioButton18);
+        jRadioButton18.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton18.setText("0");
         jRadioButton18.setActionCommand("5_respiration_0");
         jRadioButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -533,6 +592,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinRespirationButtonGroup.add(jRadioButton20);
+        jRadioButton20.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton20.setText("2");
         jRadioButton20.setActionCommand("5_respiration_2");
         jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -542,6 +602,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinRespirationButtonGroup.add(jRadioButton19);
+        jRadioButton19.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton19.setText("1");
         jRadioButton19.setActionCommand("5_respiration_1");
         jRadioButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -550,10 +611,11 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
-        fiveMinFlashLabel.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
+        fiveMinFlashLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         fiveMinFlashLabel.setText("5分钟");
 
         fiveMinAppearanceButtonGroup.add(jRadioButton67);
+        jRadioButton67.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton67.setText("2");
         jRadioButton67.setActionCommand("5_appearance_2");
         jRadioButton67.addActionListener(new java.awt.event.ActionListener() {
@@ -563,6 +625,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinAppearanceButtonGroup.add(jRadioButton64);
+        jRadioButton64.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton64.setText("0");
         jRadioButton64.setActionCommand("5_appearance_0");
         jRadioButton64.addActionListener(new java.awt.event.ActionListener() {
@@ -572,6 +635,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinAppearanceButtonGroup.add(jRadioButton65);
+        jRadioButton65.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton65.setText("1");
         jRadioButton65.setActionCommand("5_appearance_1");
         jRadioButton65.addActionListener(new java.awt.event.ActionListener() {
@@ -581,6 +645,7 @@ public class APGARTab extends javax.swing.JFrame {
         });
 
         fiveMinActivityButtonGroup.add(jRadioButton74);
+        jRadioButton74.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jRadioButton74.setText("2");
         jRadioButton74.setActionCommand("5_activity_2");
         jRadioButton74.addActionListener(new java.awt.event.ActionListener() {
@@ -598,6 +663,7 @@ public class APGARTab extends javax.swing.JFrame {
         tenMinTotalLabel.setFont(tenMinTotalLabel.getFont().deriveFont(tenMinTotalLabel.getFont().getSize()+10f));
         tenMinTotalLabel.setText("未打分");
 
+        oneMinConfirmButton.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         oneMinConfirmButton.setText("确定");
         oneMinConfirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -605,6 +671,7 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        tenMinConfirmButton.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         tenMinConfirmButton.setText("确定");
         tenMinConfirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -612,6 +679,7 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        fiveMinConfirmButton.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         fiveMinConfirmButton.setText("确定");
         fiveMinConfirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -619,6 +687,7 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        cancelButton.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         cancelButton.setText("退出");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -626,6 +695,7 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        finishAndPrintButton.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         finishAndPrintButton.setText("完成并打印");
         finishAndPrintButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -633,6 +703,7 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        finishAndExitButton.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         finishAndExitButton.setText("完成并退出");
         finishAndExitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -640,27 +711,28 @@ public class APGARTab extends javax.swing.JFrame {
             }
         });
 
+        standardLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         standardLabel.setText("(评分标准)");
 
         apgarTimerLabel.setFont(new java.awt.Font("宋体", 0, 48)); // NOI18N
         apgarTimerLabel.setText("00:00");
 
-        jLabel14.setFont(new java.awt.Font("宋体", 1, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("宋体", 1, 24)); // NOI18N
         jLabel14.setText("心率(次/分)");
 
-        jLabel31.setFont(new java.awt.Font("宋体", 1, 14)); // NOI18N
+        jLabel31.setFont(new java.awt.Font("宋体", 1, 24)); // NOI18N
         jLabel31.setText("呼吸");
 
-        jLabel32.setFont(new java.awt.Font("宋体", 1, 14)); // NOI18N
+        jLabel32.setFont(new java.awt.Font("宋体", 1, 24)); // NOI18N
         jLabel32.setText("肌张力");
 
-        jLabel28.setFont(new java.awt.Font("宋体", 1, 14)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("宋体", 1, 24)); // NOI18N
         jLabel28.setText("对刺激反应、怪象");
 
-        jLabel33.setFont(new java.awt.Font("宋体", 1, 14)); // NOI18N
+        jLabel33.setFont(new java.awt.Font("宋体", 1, 24)); // NOI18N
         jLabel33.setText("肤色");
 
-        jLabel44.setFont(jLabel44.getFont().deriveFont(jLabel44.getFont().getSize()+10f));
+        jLabel44.setFont(new java.awt.Font("宋体", 1, 24)); // NOI18N
         jLabel44.setText("总分");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -671,107 +743,117 @@ public class APGARTab extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(apgarTimerLabel)
-                        .addGap(0, 6, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel25)
-                            .addComponent(jLabel36)
-                            .addComponent(jLabel37)
-                            .addComponent(jLabel34)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel35)
-                            .addComponent(jLabel41)
-                            .addComponent(jLabel42)
-                            .addComponent(standardLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton56)
-                            .addComponent(jRadioButton54)
-                            .addComponent(jRadioButton55)
-                            .addComponent(jRadioButton71)
-                            .addComponent(jRadioButton72)
-                            .addComponent(jRadioButton73)
-                            .addComponent(jRadioButton61)
-                            .addComponent(jRadioButton60)
-                            .addComponent(jRadioButton68)
-                            .addComponent(jRadioButton23)
-                            .addComponent(jRadioButton22)
-                            .addComponent(oneMinConfirmButton)
-                            .addComponent(oneMinTotalLabel)
-                            .addComponent(jRadioButton29)
-                            .addComponent(jRadioButton27)
-                            .addComponent(jRadioButton28)
-                            .addComponent(oneMinFlashLabel)
-                            .addComponent(jRadioButton21))
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fiveMinConfirmButton)
-                            .addComponent(fiveMinTotalLabel)
-                            .addComponent(jRadioButton74)
-                            .addComponent(jRadioButton65)
-                            .addComponent(fiveMinFlashLabel)
-                            .addComponent(jRadioButton64)
-                            .addComponent(jRadioButton67)
-                            .addComponent(jRadioButton19)
-                            .addComponent(jRadioButton20)
-                            .addComponent(jRadioButton18)
-                            .addComponent(jRadioButton48)
-                            .addComponent(jRadioButton32)
-                            .addComponent(jRadioButton30)
-                            .addComponent(jRadioButton57)
-                            .addComponent(jRadioButton59)
-                            .addComponent(jRadioButton75)
-                            .addComponent(jRadioButton76)
-                            .addComponent(jRadioButton51))
-                        .addGap(43, 43, 43)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton70)
-                            .addComponent(jRadioButton69)
-                            .addComponent(jRadioButton77)
-                            .addComponent(jRadioButton52)
-                            .addComponent(jRadioButton53)
-                            .addComponent(jRadioButton58)
-                            .addComponent(jRadioButton62)
-                            .addComponent(jRadioButton63)
-                            .addComponent(jRadioButton66)
-                            .addComponent(jRadioButton26)
-                            .addComponent(jRadioButton25)
-                            .addComponent(jRadioButton24)
-                            .addComponent(tenMinConfirmButton)
-                            .addComponent(tenMinTotalLabel)
-                            .addComponent(jRadioButton49)
-                            .addComponent(jRadioButton50)
-                            .addComponent(jRadioButton31)
-                            .addComponent(tenMinFlashLabel)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(apgarTimerLabel)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel40)
                             .addComponent(jLabel38)
                             .addComponent(jLabel19)
                             .addComponent(jLabel18)
                             .addComponent(jLabel29)
-                            .addComponent(jLabel20))
-                        .addGap(27, 528, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addComponent(finishAndExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(finishAndPrintButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(127, 127, 127)
-                .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel20)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel30)
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel36)
+                                    .addComponent(jLabel37)
+                                    .addComponent(jLabel34)
+                                    .addComponent(jLabel39)
+                                    .addComponent(jLabel35)
+                                    .addComponent(jLabel41)
+                                    .addComponent(jLabel42)
+                                    .addComponent(standardLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jRadioButton56)
+                                    .addComponent(jRadioButton54)
+                                    .addComponent(jRadioButton55)
+                                    .addComponent(jRadioButton71)
+                                    .addComponent(jRadioButton72)
+                                    .addComponent(jRadioButton73)
+                                    .addComponent(jRadioButton61)
+                                    .addComponent(jRadioButton60)
+                                    .addComponent(jRadioButton68)
+                                    .addComponent(jRadioButton23)
+                                    .addComponent(jRadioButton22)
+                                    .addComponent(oneMinConfirmButton)
+                                    .addComponent(oneMinTotalLabel)
+                                    .addComponent(jRadioButton29)
+                                    .addComponent(jRadioButton27)
+                                    .addComponent(jRadioButton28)
+                                    .addComponent(oneMinFlashLabel)
+                                    .addComponent(jRadioButton21))
+                                .addGap(40, 40, 40)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel7Layout.createSequentialGroup()
+                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(fiveMinConfirmButton)
+                                            .addComponent(jRadioButton74)
+                                            .addComponent(jRadioButton65)
+                                            .addComponent(fiveMinFlashLabel)
+                                            .addComponent(jRadioButton64)
+                                            .addComponent(jRadioButton67)
+                                            .addComponent(jRadioButton19)
+                                            .addComponent(jRadioButton20)
+                                            .addComponent(jRadioButton18)
+                                            .addComponent(jRadioButton48)
+                                            .addComponent(jRadioButton32)
+                                            .addComponent(jRadioButton30)
+                                            .addComponent(jRadioButton57)
+                                            .addComponent(jRadioButton59)
+                                            .addComponent(jRadioButton75)
+                                            .addComponent(jRadioButton76)
+                                            .addComponent(jRadioButton51))
+                                        .addGap(43, 43, 43)
+                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButton70)
+                                            .addComponent(jRadioButton69)
+                                            .addComponent(jRadioButton77)
+                                            .addComponent(jRadioButton52)
+                                            .addComponent(jRadioButton53)
+                                            .addComponent(jRadioButton58)
+                                            .addComponent(jRadioButton62)
+                                            .addComponent(jRadioButton63)
+                                            .addComponent(jRadioButton66)
+                                            .addComponent(jRadioButton26)
+                                            .addComponent(jRadioButton25)
+                                            .addComponent(jRadioButton24)
+                                            .addComponent(tenMinConfirmButton)
+                                            .addComponent(tenMinTotalLabel)
+                                            .addComponent(jRadioButton49)
+                                            .addComponent(jRadioButton50)
+                                            .addComponent(jRadioButton31)
+                                            .addComponent(tenMinFlashLabel)))
+                                    .addComponent(fiveMinTotalLabel)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(3, 3, 3)))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(finishAndExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(130, 130, 130)
+                                .addComponent(finishAndPrintButton, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 749, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -780,124 +862,134 @@ public class APGARTab extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(standardLabel)
+                            .addComponent(oneMinFlashLabel)
                             .addComponent(fiveMinFlashLabel)
-                            .addComponent(tenMinFlashLabel)
-                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(oneMinFlashLabel)
-                                .addComponent(standardLabel))))
+                            .addComponent(tenMinFlashLabel)))
                     .addComponent(apgarTimerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
                     .addComponent(jRadioButton54)
-                    .addComponent(jRadioButton58)
                     .addComponent(jLabel18)
-                    .addComponent(jRadioButton51))
+                    .addComponent(jRadioButton51)
+                    .addComponent(jRadioButton58)
+                    .addComponent(jLabel14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton55)
-                    .addComponent(jRadioButton53)
                     .addComponent(jLabel19)
-                    .addComponent(jRadioButton59))
+                    .addComponent(jRadioButton59)
+                    .addComponent(jRadioButton53))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton56)
-                    .addComponent(jRadioButton52)
+                    .addComponent(jLabel20)
                     .addComponent(jRadioButton57)
-                    .addComponent(jLabel20))
-                .addGap(24, 24, 24)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel31)
-                    .addComponent(jRadioButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton18)
-                    .addComponent(jRadioButton21)
-                    .addComponent(jLabel29))
+                    .addComponent(jRadioButton52))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton25)
-                    .addComponent(jRadioButton22)
+                    .addComponent(jLabel31)
+                    .addComponent(jLabel29)
+                    .addComponent(jRadioButton21)
+                    .addComponent(jRadioButton18)
+                    .addComponent(jRadioButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton19)
+                    .addComponent(jRadioButton22)
+                    .addComponent(jRadioButton25)
                     .addComponent(jLabel30))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton26)
+                    .addComponent(jRadioButton20)
                     .addComponent(jRadioButton23)
-                    .addComponent(jLabel25)
-                    .addComponent(jRadioButton20))
-                .addGap(33, 33, 33)
+                    .addComponent(jRadioButton26)
+                    .addComponent(jLabel25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel32)
-                    .addComponent(jRadioButton31)
+                    .addComponent(jLabel36)
                     .addComponent(jRadioButton27)
                     .addComponent(jRadioButton75)
-                    .addComponent(jLabel36))
+                    .addComponent(jLabel32)
+                    .addComponent(jRadioButton31))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel37)
-                    .addComponent(jRadioButton50)
                     .addComponent(jRadioButton28)
-                    .addComponent(jRadioButton76))
+                    .addComponent(jRadioButton76)
+                    .addComponent(jRadioButton50)
+                    .addComponent(jLabel37))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton49)
+                    .addComponent(jLabel34)
                     .addComponent(jRadioButton29)
                     .addComponent(jRadioButton74)
-                    .addComponent(jLabel34))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38)
-                    .addComponent(jLabel28)
-                    .addComponent(jRadioButton61)
-                    .addComponent(jRadioButton66)
-                    .addComponent(jRadioButton32))
+                    .addComponent(jRadioButton49))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton32)
+                    .addComponent(jLabel38)
+                    .addComponent(jRadioButton66)
+                    .addComponent(jLabel28)
+                    .addComponent(jRadioButton61))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton48)
                     .addComponent(jLabel39)
                     .addComponent(jRadioButton60)
-                    .addComponent(jRadioButton62)
-                    .addComponent(jRadioButton48))
+                    .addComponent(jRadioButton62))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton68)
-                    .addComponent(jRadioButton63)
+                    .addComponent(jRadioButton30)
                     .addComponent(jLabel35)
-                    .addComponent(jRadioButton30))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel40)
-                    .addComponent(jLabel33)
-                    .addComponent(jRadioButton71)
-                    .addComponent(jRadioButton77)
-                    .addComponent(jRadioButton64))
+                    .addComponent(jRadioButton63)
+                    .addComponent(jRadioButton68))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton70)
-                    .addComponent(jLabel41)
-                    .addComponent(jRadioButton73)
-                    .addComponent(jRadioButton65))
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel40)
+                    .addComponent(jRadioButton71)
+                    .addComponent(jRadioButton64)
+                    .addComponent(jRadioButton77))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton69)
+                    .addComponent(jRadioButton65)
+                    .addComponent(jRadioButton73)
+                    .addComponent(jRadioButton70)
+                    .addComponent(jLabel41))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButton67)
                     .addComponent(jLabel42)
                     .addComponent(jRadioButton72)
-                    .addComponent(jRadioButton67))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jRadioButton69))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel44)
                     .addComponent(tenMinTotalLabel)
-                    .addComponent(fiveMinTotalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(oneMinTotalLabel))
-                .addGap(18, 18, 18)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(oneMinTotalLabel)
+                        .addComponent(jLabel44))
+                    .addComponent(fiveMinTotalLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(oneMinConfirmButton)
                         .addComponent(fiveMinConfirmButton))
                     .addComponent(tenMinConfirmButton))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(finishAndExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(finishAndPrintButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(112, 112, 112))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(finishAndPrintButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(finishAndExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel14.getAccessibleContext().setAccessibleName("心率");
@@ -911,201 +1003,12 @@ public class APGARTab extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jRadioButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton65ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton65ActionPerformed
-
-    private void jRadioButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton64ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton64ActionPerformed
-
-    private void jRadioButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton67ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton67ActionPerformed
-
-    private void jRadioButton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton66ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton66ActionPerformed
-
-    private void jRadioButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton63ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton63ActionPerformed
-
-    private void jRadioButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton62ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton62ActionPerformed
-
-    private void jRadioButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton68ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton68ActionPerformed
-
-    private void jRadioButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton60ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton60ActionPerformed
-
-    private void jRadioButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton61ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton61ActionPerformed
-
-    private void jRadioButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton56ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton56ActionPerformed
-
-    private void jRadioButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton57ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton57ActionPerformed
-
-    private void jRadioButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton58ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton58ActionPerformed
-
-    private void jRadioButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton59ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton59ActionPerformed
-
-    private void jRadioButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton51ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton51ActionPerformed
-
-    private void jRadioButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton52ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton52ActionPerformed
-
-    private void jRadioButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton53ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton53ActionPerformed
-
-    private void jRadioButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton55ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton55ActionPerformed
-
-    private void jRadioButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton50ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton50ActionPerformed
-
-    private void jRadioButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton49ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton49ActionPerformed
-
-    private void jRadioButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton48ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton48ActionPerformed
-
-    private void jRadioButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton32ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton32ActionPerformed
-
-    private void jRadioButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton31ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton31ActionPerformed
-
-    private void jRadioButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton30ActionPerformed
-
-    private void jRadioButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton29ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton29ActionPerformed
-
-    private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton28ActionPerformed
-
-    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton27ActionPerformed
-
-    private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton26ActionPerformed
-
-    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton25ActionPerformed
-
-    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton24ActionPerformed
-
-    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton23ActionPerformed
-
-    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton22ActionPerformed
-
-    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton21ActionPerformed
-
-    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton20ActionPerformed
-
-    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton19ActionPerformed
-
-    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton18ActionPerformed
-
-    private void jRadioButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton69ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton69ActionPerformed
-
-    private void jRadioButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton70ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton70ActionPerformed
-
-    private void jRadioButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton71ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton71ActionPerformed
-
-    private void jRadioButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton72ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton72ActionPerformed
-
-    private void jRadioButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton73ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton73ActionPerformed
-
-    private void jRadioButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton74ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton74ActionPerformed
-
-    private void jRadioButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton75ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton75ActionPerformed
-
-    private void jRadioButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton76ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton76ActionPerformed
-
-    private void jRadioButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton77ActionPerformed
-       actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton77ActionPerformed
-
-    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        if (CentralController.shouldContinueMessageBox("是否要关闭apgar打分窗口", "请确认您准备放弃本次打分，并准备离开？")) {
-             if (ap != null) {
-                 ap.stopTimer();
-             }
-             this.dispose();
-        }
-    }//GEN-LAST:event_cancelButtonActionPerformed
-
-    private void jRadioButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton54ActionPerformed
-        actionHandle(evt);
-    }//GEN-LAST:event_jRadioButton54ActionPerformed
 
     private void finishAndExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishAndExitButtonActionPerformed
         // save the model from model/view layer to persistent/database layer
@@ -1125,16 +1028,215 @@ public class APGARTab extends javax.swing.JFrame {
             }
             ApgarFactory apgarFactory = ApgarFactory.getApgarFactory(this.babyId);
             CentralController.saveApgarAndPrint(momId, babyId, apgarFactory.getAllApgars(), this);
-            
+
         }
     }//GEN-LAST:event_finishAndPrintButtonActionPerformed
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        if (CentralController.shouldContinueMessageBox("是否要关闭apgar打分窗口", "请确认您准备放弃本次打分，并准备离开？")) {
+            if (ap != null) {
+                ap.stopTimer();
+            }
+            this.dispose();
+        }
+    }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void fiveMinConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveMinConfirmButtonActionPerformed
+        ap.setFiveMinAlarmShouldStop();
+        disableFiveMinScoreButton();
+    }//GEN-LAST:event_fiveMinConfirmButtonActionPerformed
+
+    private void tenMinConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenMinConfirmButtonActionPerformed
+        ap.setTenMinAlarmShouldStop();
+        disableTenMinScoreButton();
+    }//GEN-LAST:event_tenMinConfirmButtonActionPerformed
 
     // TODO 通过引用了一个apgarTimer对象的方式来更新定时器的内部状态，顾不着思考是不是好了。
     private void oneMinConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneMinConfirmButtonActionPerformed
         ap.setOneMinAlarmShouldStop();
         disableOneMinScoreButton();
-        
+
     }//GEN-LAST:event_oneMinConfirmButtonActionPerformed
+
+    private void jRadioButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton74ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton74ActionPerformed
+
+    private void jRadioButton65ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton65ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton65ActionPerformed
+
+    private void jRadioButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton64ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton64ActionPerformed
+
+    private void jRadioButton67ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton67ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton67ActionPerformed
+
+    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton19ActionPerformed
+
+    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton20ActionPerformed
+
+    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton18ActionPerformed
+
+    private void jRadioButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton48ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton48ActionPerformed
+
+    private void jRadioButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton32ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton32ActionPerformed
+
+    private void jRadioButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton30ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton30ActionPerformed
+
+    private void jRadioButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton57ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton57ActionPerformed
+
+    private void jRadioButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton59ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton59ActionPerformed
+
+    private void jRadioButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton75ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton75ActionPerformed
+
+    private void jRadioButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton51ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton51ActionPerformed
+
+    private void jRadioButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton76ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton76ActionPerformed
+
+    private void jRadioButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton77ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton77ActionPerformed
+
+    private void jRadioButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton73ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton73ActionPerformed
+
+    private void jRadioButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton72ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton72ActionPerformed
+
+    private void jRadioButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton71ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton71ActionPerformed
+
+    private void jRadioButton70ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton70ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton70ActionPerformed
+
+    private void jRadioButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton69ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton69ActionPerformed
+
+    private void jRadioButton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton66ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton66ActionPerformed
+
+    private void jRadioButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton63ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton63ActionPerformed
+
+    private void jRadioButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton62ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton62ActionPerformed
+
+    private void jRadioButton68ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton68ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton68ActionPerformed
+
+    private void jRadioButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton60ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton60ActionPerformed
+
+    private void jRadioButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton61ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton61ActionPerformed
+
+    private void jRadioButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton58ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton58ActionPerformed
+
+    private void jRadioButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton52ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton52ActionPerformed
+
+    private void jRadioButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton53ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton53ActionPerformed
+
+    private void jRadioButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton50ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton50ActionPerformed
+
+    private void jRadioButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton49ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton49ActionPerformed
+
+    private void jRadioButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton31ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton31ActionPerformed
+
+    private void jRadioButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton29ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton29ActionPerformed
+
+    private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton28ActionPerformed
+
+    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton27ActionPerformed
+
+    private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton26ActionPerformed
+
+    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton25ActionPerformed
+
+    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton24ActionPerformed
+
+    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton23ActionPerformed
+
+    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton22ActionPerformed
+
+    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton21ActionPerformed
+
+    private void jRadioButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton56ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton56ActionPerformed
+
+    private void jRadioButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton54ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton54ActionPerformed
+
+    private void jRadioButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton55ActionPerformed
+        actionHandle(evt);
+    }//GEN-LAST:event_jRadioButton55ActionPerformed
 
     private void disableAllRadioButtonsAtEnumeration(Enumeration buttons) {
         while (buttons.hasMoreElements()) {
@@ -1142,16 +1244,6 @@ public class APGARTab extends javax.swing.JFrame {
         }
     }
     
-    private void tenMinConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenMinConfirmButtonActionPerformed
-        ap.setTenMinAlarmShouldStop();
-        disableTenMinScoreButton();
-    }//GEN-LAST:event_tenMinConfirmButtonActionPerformed
-
-    private void fiveMinConfirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveMinConfirmButtonActionPerformed
-        ap.setFiveMinAlarmShouldStop();
-        disableFiveMinScoreButton();
-    }//GEN-LAST:event_fiveMinConfirmButtonActionPerformed
-
     
 //     组织窗口被所有的子窗口关闭
     @Override  
@@ -1321,6 +1413,11 @@ public class APGARTab extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton75;
     private javax.swing.JRadioButton jRadioButton76;
     private javax.swing.JRadioButton jRadioButton77;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.ButtonGroup jiZhangLiOneminButtonGroup;
     private javax.swing.JButton oneMinConfirmButton;
     private javax.swing.JLabel oneMinFlashLabel;

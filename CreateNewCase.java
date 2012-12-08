@@ -8,7 +8,7 @@ import ls.jtsk.helper.CasesHelper;
 import ls.jtsk.ui.controller.CentralController;
 /**
  *
- * @author liushuai
+ * @author liushuai3
  */
 public class CreateNewCase extends javax.swing.JFrame {
     CaseHistory caseHistoryForUpdate = null;
@@ -52,14 +52,19 @@ public class CreateNewCase extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("新建病历");
+        setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         setResizable(false);
 
+        doctorNameLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         doctorNameLabel.setText("请输入大夫姓名");
 
+        medicalNoLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         medicalNoLabel.setText("请输入住院号");
 
+        gravidaAgeLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         gravidaAgeLabel.setText("请输入产妇年龄");
 
+        apgarButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         apgarButton.setText("保存并APGAR");
         apgarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +72,7 @@ public class CreateNewCase extends javax.swing.JFrame {
             }
         });
 
+        saveButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         saveButton.setText("保存并退出");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,8 +80,10 @@ public class CreateNewCase extends javax.swing.JFrame {
             }
         });
 
+        gravidaNameLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         gravidaNameLabel.setText("请输入产妇姓名");
 
+        cancelButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         cancelButton.setText("取消并退出");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +91,7 @@ public class CreateNewCase extends javax.swing.JFrame {
             }
         });
 
+        medicalNoInput.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         medicalNoInput.setText("2012");
         medicalNoInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,18 +99,23 @@ public class CreateNewCase extends javax.swing.JFrame {
             }
         });
 
+        doctorInput.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         doctorInput.setText("王大夫");
 
+        gravidaInput.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         gravidaInput.setText("王菲");
 
         ageInput.setText("30");
 
+        jLabel1.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setText("(请输入数字)");
 
+        jLabel3.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 153, 0));
         jLabel3.setText("(请输入数字)");
 
+        jLabel2.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         jLabel2.setText("备注信息");
 
         gravidaCommentInput.setColumns(20);
@@ -120,7 +134,7 @@ public class CreateNewCase extends javax.swing.JFrame {
                         .addComponent(saveButton)
                         .addGap(142, 142, 142)
                         .addComponent(apgarButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,7 +193,7 @@ public class CreateNewCase extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(40, 40, 40))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
                     .addComponent(apgarButton)

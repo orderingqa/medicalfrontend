@@ -67,9 +67,8 @@ public class ActivateWindow extends javax.swing.JFrame {
         doctorInput = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         actInput = new javax.swing.JTextField();
-        snLabel = new javax.swing.JLabel();
-        snLabel.setText("");
         jLabel7 = new javax.swing.JLabel();
+        snLabel = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,8 +105,6 @@ public class ActivateWindow extends javax.swing.JFrame {
             }
         });
 
-        hosInput.setText("宣武医院妇产科");
-
         jLabel1.setText("医院科室");
 
         generateApplyButton.setText("生成序列号");
@@ -119,14 +116,15 @@ public class ActivateWindow extends javax.swing.JFrame {
 
         jLabel5.setText("大夫");
 
-        doctorInput.setText("王丽");
-
         jLabel4.setText("请输入信息，生成激活申请号，发给刘大夫获取激活码");
 
-        snLabel.setFont(new java.awt.Font("宋体", 1, 15)); // NOI18N
-        snLabel.setText("0");
-
         jLabel7.setText("激活申请号");
+
+        snLabel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                snLabelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,41 +133,50 @@ public class ActivateWindow extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(227, 227, 227)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
+                        .addContainerGap(81, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(59, 59, 59)
+                                .addComponent(snLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(hosInput, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(227, 227, 227)
-                            .addComponent(generateApplyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(377, 377, 377)
-                            .addComponent(snLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(227, 227, 227)
-                            .addComponent(welcomeLabel))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(49, 49, 49)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(actInput, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jLabel6)
-                                        .addComponent(jLabel10))
-                                    .addGap(139, 139, 139)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(inputActivateContinueButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(enterApgarButton, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE))))))
-                    .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(227, 227, 227)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(enterApgarButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputActivateContinueButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(generateApplyButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(227, 227, 227)
+                        .addComponent(welcomeLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel10))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel8))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(347, 347, 347)
+                        .addComponent(hosInput, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(actInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(doctorInput, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,10 +196,10 @@ public class ActivateWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(generateApplyButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addComponent(snLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                    .addComponent(snLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel8))
@@ -202,7 +209,7 @@ public class ActivateWindow extends javax.swing.JFrame {
                     .addComponent(actInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13)
                 .addComponent(inputActivateContinueButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(welcomeLabel)
                     .addComponent(jLabel10))
@@ -215,6 +222,7 @@ public class ActivateWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void inputActivateContinueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputActivateContinueButtonActionPerformed
+    
         if (actInput.getText() != null && actInput.getText().trim().length() > 0) {
             try {
                 long userInputActivateSN = Long.parseLong(actInput.getText().trim());
@@ -246,7 +254,7 @@ public class ActivateWindow extends javax.swing.JFrame {
             CustomerHelper.addNewCustomer(hosInput.getText(), doctorInput.getText(), null, null, null);
 //            snLabel.setVisible(true);
 //          当正式运行时，需要删掉
-            actInput.setText(NetID.finalActivateNumberGenerate(NetID.generateApplyNumber()));
+//            actInput.setText(NetID.finalActivateNumberGenerate(NetID.generateApplyNumber()));
         } else {
             snLabel.setText("");
             CentralController.showCommonMessageBox("请正确输入医院科室信息和使用者信息");
@@ -262,6 +270,10 @@ public class ActivateWindow extends javax.swing.JFrame {
         ch.setVisible(true);
     }//GEN-LAST:event_enterApgarButtonActionPerformed
 
+    private void snLabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_snLabelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_snLabelActionPerformed
+
     private void disableAllInputBoxAndEnable(String welcomeStr) {
         hosInput.setEnabled(false);
         doctorInput.setEnabled(false);
@@ -271,6 +283,7 @@ public class ActivateWindow extends javax.swing.JFrame {
         enterApgarButton.setEnabled(true);
         welcomeLabel.setEnabled(true);
         welcomeLabel.setText(welcomeStr);
+        snLabel.setEnabled(false);
     }
     
     /**
@@ -323,7 +336,7 @@ public class ActivateWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel snLabel;
+    private javax.swing.JTextField snLabel;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }

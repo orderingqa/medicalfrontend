@@ -61,8 +61,8 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel7" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -76,102 +76,25 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="apgarTimerLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel28" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel32" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel33" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel31" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel44" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="apgarTimerLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel28" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel32" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel33" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel31" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel44" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="standardLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="151" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jRadioButton56" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton54" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton55" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton71" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton72" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton73" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton61" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton60" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton68" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton23" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton22" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="oneMinConfirmButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="oneMinTotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton29" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton27" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton28" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="oneMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton21" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="fiveMinConfirmButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="fiveMinTotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton74" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton65" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="fiveMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton64" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton67" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton19" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton20" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton18" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton48" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton32" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton30" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton57" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton59" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton75" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton76" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton51" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jRadioButton70" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton69" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton77" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton52" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton53" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton58" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton62" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton63" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton66" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton26" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton25" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton24" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="tenMinConfirmButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="tenMinTotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton49" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton50" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton31" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="tenMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -179,18 +102,110 @@
                               <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="standardLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jRadioButton56" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton54" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton55" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton71" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton72" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton73" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton61" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton60" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton68" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton23" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton22" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oneMinConfirmButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oneMinTotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton29" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="oneMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jRadioButton21" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="fiveMinConfirmButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton74" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton65" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="fiveMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton64" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton67" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton19" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton20" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton18" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton48" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton32" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton30" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton57" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton59" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton75" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton76" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton51" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jRadioButton70" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton69" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton77" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton52" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton53" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton58" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton62" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton63" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton66" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton26" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tenMinConfirmButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tenMinTotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton49" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton50" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton31" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="tenMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="fiveMinTotalLabel" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="cancelButton" min="-2" pref="116" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <EmptySpace min="27" pref="528" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="finishAndExitButton" min="-2" pref="191" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="finishAndPrintButton" min="-2" pref="177" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jSeparator1" alignment="0" min="-2" pref="749" max="-2" attributes="0"/>
+                              <Component id="jSeparator3" alignment="0" min="-2" pref="749" max="-2" attributes="0"/>
+                              <Component id="jSeparator4" alignment="0" min="-2" pref="749" max="-2" attributes="0"/>
+                              <Component id="jSeparator5" alignment="0" min="-2" pref="749" max="-2" attributes="0"/>
+                              <Component id="jSeparator6" alignment="0" min="-2" pref="749" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <Component id="finishAndExitButton" min="-2" pref="140" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="finishAndPrintButton" min="-2" pref="146" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-                  <Component id="cancelButton" min="-2" pref="116" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -199,135 +214,145 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="standardLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="oneMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="fiveMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="tenMinFlashLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                  <Component id="oneMinFlashLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="standardLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
                           </Group>
                       </Group>
                       <Component id="apgarTimerLabel" min="-2" pref="48" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton54" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton58" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel18" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton51" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton58" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jRadioButton55" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton53" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton59" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton53" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jRadioButton56" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton52" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton57" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel20" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton57" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton52" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel31" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton24" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="jRadioButton18" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton21" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel29" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton21" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton18" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton24" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jRadioButton25" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton22" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton19" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton22" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton25" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jRadioButton26" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton23" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton20" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton23" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton26" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton31" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton27" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton75" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton31" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel37" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton50" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton28" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton76" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton50" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel37" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jRadioButton49" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton29" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton74" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton49" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jRadioButton32" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel38" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton66" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel28" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton61" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton66" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton32" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jRadioButton48" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton60" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton62" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton48" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jRadioButton68" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton63" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton30" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton63" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton68" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <EmptySpace pref="6" max="32767" attributes="0"/>
+                  <Component id="jSeparator6" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton71" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton77" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton64" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton77" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jRadioButton65" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton73" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton70" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton73" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton65" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jRadioButton69" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton67" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jRadioButton72" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jRadioButton67" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton69" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="jSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel44" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="tenMinTotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="fiveMinTotalLabel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="oneMinTotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="oneMinTotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="fiveMinTotalLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="oneMinConfirmButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -335,13 +360,13 @@
                       </Group>
                       <Component id="tenMinConfirmButton" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="finishAndExitButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="finishAndPrintButton" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="cancelButton" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="finishAndPrintButton" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cancelButton" max="32767" attributes="0"/>
+                      <Component id="finishAndExitButton" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -351,6 +376,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="xinLvOneminButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="1_pulse_1"/>
@@ -364,6 +392,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="xinLvOneminButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="1_pulse_0"/>
           </Properties>
@@ -376,6 +407,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="xinLvOneminButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="1_pulse_2"/>
           </Properties>
@@ -385,23 +419,32 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel18">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0&#xff1a;&#x65e0;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel19">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1&#xff1a;&#x5c0f;&#x4e8e;100"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel20">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2&#xff1a;&#x5927;&#x4e8e;&#x7b49;&#x4e8e;100"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="oneMinFlashLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1&#x5206;&#x949f;"/>
           </Properties>
@@ -409,33 +452,48 @@
         <Component class="javax.swing.JLabel" name="tenMinFlashLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="10&#x5206;&#x949f;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel25">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2&#xff1a;&#x89c4;&#x5219;&#x3001;&#x54ed;&#x58f0;&#x6d2a;&#x4eae;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel29">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0&#xff1a;&#x65e0;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel30">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1&#xff1a;&#x6162;&#x3001;&#x4e0d;&#x89c4;&#x5219;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel34">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2&#xff1a;&#x56db;&#x80a2;&#x6d3b;&#x52a8;&#x597d;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel36">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0&#xff1a;&#x677e;&#x5f1b;"/>
           </Properties>
         </Component>
@@ -443,6 +501,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="huXiOneminButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="1_respiration_0"/>
@@ -456,6 +517,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="huXiOneminButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="1_respiration_1"/>
           </Properties>
@@ -467,6 +531,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="huXiOneminButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="1_respiration_2"/>
@@ -480,6 +547,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinRespirationButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_respiration_0"/>
           </Properties>
@@ -491,6 +561,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinRespirationButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_respiration_1"/>
@@ -504,6 +577,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinRespirationButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_respiration_2"/>
           </Properties>
@@ -515,6 +591,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="jiZhangLiOneminButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="1_activity_0"/>
@@ -528,6 +607,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="jiZhangLiOneminButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="1_activity_1"/>
           </Properties>
@@ -539,6 +621,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="jiZhangLiOneminButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="1_activity_2"/>
@@ -552,6 +637,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinActivityButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_activity_0"/>
           </Properties>
@@ -563,6 +651,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinActivityButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_activity_2"/>
@@ -576,6 +667,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinActivityButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_activity_1"/>
           </Properties>
@@ -587,6 +681,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinPulseButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_pulse_1"/>
@@ -600,6 +697,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinPulseButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_pulse_2"/>
           </Properties>
@@ -612,6 +712,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinPulseButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_pulse_0"/>
           </Properties>
@@ -621,6 +724,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel37">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1&#xff1a;&#x56db;&#x80a2;&#x5c48;&#x66f2;"/>
           </Properties>
         </Component>
@@ -628,6 +734,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="ciJiOneminButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="1_grimace_0"/>
@@ -641,6 +750,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="ciJiOneminButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="1_grimace_1"/>
           </Properties>
@@ -652,6 +764,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="ciJiOneminButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="1_grimace_2"/>
@@ -665,6 +780,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinGrimanceButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_grimace_1"/>
           </Properties>
@@ -676,6 +794,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinGrimanceButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_grimace_2"/>
@@ -689,6 +810,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinGrimanceButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_grimace_0"/>
           </Properties>
@@ -698,26 +822,41 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel35">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2&#xff1a;&#x55b7;&#x568f;&#x3001;&#x54ed;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel39">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1&#xff1a;&#x7565;&#x6709;&#x53cd;&#x5e94;(&#x602a;&#x8138;&#x3001;&#x5f31;&#x53cd;&#x5e94;) "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel38">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0&#xff1a;&#x65e0;&#x53cd;&#x5e94;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel40">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0&#xff1a;&#x5168;&#x8eab;&#x9752;&#x7d2b;&#x6216;&#x82cd;&#x767d;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel41">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1&#xff1a;&#x8eaf;&#x5e72;&#x7ea2;&#x3001;&#x56db;&#x80a2;&#x7d2b;(&#x7070;)"/>
           </Properties>
         </Component>
@@ -725,6 +864,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinAppranceButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="10_appearance_2"/>
@@ -738,6 +880,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinAppranceButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="10_appearance_1"/>
           </Properties>
@@ -749,6 +894,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fuSeOneMinButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="1_appearance_0"/>
@@ -762,6 +910,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fuSeOneMinButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="1_appearance_2"/>
           </Properties>
@@ -774,6 +925,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fuSeOneMinButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="1_appearance_1"/>
           </Properties>
@@ -783,6 +937,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel42">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2&#xff1a;&#x7c89;&#x7ea2;&#x8272;"/>
           </Properties>
         </Component>
@@ -790,6 +947,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="tenMinAppranceButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="10_appearance_0"/>
@@ -803,6 +963,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinActivityButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="5_activity_1"/>
           </Properties>
@@ -814,6 +977,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinPulsebuttonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="5_pulse_0"/>
@@ -827,6 +993,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinActivityButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="5_activity_0"/>
           </Properties>
@@ -838,6 +1007,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinPulsebuttonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="5_pulse_1"/>
@@ -851,6 +1023,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinPulsebuttonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="5_pulse_2"/>
           </Properties>
@@ -862,6 +1037,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinGrimaceButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="5_grimace_2"/>
@@ -875,6 +1053,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinGrimaceButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="5_grimace_0"/>
           </Properties>
@@ -886,6 +1067,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinGrimaceButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="5_grimace_1"/>
@@ -899,6 +1083,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinRespirationButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="5_respiration_0"/>
           </Properties>
@@ -910,6 +1097,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinRespirationButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="5_respiration_2"/>
@@ -923,6 +1113,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinRespirationButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="5_respiration_1"/>
           </Properties>
@@ -933,7 +1126,7 @@
         <Component class="javax.swing.JLabel" name="fiveMinFlashLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="5&#x5206;&#x949f;"/>
           </Properties>
@@ -942,6 +1135,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinAppearanceButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="5_appearance_2"/>
@@ -955,6 +1151,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinAppearanceButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="0"/>
             <Property name="actionCommand" type="java.lang.String" value="5_appearance_0"/>
           </Properties>
@@ -967,6 +1166,9 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinAppearanceButtonGroup"/>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1"/>
             <Property name="actionCommand" type="java.lang.String" value="5_appearance_1"/>
           </Properties>
@@ -978,6 +1180,9 @@
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="fiveMinActivityButtonGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="2"/>
             <Property name="actionCommand" type="java.lang.String" value="5_activity_2"/>
@@ -1018,6 +1223,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="oneMinConfirmButton">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x786e;&#x5b9a;"/>
           </Properties>
           <Events>
@@ -1026,6 +1234,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="tenMinConfirmButton">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x786e;&#x5b9a;"/>
           </Properties>
           <Events>
@@ -1034,6 +1245,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="fiveMinConfirmButton">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="18" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x786e;&#x5b9a;"/>
           </Properties>
           <Events>
@@ -1042,6 +1256,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="cancelButton">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x9000;&#x51fa;"/>
           </Properties>
           <Events>
@@ -1050,6 +1267,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="finishAndPrintButton">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x5b8c;&#x6210;&#x5e76;&#x6253;&#x5370;"/>
           </Properties>
           <Events>
@@ -1058,6 +1278,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="finishAndExitButton">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="&#x5b8c;&#x6210;&#x5e76;&#x9000;&#x51fa;"/>
           </Properties>
           <Events>
@@ -1066,6 +1289,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="standardLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="(&#x8bc4;&#x5206;&#x6807;&#x51c6;)"/>
           </Properties>
         </Component>
@@ -1080,7 +1306,7 @@
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="&#x5b8b;&#x4f53;" size="18" style="1"/>
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x5fc3;&#x7387;(&#x6b21;/&#x5206;)"/>
           </Properties>
@@ -1091,7 +1317,7 @@
         <Component class="javax.swing.JLabel" name="jLabel31">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="&#x5b8b;&#x4f53;" size="14" style="1"/>
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x547c;&#x5438;"/>
           </Properties>
@@ -1099,7 +1325,7 @@
         <Component class="javax.swing.JLabel" name="jLabel32">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="&#x5b8b;&#x4f53;" size="14" style="1"/>
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x808c;&#x5f20;&#x529b;"/>
           </Properties>
@@ -1107,7 +1333,7 @@
         <Component class="javax.swing.JLabel" name="jLabel28">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="&#x5b8b;&#x4f53;" size="14" style="1"/>
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x5bf9;&#x523a;&#x6fc0;&#x53cd;&#x5e94;&#x3001;&#x602a;&#x8c61;"/>
           </Properties>
@@ -1115,20 +1341,28 @@
         <Component class="javax.swing.JLabel" name="jLabel33">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="&#x5b8b;&#x4f53;" size="14" style="1"/>
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x80a4;&#x8272;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel44">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
-              <FontInfo relative="true">
-                <Font component="jLabel44" property="font" relativeSize="true" size="10"/>
-              </FontInfo>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="&#x5b8b;&#x4f53;" size="24" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x603b;&#x5206;"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator1">
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator3">
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator4">
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator5">
+        </Component>
+        <Component class="javax.swing.JSeparator" name="jSeparator6">
         </Component>
       </SubComponents>
     </Container>
