@@ -72,6 +72,7 @@ public class ActivateWindow extends javax.swing.JFrame {
         snLabel = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("欢迎使用阿氏评分法自动评分仪（PC版）");
 
         jLabel8.setFont(new java.awt.Font("宋体", 1, 24)); // NOI18N
         jLabel8.setText("第二步");
