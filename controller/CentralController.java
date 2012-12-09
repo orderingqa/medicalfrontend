@@ -3,6 +3,7 @@
  */
 package ls.jtsk.ui.controller;
 
+import java.awt.Font;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -19,9 +20,11 @@ import javax.swing.table.TableModel;
 import ls.jtsk.helper.ApgarHelper;
 import ls.jtsk.helper.BabyHelper;
 import ls.jtsk.helper.CasesHelper;
+import ls.jtsk.helper.CustomerHelper;
 import ls.jtsk.model.Apgar;
 import ls.jtsk.model.Baby;
 import ls.jtsk.model.Cases;
+import ls.jtsk.model.Customer;
 import ls.jtsk.model.Doctor;
 import ls.jtsk.model.Gender;
 import ls.jtsk.model.Gravida;
@@ -148,11 +151,22 @@ public class CentralController {
         Gravida gravida = existCase.getGravida();
         Doctor doctor = existCase.getDoctor();
         Baby firstBaby = (Baby)gravida.getBabys().toArray()[0];
+        
+        Customer c = CustomerHelper.getFirstCustomer();
+        String hospitalString = "";
+        if (c != null) hospitalString = "                                          " + 
+                c.getHospitalAndDepString() + 
+                "新生婴儿阿氏评分结果\n\n";
+                
         String gravidaString = "产妇姓名:" + gravida.getName() + "\n"+
                 "产妇年龄:" + gravida.getAge() + "\n";
         String hopspitalString = "大夫姓名:" + doctor.getDoctorName() + "\n病历号:" + gravida.getMedicNo() + "\n";
         String babyString = "婴儿出生时间:" + firstBaby.getBirthTime() + "\n婴儿性别:" + (firstBaby.getGender() == Gender.BOY ? "男" : "女" ) + "\n"; 
         String commentString = "备注：" + gravida.getComment();
+        
+        // 第一行应该是需要居中的标题，这个在打印时还需要再revise
+        printableString.append(hospitalString);
+        
         printableString.append(gravidaString);
         printableString.append(hopspitalString);
         printableString.append(babyString);
@@ -282,5 +296,17 @@ public class CentralController {
 //        } catch (IOException ex) {
 //            Logger.getLogger(CentralController.class.getName()).log(Level.SEVERE, null, ex);
 //        }
+    }
+    
+    
+    public static void EnableLargerTableFontSize(javax.swing.JTable jtable) {
+        Font tableFont = new Font("SansSerif", Font.PLAIN, 20);
+        Font headerFont = new Font("SansSerif", Font.BOLD, 22);
+        jtable.setFont(tableFont);
+        jtable.getTableHeader().setFont(headerFont);
+        jtable.setRowHeight(jtable.getRowHeight()+tableFont.getSize());
+        
+//      getFont得到的结果
+//      jtable.getFont();  "javax.swing.plaf.FontUIResource[family=SansSerif,name=sansserif,style=plain,size=12]"
     }
 }

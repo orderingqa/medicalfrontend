@@ -4,10 +4,12 @@
  */
 package ls.jtsk.ui;
 
+import java.awt.Font;
 import java.util.List;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;
 import ls.jtsk.helper.CasesHelper;
+import ls.jtsk.helper.CustomerHelper;
 import ls.jtsk.model.Cases;
 import ls.jtsk.ui.controller.CentralController;
 
@@ -52,11 +54,8 @@ public class CaseHistory extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         caseListTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        titleLabel = new javax.swing.JLabel();
         createCaseButton = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         viewExistingCasesButton = new javax.swing.JButton();
         modifyCaseButton = new javax.swing.JButton();
         deleteCaseButton = new javax.swing.JButton();
@@ -64,7 +63,6 @@ public class CaseHistory extends javax.swing.JFrame {
         printButton = new javax.swing.JButton();
         previousPageButton = new javax.swing.JButton();
         nextPageButton = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("阿氏评分法自动评分仪PC版");
@@ -85,10 +83,13 @@ public class CaseHistory extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(caseListTable);
 
+        jLabel1.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
         jLabel1.setText("单位");
 
-        jLabel2.setText("宣武医院妇产科");
+        titleLabel.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
+        titleLabel.setText("宣武医院妇产科");
 
+        createCaseButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         createCaseButton.setText("新建病历");
         createCaseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,12 +97,7 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
-        jSpinner1.setEnabled(false);
-
-        jLabel5.setText("跳转到第");
-
-        jLabel6.setText("页");
-
+        viewExistingCasesButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         viewExistingCasesButton.setText("查看病历");
         viewExistingCasesButton.setEnabled(false);
         viewExistingCasesButton.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +106,7 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
+        modifyCaseButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         modifyCaseButton.setText("修改病历");
         modifyCaseButton.setEnabled(false);
         modifyCaseButton.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +115,7 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
+        deleteCaseButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         deleteCaseButton.setText("删除病历");
         deleteCaseButton.setEnabled(false);
         deleteCaseButton.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +124,7 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
+        apgarScoreButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         apgarScoreButton.setText("apgar打分");
         apgarScoreButton.setEnabled(false);
         apgarScoreButton.addActionListener(new java.awt.event.ActionListener() {
@@ -134,6 +133,7 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
+        printButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         printButton.setText("预览并打印");
         printButton.setEnabled(false);
         printButton.addActionListener(new java.awt.event.ActionListener() {
@@ -142,6 +142,7 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
+        previousPageButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         previousPageButton.setText("上一页");
         previousPageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,6 +150,7 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
+        nextPageButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
         nextPageButton.setText("下一页");
         nextPageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,51 +158,37 @@ public class CaseHistory extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setText("Go");
-        jButton9.setEnabled(false);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(createCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 818, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 20, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(previousPageButton)
+                        .addGap(66, 66, 66)
+                        .addComponent(nextPageButton))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
                         .addComponent(viewExistingCasesButton)
-                        .addGap(79, 79, 79)
+                        .addGap(109, 109, 109)
                         .addComponent(modifyCaseButton)
-                        .addGap(97, 97, 97)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                         .addComponent(deleteCaseButton)
+                        .addGap(81, 81, 81)
+                        .addComponent(printButton)
+                        .addGap(69, 69, 69)
+                        .addComponent(apgarScoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(30, 30, 30)
+                        .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(printButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(88, 88, 88)
-                        .addComponent(apgarScoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(createCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(previousPageButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nextPageButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,11 +196,11 @@ public class CaseHistory extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
+                        .addComponent(titleLabel)
                         .addComponent(jLabel1))
                     .addComponent(createCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(viewExistingCasesButton)
@@ -222,12 +210,8 @@ public class CaseHistory extends javax.swing.JFrame {
                     .addComponent(printButton))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
                     .addComponent(previousPageButton)
-                    .addComponent(nextPageButton)
-                    .addComponent(jButton9))
+                    .addComponent(nextPageButton))
                 .addGap(20, 20, 20))
         );
 
@@ -244,8 +228,7 @@ public class CaseHistory extends javax.swing.JFrame {
         ((CaseTableModel)caseListTable.getModel()).setList(modelList);
         caseListTable.updateUI();
     }
-    
-    
+        
     // TODO 这个函数也提供给外部调用，因为如果对一个case做了修改，那么下面的button需要在更改保存后更新。
     public void updateButtonForCurrentCase() {
         currentSelectIndex = caseListTable.getSelectedRow();
@@ -346,17 +329,13 @@ public class CaseHistory extends javax.swing.JFrame {
     private javax.swing.JTable caseListTable;
     private javax.swing.JButton createCaseButton;
     private javax.swing.JButton deleteCaseButton;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JButton modifyCaseButton;
     private javax.swing.JButton nextPageButton;
     private javax.swing.JButton previousPageButton;
     private javax.swing.JButton printButton;
+    private javax.swing.JLabel titleLabel;
     private javax.swing.JButton viewExistingCasesButton;
     // End of variables declaration//GEN-END:variables
 
@@ -368,7 +347,11 @@ public class CaseHistory extends javax.swing.JFrame {
         CaseTableModel ctm = new CaseTableModel(modelList);
         caseListTable.setModel(ctm);
         currentPage = 1;
+        titleLabel.setText(CustomerHelper.getFirstCustomer().getHospitalAndDepString());
+        CentralController.EnableLargerTableFontSize(caseListTable); 
     }
+
+
     
     class CaseTableModel implements TableModel {
         List <Cases> caseList = null;

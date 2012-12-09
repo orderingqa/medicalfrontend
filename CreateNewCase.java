@@ -92,7 +92,6 @@ public class CreateNewCase extends javax.swing.JFrame {
         });
 
         medicalNoInput.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
-        medicalNoInput.setText("2012");
         medicalNoInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 medicalNoInputActionPerformed(evt);
@@ -100,12 +99,10 @@ public class CreateNewCase extends javax.swing.JFrame {
         });
 
         doctorInput.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
-        doctorInput.setText("王大夫");
 
         gravidaInput.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
-        gravidaInput.setText("王菲");
 
-        ageInput.setText("30");
+        ageInput.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("宋体", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 153, 0));
@@ -116,11 +113,12 @@ public class CreateNewCase extends javax.swing.JFrame {
         jLabel3.setText("(请输入数字)");
 
         jLabel2.setFont(new java.awt.Font("宋体", 0, 24)); // NOI18N
-        jLabel2.setText("备注信息");
+        jLabel2.setText("备注");
 
         gravidaCommentInput.setColumns(20);
+        gravidaCommentInput.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         gravidaCommentInput.setRows(5);
-        gravidaCommentInput.setText("请输入类似孕高症等其他备注信息");
+        gravidaCommentInput.setText("其他信息");
         jScrollPane1.setViewportView(gravidaCommentInput);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -134,24 +132,9 @@ public class CreateNewCase extends javax.swing.JFrame {
                         .addComponent(saveButton)
                         .addGap(142, 142, 142)
                         .addComponent(apgarButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(gravidaAgeLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(ageInput, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(doctorNameLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(doctorInput, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(16, 16, 16))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(cancelButton)
-                                .addGap(54, 54, 54))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cancelButton)
+                        .addGap(54, 54, 54))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(medicalNoLabel)
@@ -159,15 +142,24 @@ public class CreateNewCase extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(medicalNoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(medicalNoInput, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel1)))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jScrollPane1))
+                                        .addComponent(jLabel1))
+                                    .addComponent(gravidaInput, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(gravidaAgeLabel)
+                                    .addComponent(doctorNameLabel))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(doctorInput, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                    .addComponent(ageInput))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3)))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
