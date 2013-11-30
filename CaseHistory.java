@@ -349,13 +349,15 @@ public class CaseHistory extends javax.swing.JFrame {
         currentPage = 1;
         titleLabel.setText(CustomerHelper.getFirstCustomer().getHospitalAndDepString());
         CentralController.EnableLargerTableFontSize(caseListTable); 
+        modifyCaseButton.setVisible(false);
+        deleteCaseButton.setVisible(false);
     }
 
 
     
     class CaseTableModel implements TableModel {
         List <Cases> caseList = null;
-        String[] columnStrings = new String [] {"产妇姓名", "产妇年龄", "住院号", "主治医生", "建档日期"};
+        String[] columnStrings = new String [] {"建档日期", "产母姓名", "产母年龄", "住院号", "评分人员", "接生人员"};
         
         public CaseTableModel(List <Cases> l) {
             caseList = l;
@@ -372,7 +374,7 @@ public class CaseHistory extends javax.swing.JFrame {
 
         @Override
         public int getColumnCount() {
-            return 5;
+            return 6;
         }
 
         @Override
@@ -397,15 +399,17 @@ public class CaseHistory extends javax.swing.JFrame {
             String value = null;
             switch (columnIndex) {
                 case 0:
-                    value = currentCase.getGravida().getName(); break;
-                case 1:
-                    value = new Integer(currentCase.getGravida().getAge()).toString(); break;
-                case 2:
-                    value = new Integer(currentCase.getGravida().getMedicNo()).toString(); break;
-                case 3:
-                    value = currentCase.getDoctor().getDoctorName(); break;
-                case 4:
                     value = currentCase.getCreateDate(); break;
+                case 1:
+                    value = currentCase.getGravida().getName(); break;
+                case 2:
+                    value = new Integer(currentCase.getGravida().getAge()).toString(); break;
+                case 3:
+                    value = new Integer(currentCase.getGravida().getMedicNo()).toString(); break;
+                case 4:
+                    value = currentCase.getDoctor().getDoctorName(); break;
+                case 5:
+                    value = currentCase.getDoctor().getJieshengrenName(); break;
                 default: ;
             }
             return value;

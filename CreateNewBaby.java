@@ -74,7 +74,7 @@ public class CreateNewBaby extends javax.swing.JFrame {
         jLabel3.setText("出生日期");
 
         startApgarButton.setFont(new java.awt.Font("宋体", 0, 20)); // NOI18N
-        startApgarButton.setText("添加婴儿信息并Apgar");
+        startApgarButton.setLabel("开始评分");
         startApgarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startApgarButtonActionPerformed(evt);

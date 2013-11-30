@@ -28,44 +28,62 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="gravidaNameLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="gravidaInput" min="-2" pref="96" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="gravidaAgeLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="ageInput" min="-2" pref="127" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="saveButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
                       <Component id="apgarButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="256" max="32767" attributes="0"/>
                       <Component id="cancelButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="medicalNoLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="medicalNoLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel2" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane1" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="medicalNoInput" pref="95" max="32767" attributes="0"/>
+                              <Component id="medicalNoInput" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="doctorNameLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="doctorNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="gravidaAgeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="doctorInput" min="-2" pref="131" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="ageInput" max="32767" attributes="0"/>
+                                  <Component id="doctorInput" pref="131" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jieshengrenName" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jieshengrenInput" min="-2" pref="131" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="gravidaAgeLabel1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -84,14 +102,21 @@
                   <Component id="gravidaInput" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ageInput" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="gravidaAgeLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="medicalNoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="doctorNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="medicalNoInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="doctorInput" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="medicalNoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="doctorNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="medicalNoInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="doctorInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                      <Component id="jieshengrenName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jieshengrenInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -118,7 +143,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x8bf7;&#x8f93;&#x5165;&#x5927;&#x592b;&#x59d3;&#x540d;"/>
+        <Property name="text" type="java.lang.String" value="&#x8bc4;&#x5206;&#x4eba;&#x5458;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="medicalNoLabel">
@@ -126,7 +151,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x8bf7;&#x8f93;&#x5165;&#x4f4f;&#x9662;&#x53f7;"/>
+        <Property name="text" type="java.lang.String" value="&#x4f4f;&#x9662;&#x53f7;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="gravidaAgeLabel">
@@ -134,7 +159,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x8bf7;&#x8f93;&#x5165;&#x4ea7;&#x5987;&#x5e74;&#x9f84;"/>
+        <Property name="text" type="java.lang.String" value="&#x4ea7;&#x6bcd;&#x5e74;&#x9f84;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="apgarButton">
@@ -164,7 +189,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x8bf7;&#x8f93;&#x5165;&#x4ea7;&#x5987;&#x59d3;&#x540d;"/>
+        <Property name="text" type="java.lang.String" value="&#x4ea7;&#x6bcd;&#x59d3;&#x540d;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="cancelButton">
@@ -236,7 +261,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#x5907;&#x6ce8;"/>
+        <Property name="text" type="java.lang.String" value="&#x4e3b;&#x8981;&#x8bca;&#x65ad;"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -253,10 +278,33 @@
               <Font name="Monospaced" size="18" style="0"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="&#x5176;&#x4ed6;&#x4fe1;&#x606f;"/>
+            <Property name="text" type="java.lang.String" value="&#x598a;&#x5a20;&#xff1a;  &#x5468;  &#x5929;"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="jieshengrenName">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x63a5;&#x751f;&#x4eba;&#x5458;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jieshengrenInput">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="&#x5b8b;&#x4f53;" size="20" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="gravidaAgeLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="&#x5b8b;&#x4f53;" size="24" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#x5c81;"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>
